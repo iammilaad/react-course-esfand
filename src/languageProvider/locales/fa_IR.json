@@ -1,0 +1,28 @@
+{
+  "signin.title":"ورود به اویلو",
+  "signin.identity":"پست الکترونیک",
+  "signin.password":"کلمه عبور",
+  "signin.RememberMe":"مرا به خاطر بسپار",
+  "signin.Button":"ورود به سیستم",
+  "signin.GooglePlus":"ورود با اکانت گوگل",
+  "signin.ForgotPass":"فراموشی رمز عبور",
+  "signin.CreateAccount":"ایجاد اکانت جدید",
+  "signup.title":"ثبت نام در اویلو",
+  "signup.name":"نام",
+  "signup.email":"پست الکترونیک",
+  "signup.ssn":"کد ملی",
+  "signup.phoneNumber":"تلفن همراه",
+  "signup.password":"کلمه عبور",
+  "signup.button":"ثبت نام",
+  "signup.GooglePlus":"ثبت نام با گوگل",
+  "signup.AlreadyAccount":"حساب کاربری دارم، ورود",
+  "forgot.title":"فراموشی رمز عبور",
+  "forgot.email":" پست الکترونیک",
+  "forgot.description":"برای بازیابی رمز عبور، ایمیل خود را وارد نمایید و پس از کلیک بر روی بازیابی پسورد جدید برای شما ارسال خواهد شد.",
+  "forgot.button":"ارسال درخواست",
+  "forgot.login":"ورود به حساب کاربری"
+
+}
+
+
+

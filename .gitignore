@@ -1,0 +1,8 @@
+.idea
+*.iml
+npm-debug.log
+**/*.DS_Store
+tmp
+bin
+/build
+/node_modules
