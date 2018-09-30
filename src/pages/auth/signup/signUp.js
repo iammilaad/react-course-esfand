@@ -32,7 +32,7 @@ class SignUp extends Component {
                     <div className="ovSignUpContent">
                         <div className="ovLogoWrapper">
                             <Link to="/">
-                                <IntlMessages id="signup.title" />
+                                <IntlMessages id="signUp.title" />
                             </Link>
                         </div>
 
@@ -45,7 +45,7 @@ class SignUp extends Component {
                                                 {
                                                     required: true,
                                                     message: this.context.intl.formatMessage({
-                                                        id: "signup.name"
+                                                        id: "signUp.name"
                                                     })
                                                 }
                                             ]
@@ -53,7 +53,7 @@ class SignUp extends Component {
                                             <Input
                                                 size="large"
                                                 placeholder={this.context.intl.formatMessage({
-                                                    id: "signup.name"
+                                                    id: "signUp.name"
                                                 })}
                                             />
                                         )}
@@ -67,7 +67,7 @@ class SignUp extends Component {
                                                     required: true,
                                                     type: "email",
                                                     message: this.context.intl.formatMessage({
-                                                        id: "signup.email"
+                                                        id: "signUp.email"
                                                     })
                                                 }
                                             ]
@@ -75,7 +75,7 @@ class SignUp extends Component {
                                             <Input
                                                 size="large"
                                                 placeholder={this.context.intl.formatMessage({
-                                                    id: "signup.email"
+                                                    id: "signUp.email"
                                                 })}
                                             />
                                         )}
@@ -88,7 +88,7 @@ class SignUp extends Component {
                                                 {
                                                     required: false,
                                                     message: this.context.intl.formatMessage({
-                                                        id: "signup.ssn"
+                                                        id: "signUp.ssn"
                                                     })
                                                 }
                                             ]
@@ -96,7 +96,7 @@ class SignUp extends Component {
                                             <Input
                                                 size="large"
                                                 placeholder={this.context.intl.formatMessage({
-                                                    id: "signup.ssn"
+                                                    id: "signUp.ssn"
                                                 })}
                                             />
                                         )}
@@ -109,7 +109,7 @@ class SignUp extends Component {
                                                 {
                                                     required: false,
                                                     message: this.context.intl.formatMessage({
-                                                        id: "signup.phoneNumber"
+                                                        id: "signUp.phoneNumber"
                                                     })
                                                 }
                                             ]
@@ -117,7 +117,7 @@ class SignUp extends Component {
                                             <Input
                                                 size="large"
                                                 placeholder={this.context.intl.formatMessage({
-                                                    id: "signup.phoneNumber"
+                                                    id: "signUp.phoneNumber"
                                                 })}
                                             />
                                         )}
@@ -130,7 +130,7 @@ class SignUp extends Component {
                                                 {
                                                     required: true,
                                                     message: this.context.intl.formatMessage({
-                                                        id: "signup.password"
+                                                        id: "signUp.password"
                                                     })
                                                 }
                                             ]
@@ -139,7 +139,7 @@ class SignUp extends Component {
                                                 size="large"
                                                 type="password"
                                                 placeholder={this.context.intl.formatMessage({
-                                                    id: "signup.password"
+                                                    id: "signUp.password"
                                                 })}
                                             />
                                         )}
@@ -148,18 +148,18 @@ class SignUp extends Component {
                                 <div className="ovInputWrapper">
                                     <FormItem>
                                         <Button type="primary" htmlType="submit" loading={loading}>
-                                            <IntlMessages id="signup.button" />
+                                            <IntlMessages id="signUp.button" />
                                         </Button>
                                     </FormItem>
                                 </div>
                                 <div className="ovInputWrapper ovOtherLogin">
                                     <Button type="primary btnGooglePlus">
-                                        <IntlMessages id="signup.GooglePlus" />
+                                        <IntlMessages id="signUp.GooglePlus" />
                                     </Button>
                                 </div>
                                 <div className="ovInputWrapper ovCenterComponent ovHelperWrapper">
                                     <Link to="/signin">
-                                        <IntlMessages id="signup.AlreadyAccount" />
+                                        <IntlMessages id="signUp.AlreadyAccount" />
                                     </Link>
                                 </div>
                             </Form>

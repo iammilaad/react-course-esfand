@@ -59,7 +59,7 @@ const PublicRoutes = ({ history, isLoggedIn }) => {
         <Route
           exact
           path={"/reset-password"}
-          component={asyncComponent(() => import("pages/auth/resetPassword"))}
+          component={asyncComponent(() => import("pages/auth/resetPassword/resetPassword"))}
         />
 
         <RestrictedRoute

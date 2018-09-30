@@ -1,0 +1,250 @@
+import React, {Component, Fragment} from "react";
+import {toJS} from 'utils/higherOrderComponents/toJsHoc';
+import {connect} from 'react-redux';
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import query from "query-string";
+import Input from "components/uielements/input";
+import Button from "components/uielements/button";
+import Form from 'components/uielements/form';
+import Spin from 'components/uielements/spin';
+import IntlMessages from "components/utility/intlMessages";
+import ResetPasswordStyleWrapper from "./resetPassword.style";
+import * as constants from './constants';
+import * as actions from './actions';
+
+const FormItem = Form.Item;
+
+
+const HandleReseted = () => {
+
+}
+
+class resetPassword extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            confirmDirty: false,
+        }
+    }
+    componentDidMount = () => {
+        const {getCheckTokenRequest} = this.props;
+        const queryString = query.parse(window.location.search);
+        const {token} = queryString;
+        if(token !== undefined) {
+            getCheckTokenRequest(token);
+        } else {
+            this.props.history.push('/forgot-password');
+        }
+    }
+
+    componentWillUnmount = () => {
+        const {resetPasswordStatus, resetPasswordTokenCheck} = this.props;
+        resetPasswordStatus(constants.NOT_RESETED);
+        resetPasswordTokenCheck(constants.TOKEN_NOT_CHECKED);
+    };
+    handleSubmit = e => {
+        const { resetPasswordRequest } = this.props;
+        e.preventDefault();
+        this.props.form.validateFields((err, values) => {
+            if (!err) {
+                resetPasswordRequest(values);
+            }
+        });
+    };
+    compareToFirstPassword = (rule, value, callback) => {
+        const form = this.props.form;
+        if (value && value !== form.getFieldValue('password')) {
+            callback( <IntlMessages id="resetPassword.inconsistentPasswords" />);
+        } else {
+            callback();
+        }
+    };
+
+    validateToNextPassword = (rule, value, callback) => {
+        const form = this.props.form;
+        if (value && this.state.confirmDirty) {
+            form.validateFields(['passwordConfirm'], { force: true });
+        }
+        callback();
+    };
+    handleConfirmBlur = (e) => {
+        const value = e.target.value;
+        this.setState({ confirmDirty: this.state.confirmDirty || !!value });
+    };
+
+    HandleCheckToken = () => {
+        const {tokenStatus} = this.props;
+        if (tokenStatus === constants.TOKEN_NOT_CHECKED) {
+            return (
+                <Spin size="large" tip={<IntlMessages id="loading"/>}/>
+            )
+        } else if(tokenStatus === constants.TOKEN_CHECKED) {
+            return (
+                <Fragment>
+                    {this.handleReseted()}
+                </Fragment>
+            )
+        } else if(tokenStatus === constants.TOKEN_EXPIRED) {
+            return (
+                <Fragment>
+                    <div className="ovFormHeadText ovCenterComponent">
+                        <p>
+                            <IntlMessages id="resetPassword.tokenExpired" />
+                        </p>
+                    </div>
+                    <div className="ovInputWrapper ovCenterComponent ovHelperWrapper">
+                        <Link to="/forgot-password">
+                            <IntlMessages id="forgot.title"/>
+                        </Link>
+                    </div>
+                </Fragment>
+            )
+        }
+    }
+
+    handleReseted = () => {
+        const { getFieldDecorator } = this.props.form;
+        const {loading} = this.props;
+        const {resetStatus} = this.props;
+        if(resetStatus === constants.NOT_RESETED) {
+            return (
+                <Fragment>
+                    <div className="ovFormHeadText">
+                        <p>
+                            <IntlMessages id="resetPassword.description" />
+                        </p>
+                    </div>
+
+                    <div className="ovResetPassForm">
+                        <Form onSubmit={this.handleSubmit} className="forgot-form">
+                            <div className="ovInputWrapper">
+                                <FormItem>
+                                    {getFieldDecorator("password", {
+                                        rules: [
+                                            {
+                                                required: true,
+                                                message: this.context.intl.formatMessage({
+                                                    id: "resetPassword.password"
+                                                })
+                                            },
+                                            {
+                                                min: 8,
+                                                message: this.context.intl.formatMessage({
+                                                    id: "resetPassword.minLimitChar"
+                                                })
+                                            },
+                                            {
+                                                validator: this.validateToNextPassword,
+                                            }
+                                        ]
+                                    })(
+                                        <Input
+                                            size="large"
+                                            type="password"
+                                            placeholder={this.context.intl.formatMessage({
+                                                id: "resetPassword.password"
+                                            })}
+                                        />
+                                    )}
+                                </FormItem>
+                            </div>
+
+                            <div className="ovInputWrapper">
+                                <FormItem>
+                                    {getFieldDecorator("confirmPassword", {
+                                        rules: [
+                                            {
+                                                required: true,
+                                                message: this.context.intl.formatMessage({
+                                                    id: "resetPassword.confirmPassword"
+                                                })
+                                            },
+                                            {
+                                                min: 8,
+                                                message: this.context.intl.formatMessage({
+                                                    id: "resetPassword.minLimitChar"
+                                                })
+                                            },
+                                            {
+                                                validator: this.compareToFirstPassword,
+                                            }
+                                        ]
+                                    })(
+                                        <Input
+                                            size="large"
+                                            type="password"
+                                            onBlur={this.handleConfirmBlur}
+                                            placeholder={this.context.intl.formatMessage({
+                                                id: "resetPassword.confirmPassword"
+                                            })}
+                                        />
+                                    )}
+                                </FormItem>
+                            </div>
+
+                            <div className="ovInputWrapper">
+                                <FormItem>
+                                    <Button type="primary" htmlType="submit" loading={loading}>
+                                        <IntlMessages id="resetPassword.button" />
+                                    </Button>
+                                </FormItem>
+                            </div>
+                        </Form>
+                    </div>
+                </Fragment>
+            )
+        } else {
+            return (
+                <Fragment>
+                    <div className="ovFormHeadText">
+                        <p>
+                            <IntlMessages id="resetPassword.resetedDone" />
+                        </p>
+                    </div>
+                    <div className="ovInputWrapper ovCenterComponent ovHelperWrapper">
+                        <Link to="/signin">
+                            <IntlMessages id="signin.title"/>
+                        </Link>
+                    </div>
+                </Fragment>
+            )
+        }
+    }
+
+    render() {
+
+        return (
+            <ResetPasswordStyleWrapper className="ovResetPassPage">
+                <div className="ovFormContentWrapper">
+                    <div className="ovFormContent">
+                        <div className="ovLogoWrapper">
+                            <Link to="/">
+                                <IntlMessages id="resetPassword.title" />
+                            </Link>
+                        </div>
+                        {this.HandleCheckToken()}
+                    </div>
+                </div>
+            </ResetPasswordStyleWrapper>
+        );
+    }
+}
+resetPassword.contextTypes = {
+    intl: PropTypes.object.isRequired
+};
+const mapDispatchToProps = {
+    getCheckTokenRequest: actions.getCheckTokenRequest,
+    resetPasswordRequest: actions.setResetPasswordRequest,
+    resetPasswordStatus: actions.setResetPasswordStatus,
+    resetPasswordTokenCheck: actions.setResetPasswordTokenCheck,
+};
+const mapStateToProps = state => ({
+    loading: state.getIn(["loading", constants.RESET_PASSWORD, "status"], false),
+    tokenStatus:state.getIn([constants.RESET_PASSWORD,"tokenStatus"]),
+    resetStatus:state.getIn([constants.RESET_PASSWORD,"status"]),
+});
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(toJS(Form.create()(resetPassword)));

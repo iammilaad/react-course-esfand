@@ -15,8 +15,8 @@ const FormItem = Form.Item;
 class ForgotPassword extends Component {
 
   toggleToNotSend = () => {
-      const {ForgotPasswordStatus} = this.props;
-      ForgotPasswordStatus(constants.NOT_SEND);
+      const {forgotPasswordStatus} = this.props;
+      forgotPasswordStatus(constants.NOT_SEND);
   }
 
     componentWillUnmount = () => {
@@ -27,11 +27,11 @@ class ForgotPassword extends Component {
     };
 
     handleSubmit = e => {
-        const { ForgotPasswordRequest } = this.props;
+        const { forgotPasswordRequest } = this.props;
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                ForgotPasswordRequest(values);
+                forgotPasswordRequest(values);
             }
         });
     };
@@ -46,17 +46,17 @@ class ForgotPassword extends Component {
                     <div className="ovFormContent">
                         <div className="ovLogoWrapper">
                             <Link to="/dashboard">
-                                <IntlMessages id="forgot.title" />
+                                <IntlMessages id="forgotPassword.title" />
                             </Link>
                         </div>
 
                         {sendStatus === constants.NOT_SEND ? <Fragment>
                                 <div className="ovFormHeadText">
                                     <h3>
-                                        <IntlMessages id="forgot.title"/>
+                                        <IntlMessages id="forgotPassword.title"/>
                                     </h3>
                                     <p>
-                                        <IntlMessages id="forgot.description"/>
+                                        <IntlMessages id="forgotPassword.description"/>
                                     </p>
                                 </div>
                                 <div className="ovForgotPassForm">
@@ -68,13 +68,13 @@ class ForgotPassword extends Component {
                                                         {
                                                             type: "email",
                                                             message: this.context.intl.formatMessage({
-                                                                id: "forgot.email"
+                                                                id: "forgotPassword.email"
                                                             })
                                                         },
                                                         {
                                                             required: true,
                                                             message: this.context.intl.formatMessage({
-                                                                id: "forgot.email"
+                                                                id: "forgotPassword.email"
                                                             })
                                                         }
                                                     ]
@@ -82,7 +82,7 @@ class ForgotPassword extends Component {
                                                     <Input
                                                         size="large"
                                                         placeholder={this.context.intl.formatMessage({
-                                                            id: "forgot.email"
+                                                            id: "forgotPassword.email"
                                                         })}
                                                     />
                                                 )}
@@ -92,13 +92,13 @@ class ForgotPassword extends Component {
                                         <div className="ovInputWrapper">
                                             <FormItem>
                                                 <Button type="primary" htmlType="submit" loading={loading}>
-                                                    <IntlMessages id="forgot.button"/>
+                                                    <IntlMessages id="forgotPassword.button"/>
                                                 </Button>
                                             </FormItem>
                                         </div>
                                         <div className="ovInputWrapper ovCenterComponent ovHelperWrapper">
                                             <Link to="/signin">
-                                                <IntlMessages id="forgot.login"/>
+                                                <IntlMessages id="forgotPassword.login"/>
                                             </Link>
                                         </div>
                                     </Form>
@@ -107,15 +107,15 @@ class ForgotPassword extends Component {
                             <Fragment>
                                 <div className="ovFormHeadText">
                                     <h3>
-                                        <IntlMessages id="forgot.sentTitle"/>
+                                        <IntlMessages id="forgotPassword.sentTitle"/>
                                     </h3>
                                     <p>
-                                        <IntlMessages id="forgot.sentDescription"/>
+                                        <IntlMessages id="forgotPassword.sentDescription"/>
                                     </p>
                                 </div>
                                 <div className="ovInputWrapper ovCenterComponent ovHelperWrapper">
                                     <Button type="primary" onClick={this.resendAgain}>
-                                        <IntlMessages id="forgot.resendAgain"/>
+                                        <IntlMessages id="forgotPassword.resendAgain"/>
                                     </Button>
                                 </div>
                             </Fragment>
@@ -130,12 +130,12 @@ ForgotPassword.contextTypes = {
     intl: PropTypes.object.isRequired
 };
 const mapDispatchToProps = {
-    ForgotPasswordRequest: actions.setForgotPasswordRequest,
-    ForgotPasswordStatus: actions.setForgotPasswordStatus
+    forgotPasswordRequest: actions.setForgotPasswordRequest,
+    forgotPasswordStatus: actions.setForgotPasswordStatus
 };
 const mapStateToProps = state => ({
     loading: state.getIn(["loading", constants.FORGOT_PASSWORD_REQUEST, "status"], false),
-    sendStatus:state.getIn([constants.FORGOT_PASSWORD,"status"]),
+    sendStatus:state.getIn([constants.FORGOT_PASSWORD,"sendStatus"]),
 });
 export default connect(
     mapStateToProps,

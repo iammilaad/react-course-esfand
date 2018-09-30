@@ -34,7 +34,7 @@ class SignIn extends Component {
           <div className="ovLoginContent">
             <div className="ovLogoWrapper">
               <Link to="/">
-                <IntlMessages id="signin.title" />
+                <IntlMessages id="signIn.title" />
               </Link>
             </div>
             <div className="ovSignInForm">
@@ -47,7 +47,7 @@ class SignIn extends Component {
                           required: true,
                           type: "email",
                           message: this.context.intl.formatMessage({
-                            id: "signin.identity"
+                            id: "signIn.identity"
                           })
                         }
                       ]
@@ -55,7 +55,7 @@ class SignIn extends Component {
                       <Input
                         size="large"
                         placeholder={this.context.intl.formatMessage({
-                          id: "signin.identity"
+                          id: "signIn.identity"
                         })}
                       />
                     )}
@@ -69,7 +69,7 @@ class SignIn extends Component {
                         {
                           required: true,
                           message: this.context.intl.formatMessage({
-                            id: "signin.password"
+                            id: "signIn.password"
                           })
                         }
                       ]
@@ -78,7 +78,7 @@ class SignIn extends Component {
                         size="large"
                         type="password"
                         placeholder={this.context.intl.formatMessage({
-                          id: "signin.password"
+                          id: "signIn.password"
                         })}
                       />
                     )}
@@ -91,21 +91,21 @@ class SignIn extends Component {
                   </FormItem>
                   <FormItem>
                     <Button type="primary" htmlType="submit" loading={loading}>
-                      <IntlMessages id="signin.Button" />
+                      <IntlMessages id="signIn.Button" />
                     </Button>
                   </FormItem>
                 </div>
                 <div className="ovInputWrapper ovOtherLogin">
                   <Button type="primary btnGooglePlus">
-                    <IntlMessages id="signin.GooglePlus" />
+                    <IntlMessages id="signIn.GooglePlus" />
                   </Button>
                 </div>
                 <div className="ovCenterComponent ovHelperWrapper">
                   <Link to="/forgot-password" className="ovForgotPass">
-                    <IntlMessages id="signin.ForgotPass" />
+                    <IntlMessages id="signIn.ForgotPass" />
                   </Link>
                   <Link to="/signup">
-                    <IntlMessages id="signin.CreateAccount" />
+                    <IntlMessages id="signIn.CreateAccount" />
                   </Link>
                 </div>
               </Form>
