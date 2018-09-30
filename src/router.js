@@ -53,12 +53,12 @@ const PublicRoutes = ({ history, isLoggedIn }) => {
         />
         <Route
           exact
-          path={"/forgotpassword"}
-          component={asyncComponent(() => import("pages/auth/forgotPassword"))}
+          path={"/forgot-password"}
+          component={asyncComponent(() => import("pages/auth/forgotPassword/forgotPassword"))}
         />
         <Route
           exact
-          path={"/resetpassword"}
+          path={"/reset-password"}
           component={asyncComponent(() => import("pages/auth/resetPassword"))}
         />
 

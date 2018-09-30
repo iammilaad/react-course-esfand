@@ -38,14 +38,14 @@ const Style = styled.div`
     padding: 0;
   }
 
-  .isoLeftRightComponent {
+  .ovLeftRightComponent {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
   }
 
-  .isoCenterComponent {
+  .ovCenterComponent {
     display: flex;
     align-items: center;
     justify-content: center;

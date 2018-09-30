@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import Input from "components/uielements/input";
-import Checkbox from "components/uielements/checkbox";
 import Button from "components/uielements/button";
 import Form from "components/uielements/form";
 import IntlMessages from "components/utility/intlMessages";
@@ -88,13 +87,7 @@ class SignIn extends Component {
 
                 <div className="ovInputWrapper ovLeftRightComponent">
                   <FormItem>
-                    {getFieldDecorator("remember", {
-                      valuePropName: "checked"
-                    })(
-                      <Checkbox>
-                        <IntlMessages id="signin.RememberMe" />
-                      </Checkbox>
-                    )}
+
                   </FormItem>
                   <FormItem>
                     <Button type="primary" htmlType="submit" loading={loading}>
@@ -108,7 +101,7 @@ class SignIn extends Component {
                   </Button>
                 </div>
                 <div className="ovCenterComponent ovHelperWrapper">
-                  <Link to="/forgotpassword" className="ovForgotPass">
+                  <Link to="/forgot-password" className="ovForgotPass">
                     <IntlMessages id="signin.ForgotPass" />
                   </Link>
                   <Link to="/signup">

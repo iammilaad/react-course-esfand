@@ -17,14 +17,16 @@ import { updateLocalStorage } from "utils/localStorage";
 import config from "settings";
 import signIn from "pages/auth/signin";
 import signUp from "pages/auth/signup";
+import forgotPassword from "pages/auth/forgotPassword";
 import loading from "utils/globalRedux/loading/reducer";
 import userReducers from "utils/globalRedux/user/reducers";
 
 const rootSage = function*() {
-  yield all([
-      ...signIn.sagas,
-      ...signUp.sagas,
-  ]);
+    yield all([
+        ...signIn.sagas,
+        ...signUp.sagas,
+        ...forgotPassword.sagas,
+    ]);
 };
 const history = createHistory();
 const sagaMiddleware = createSagaMiddleware();
@@ -33,30 +35,31 @@ const routeMiddleware = routerMiddleware(history);
 const logger = createLogger(); // eslint-disable-line
 
 const rootReducer = (state, action) => {
-  if (action.type === FLUSH) {
-    state = undefined;
-  }
+    if (action.type === FLUSH) {
+        state = undefined;
+    }
 
-  return combineReducers({
-    router: routerReducer,
-    App,
-    ThemeSwitcher,
-    LanguageSwitcher,
-    loading,
-    ...userReducers
-  })(state, action);
+    return combineReducers({
+        router: routerReducer,
+        App,
+        ThemeSwitcher,
+        LanguageSwitcher,
+        loading,
+        ...userReducers,
+        ...forgotPassword.reducers,
+    })(state, action);
 };
 
 const store = createStore(
-  rootReducer,
-  fromJS(localStorage.get(config.localStorageName)),
-  composeWithDevTools(
-    applyMiddleware(
-      sagaMiddleware,
-      routeMiddleware,
-      logger // eslint-disable-line
+    rootReducer,
+    fromJS(localStorage.get(config.localStorageName)),
+    composeWithDevTools(
+        applyMiddleware(
+            sagaMiddleware,
+            routeMiddleware,
+            logger // eslint-disable-line
+        )
     )
-  )
 );
 store.subscribe(updateLocalStorage);
 sagaMiddleware.run(rootSage);
