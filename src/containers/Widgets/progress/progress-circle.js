@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Progress from '../../../components/uielements/progress';
-import { CircleProgressWidgetBar } from './style';
+import React, { Component } from "react";
+import Progress from "../../../components/uielements/progress";
+import { CircleProgressWidgetBar } from "./style";
 
 export default class CircleProgressWidget extends Component {
   render() {
@@ -14,9 +14,7 @@ export default class CircleProgressWidget extends Component {
           status={status}
           showInfo={info}
         />
-        <h3 style={{ color: fontColor }}>
-          {label}
-        </h3>
+        <h3 style={{ color: fontColor }}>{label}</h3>
       </CircleProgressWidgetBar>
     );
   }

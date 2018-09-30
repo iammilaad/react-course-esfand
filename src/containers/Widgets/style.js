@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
+import styled from "styled-components";
+import { palette } from "styled-theme";
 
 const WidgetWrapper = styled.div`
   margin: 0 10px;
@@ -14,7 +14,7 @@ const WidgetBox = styled.div`
   height: 100%;
   padding: 30px;
   background-color: #ffffff;
-  border: 1px solid${palette('border', 2)};
+  border: 1px solid ${palette("border", 2)};
 
   canvas {
     width: 100% !important;
@@ -22,6 +22,8 @@ const WidgetBox = styled.div`
   }
 `;
 
-const WidgetColumn = styled.div`align-content: flex-start;`;
+const WidgetColumn = styled.div`
+  align-content: flex-start;
+`;
 
 export { WidgetWrapper, WidgetBox, WidgetColumn };

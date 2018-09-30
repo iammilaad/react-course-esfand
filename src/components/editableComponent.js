@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Icon } from 'antd';
-import { Textarea as Input } from './uielements/input';
+import React, { Component } from "react";
+import { Icon } from "antd";
+import { Textarea as Input } from "./uielements/input";
 
 export default class EditableComponent extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export default class EditableComponent extends Component {
     this.edit = this.edit.bind(this);
     this.state = {
       value: this.props.value,
-      editable: false,
+      editable: false
     };
   }
   handleChange(event) {
@@ -47,7 +47,7 @@ export default class EditableComponent extends Component {
           </div>
         ) : (
           <p className="ovNoteTextWrapper" onClick={this.edit}>
-            {value || ' '}
+            {value || " "}
             <Icon type="edit" className="ovNoteEditIcon" />
           </p>
         )}

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Searchbar from '../../components/topbar/searchBox';
-import TopbarSearchModal from './topbarSearchModal.style';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Searchbar from "../../components/topbar/searchBox";
+import TopbarSearchModal from "./topbarSearchModal.style";
 
 class TopbarSearch extends Component {
   state = {
@@ -42,7 +42,7 @@ class TopbarSearch extends Component {
           footer={null}
         >
           <div className="ovSearchContainer">
-            {visible ? <Searchbar onBlur={this.handleBlur} /> : ''}
+            {visible ? <Searchbar onBlur={this.handleBlur} /> : ""}
           </div>
         </TopbarSearchModal>
       </div>

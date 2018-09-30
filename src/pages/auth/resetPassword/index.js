@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Input from 'components/uielements/input';
-import Button from 'components/uielements/button';
-import IntlMessages from 'components/utility/intlMessages';
-import ResetPasswordStyleWrapper from './style';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Input from "components/uielements/input";
+import Button from "components/uielements/button";
+import IntlMessages from "components/utility/intlMessages";
+import ResetPasswordStyleWrapper from "./style";
 
 export default class extends Component {
   render() {

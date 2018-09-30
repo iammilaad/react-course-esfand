@@ -1,50 +1,50 @@
-import React, { Component } from 'react';
-import ovmorphicTransfer from '../Transfer';
-import AntdUpload from '../Upload';
-import AntdCheckbox from '../Checkbox';
-import AntdAutocomplete from '../AutoComplete';
-import AntdRadiobox from '../Radiobox';
-import AntdSelectBox from '../Select';
-import AntdMention from '../Mention';
-import AntdRater from '../Rating';
-import AntdSlider from '../Slider';
-import AntdInputNumber from '../InputNumber';
-import Button from '../../../components/uielements/button';
-import Steps from '../../../components/uielements/steps';
-import message from '../../../components/uielements/message';
-import Input from '../../../components/uielements/input';
-import PageHeader from '../../../components/utility/pageHeader';
-import ContentHolder from '../../../components/utility/contentHolder';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import { FormFieldTitle } from './formFieldTitle.style';
+import React, { Component } from "react";
+import ovmorphicTransfer from "../Transfer";
+import AntdUpload from "../Upload";
+import AntdCheckbox from "../Checkbox";
+import AntdAutocomplete from "../AutoComplete";
+import AntdRadiobox from "../Radiobox";
+import AntdSelectBox from "../Select";
+import AntdMention from "../Mention";
+import AntdRater from "../Rating";
+import AntdSlider from "../Slider";
+import AntdInputNumber from "../InputNumber";
+import Button from "../../../components/uielements/button";
+import Steps from "../../../components/uielements/steps";
+import message from "../../../components/uielements/message";
+import Input from "../../../components/uielements/input";
+import PageHeader from "../../../components/utility/pageHeader";
+import ContentHolder from "../../../components/utility/contentHolder";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import { FormFieldTitle } from "./formFieldTitle.style";
 const Step = Steps.Step;
 
 const steps = [
   {
-    title: 'First',
+    title: "First",
     content: (
       <div className="ovExampleWrapper">
-        <div style={{ padding: '10px 20px' }}>
+        <div style={{ padding: "10px 20px" }}>
           <FormFieldTitle className="ovFormFieldTitle">Input</FormFieldTitle>
           <Input className="ovmorphicInputBox" />
         </div>
 
-        <div style={{ padding: '20px' }}>
+        <div style={{ padding: "20px" }}>
           <ovmorphicTransfer />
         </div>
 
-        <div style={{ padding: '20px' }}>
+        <div style={{ padding: "20px" }}>
           <AntdUpload className="ovmorphicUpload" />
         </div>
 
-        <div style={{ padding: '20px' }}>
+        <div style={{ padding: "20px" }}>
           <AntdCheckbox className="ovmorphicCheckbox" />
         </div>
       </div>
     )
   },
   {
-    title: 'Second',
+    title: "Second",
     content: (
       <div className="ovExampleWrapper">
         <AntdAutocomplete />
@@ -55,7 +55,7 @@ const steps = [
     )
   },
   {
-    title: 'Last',
+    title: "Last",
     content: (
       <div className="ovExampleWrapper">
         <AntdRater />
@@ -88,7 +88,9 @@ export default class extends Component {
         <PageHeader>Stepper Form</PageHeader>
         <ContentHolder>
           <Steps current={current}>
-            {steps.map(item => <Step key={item.title} title={item.title} />)}
+            {steps.map(item => (
+              <Step key={item.title} title={item.title} />
+            ))}
           </Steps>
 
           <div s="steps-content">{steps[this.state.current].content}</div>
@@ -101,7 +103,7 @@ export default class extends Component {
             {this.state.current === steps.length - 1 && (
               <Button
                 type="primary"
-                onClick={() => message.success('Processing complete!')}
+                onClick={() => message.success("Processing complete!")}
               >
                 Done
               </Button>

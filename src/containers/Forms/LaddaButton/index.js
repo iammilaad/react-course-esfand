@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Col, Row } from 'antd';
+import React, { Component } from "react";
+import { Col, Row } from "antd";
 
 import LaddaButton, {
   XL,
@@ -12,12 +12,12 @@ import LaddaButton, {
   SLIDE_UP,
   ZOOM_IN,
   ZOOM_OUT
-} from 'react-ladda';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import './laddaButton.css';
+} from "react-ladda";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import "./laddaButton.css";
 
 export default class extends Component {
   state = {
@@ -36,12 +36,12 @@ export default class extends Component {
 
   render() {
     const rowStyle = {
-      width: '100%',
-      display: 'flex',
-      flexFlow: 'row wrap'
+      width: "100%",
+      display: "flex",
+      flexFlow: "row wrap"
     };
     const colStyle = {
-      marginBottom: '16px'
+      marginBottom: "16px"
     };
     const gutter = 16;
     return (

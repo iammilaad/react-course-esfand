@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import Form from '../../../components/uielements/form';
-import Input from '../../../components/uielements/input';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import IntlMessages from '../../../components/utility/intlMessages';
-import FormValidation from './FormValidation';
+import React, { Component } from "react";
+import Form from "../../../components/uielements/form";
+import Input from "../../../components/uielements/input";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import IntlMessages from "../../../components/utility/intlMessages";
+import FormValidation from "./FormValidation";
 
 const FormItem = Form.Item;
 

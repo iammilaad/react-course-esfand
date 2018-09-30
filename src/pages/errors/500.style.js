@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
-import { transition, borderRadius } from 'settings/style-util';
-import WithDirection from 'settings/withDirection';
+import styled from "styled-components";
+import { palette } from "styled-theme";
+import { transition, borderRadius } from "settings/style-util";
+import WithDirection from "settings/withDirection";
 
 const FiveZeroZeroStyleWrapper = styled.div`
   width: 100%;
@@ -33,7 +33,7 @@ const FiveZeroZeroStyleWrapper = styled.div`
     h1 {
       font-size: 84px;
       font-weight: 700;
-      color: ${palette('secondary', 2)};
+      color: ${palette("secondary", 2)};
       line-height: 1;
       margin: 0 0 25px;
     }
@@ -41,7 +41,7 @@ const FiveZeroZeroStyleWrapper = styled.div`
     h3 {
       font-size: 24px;
       font-weight: 400;
-      color: ${palette('text', 1)};
+      color: ${palette("text", 1)};
       margin: 0 0 10px;
       line-height: 1.2;
     }
@@ -49,7 +49,7 @@ const FiveZeroZeroStyleWrapper = styled.div`
     p {
       font-size: 14px;
       font-weight: 400;
-      color: ${palette('text', 3)};
+      color: ${palette("text", 3)};
       margin: 0 0 10px;
     }
 
@@ -76,9 +76,9 @@ const FiveZeroZeroStyleWrapper = styled.div`
       user-select: none;
       position: relative;
       color: #ffffff;
-      background-color: ${palette('primary', 0)};
+      background-color: ${palette("primary", 0)};
       ${transition()};
-      ${borderRadius('18px')};
+      ${borderRadius("18px")};
 
       a {
         width: 100%;
@@ -88,7 +88,7 @@ const FiveZeroZeroStyleWrapper = styled.div`
       }
 
       &:hover {
-        background-color: ${palette('primary', 2)};
+        background-color: ${palette("primary", 2)};
 
         a {
           text-decoration: none;
@@ -111,14 +111,14 @@ const FiveZeroZeroStyleWrapper = styled.div`
     align-items: center;
     justify-content: center;
     margin-left: ${props =>
-      props['data-rtl'] === 'rtl' ? 'inherit' : '100px'};
+      props["data-rtl"] === "rtl" ? "inherit" : "100px"};
     margin-right: ${props =>
-      props['data-rtl'] === 'rtl' ? '100px' : 'inherit'};
+      props["data-rtl"] === "rtl" ? "100px" : "inherit"};
     height: 500px;
 
     @media only screen and (max-width: 767px) {
-      margin-left: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '0')};
-      margin-right: ${props => (props['data-rtl'] === 'rtl' ? '0' : 'inherit')};
+      margin-left: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "0")};
+      margin-right: ${props => (props["data-rtl"] === "rtl" ? "0" : "inherit")};
     }
 
     img {

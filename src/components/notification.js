@@ -1,9 +1,9 @@
-import notification from './feedback/notification';
+import notification from "./feedback/notification";
 
 const createNotification = (type, message, description) => {
   notification[type]({
     message,
-    description,
+    description
   });
 };
 export default createNotification;

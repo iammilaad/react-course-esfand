@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import IntlMessages from '../../components/utility/intlMessages';
-import actions from './actions';
-import config from './config';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import IntlMessages from "../../components/utility/intlMessages";
+import actions from "./actions";
+import config from "./config";
 
 const { changeLanguage } = actions;
 
@@ -19,8 +19,8 @@ class LanguageSwitcher extends Component {
             const { languageId, icon } = option;
             const customClass =
               languageId === language.languageId
-                ? 'selectedTheme languageSwitch'
-                : 'languageSwitch';
+                ? "selectedTheme languageSwitch"
+                : "languageSwitch";
 
             return (
               <button
@@ -43,7 +43,7 @@ class LanguageSwitcher extends Component {
 
 export default connect(
   state => ({
-    ...state.LanguageSwitcher.toJS(),
+    ...state.LanguageSwitcher.toJS()
   }),
   { changeLanguage }
 )(LanguageSwitcher);

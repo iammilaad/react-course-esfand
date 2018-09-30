@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Col, Row } from 'antd';
-import Select, { SelectOption } from '../../../components/uielements/select';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
+import React, { Component } from "react";
+import { Col, Row } from "antd";
+import Select, { SelectOption } from "../../../components/uielements/select";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
 const Option = SelectOption;
 
 const children = [];
@@ -16,12 +16,12 @@ export default class extends Component {
 
   render() {
     const rowStyle = {
-      width: '100%',
-      display: 'flex',
-      flexFlow: 'row wrap'
+      width: "100%",
+      display: "flex",
+      flexFlow: "row wrap"
     };
     const colStyle = {
-      marginBottom: '16px'
+      marginBottom: "16px"
     };
     const gutter = 16;
 
@@ -38,9 +38,9 @@ export default class extends Component {
               <ContentHolder>
                 <Select
                   mode="multiple"
-                  style={{ width: '100%' }}
+                  style={{ width: "100%" }}
                   placeholder="Please select"
-                  defaultValue={['a10', 'c12']}
+                  defaultValue={["a10", "c12"]}
                   onChange={this.handleChange}
                 >
                   {children}
@@ -57,7 +57,7 @@ export default class extends Component {
                 <Select
                   defaultValue="lucy"
                   onChange={this.handleChange}
-                  style={{ width: '120px' }}
+                  style={{ width: "120px" }}
                 >
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
@@ -74,7 +74,7 @@ export default class extends Component {
               <ContentHolder>
                 <Select
                   defaultValue="lucy"
-                  style={{ width: '120px' }}
+                  style={{ width: "120px" }}
                   allowClear
                   disabled
                 >
@@ -94,7 +94,7 @@ export default class extends Component {
               <ContentHolder>
                 <Select
                   mode="tags"
-                  style={{ width: '100%' }}
+                  style={{ width: "100%" }}
                   placeholder="Tags Mode"
                   onChange={this.handleChange}
                 >

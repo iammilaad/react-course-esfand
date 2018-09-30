@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
+import styled from "styled-components";
+import { palette } from "styled-theme";
 
 const ReportWidgetWrapper = styled.div`
   width: 100%;
@@ -7,11 +7,11 @@ const ReportWidgetWrapper = styled.div`
   flex-direction: column;
   padding: 30px;
   background-color: #ffffff;
-  border: 1px solid ${palette('border', 2)};
+  border: 1px solid ${palette("border", 2)};
 
   .ovWidgetLabel {
     font-size: 21px;
-    color: ${palette('text', 0)};
+    color: ${palette("text", 0)};
     font-weight: 400;
     line-height: 1.2;
     margin: 0 0 25px;
@@ -33,7 +33,7 @@ const ReportWidgetWrapper = styled.div`
 
   .ovDescription {
     font-size: 13px;
-    color: ${palette('text', 2)};
+    color: ${palette("text", 2)};
     font-weight: 400;
     line-height: 1.5;
     margin: 0;

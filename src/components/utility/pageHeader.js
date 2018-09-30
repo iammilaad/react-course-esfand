@@ -1,7 +1,8 @@
-import React from 'react';
-import { ComponentTitleWrapper } from './pageHeader.style';
+import React from "react";
+import { ComponentTitleWrapper } from "./pageHeader.style";
 
-export default props =>
+export default props => (
   <ComponentTitleWrapper className="ovComponentTitle">
     {props.children}
-  </ComponentTitleWrapper>;
+  </ComponentTitleWrapper>
+);

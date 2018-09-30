@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
-import WithDirection from 'settings/withDirection';
+import styled from "styled-components";
+import { palette } from "styled-theme";
+import WithDirection from "settings/withDirection";
 
 const SignInStyleWrapper = styled.div`
   width: 100%;
@@ -14,7 +14,7 @@ const SignInStyleWrapper = styled.div`
   background-size: cover;
 
   &:before {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     display: flex;
@@ -22,8 +22,8 @@ const SignInStyleWrapper = styled.div`
     position: absolute;
     z-index: 1;
     top: 0;
-    left: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '0')};
-    right: ${props => (props['data-rtl'] === 'rtl' ? '0' : 'inherit')};
+    left: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "0")};
+    right: ${props => (props["data-rtl"] === "rtl" ? "0" : "inherit")};
   }
 
   .ovLoginContentWrapper {
@@ -59,7 +59,7 @@ const SignInStyleWrapper = styled.div`
         font-weight: 300;
         line-height: 1;
         text-transform: uppercase;
-        color: ${palette('secondary', 2)};
+        color: ${palette("secondary", 2)};
       }
     }
 
@@ -78,18 +78,18 @@ const SignInStyleWrapper = styled.div`
 
         input {
           &::-webkit-input-placeholder {
-            color: ${palette('grayscale', 0)};
+            color: ${palette("grayscale", 0)};
           }
 
           &:-moz-placeholder {
-            color: ${palette('grayscale', 0)};
+            color: ${palette("grayscale", 0)};
           }
 
           &::-moz-placeholder {
-            color: ${palette('grayscale', 0)};
+            color: ${palette("grayscale", 0)};
           }
           &:-ms-input-placeholder {
-            color: ${palette('grayscale', 0)};
+            color: ${palette("grayscale", 0)};
           }
         }
       }
@@ -98,26 +98,26 @@ const SignInStyleWrapper = styled.div`
         font-size: 12px;
         font-weight: 400;
         line-height: 1.2;
-        color: ${palette('grayscale', 1)};
+        color: ${palette("grayscale", 1)};
         padding-left: ${props =>
-    props['data-rtl'] === 'rtl' ? 'inherit' : '13px'};
+          props["data-rtl"] === "rtl" ? "inherit" : "13px"};
         padding-right: ${props =>
-    props['data-rtl'] === 'rtl' ? '13px' : 'inherit'};
+          props["data-rtl"] === "rtl" ? "13px" : "inherit"};
         margin: 15px 0;
         position: relative;
         display: flex;
         align-items: center;
 
         &:before {
-          content: '*';
-          color: ${palette('error', 0)};
+          content: "*";
+          color: ${palette("error", 0)};
           padding-right: 3px;
           font-size: 14px;
           line-height: 1;
           position: absolute;
           top: 2px;
-          left: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '0')};
-          right: ${props => (props['data-rtl'] === 'rtl' ? '0' : 'inherit')};
+          left: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "0")};
+          right: ${props => (props["data-rtl"] === "rtl" ? "0" : "inherit")};
         }
       }
 
@@ -129,7 +129,7 @@ const SignInStyleWrapper = styled.div`
       .ovOtherLogin {
         padding-top: 40px;
         margin-top: 35px;
-        border-top: 1px dashed ${palette('grayscale', 2)};
+        border-top: 1px dashed ${palette("grayscale", 2)};
 
         > a {
           display: flex;
@@ -173,11 +173,11 @@ const SignInStyleWrapper = styled.div`
           }
 
           &.btnFirebase {
-            background-color: ${palette('color', 5)};
+            background-color: ${palette("color", 5)};
             margin-top: 15px;
 
             &:hover {
-              background-color: ${palette('color', 6)};
+              background-color: ${palette("color", 6)};
             }
           }
         }
@@ -185,12 +185,12 @@ const SignInStyleWrapper = styled.div`
 
       .ovForgotPass {
         font-size: 12px;
-        color: ${palette('text', 3)};
+        color: ${palette("text", 3)};
         margin-bottom: 10px;
         text-decoration: none;
 
         &:hover {
-          color: ${palette('primary', 0)};
+          color: ${palette("primary", 0)};
         }
       }
 

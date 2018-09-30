@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
-import WithDirection from '../../../settings/withDirection';
+import styled from "styled-components";
+import { palette } from "styled-theme";
+import WithDirection from "../../../settings/withDirection";
 
 const CardWidgetWrapper = styled.div`
   width: 100%;
@@ -8,7 +8,7 @@ const CardWidgetWrapper = styled.div`
   padding: 20px 30px 20px 20px;
   background-color: #ffffff;
   overflow: hidden;
-  border: 1px solid ${palette('border', 2)};
+  border: 1px solid ${palette("border", 2)};
   display: flex;
   align-items: center;
 
@@ -17,9 +17,9 @@ const CardWidgetWrapper = styled.div`
     align-items: center;
     justify-content: center;
     padding: ${props =>
-      props['data-rtl'] === 'rtl'
-        ? '20px 20px 20px 30px'
-        : '20px 30px 20px 20px'};
+      props["data-rtl"] === "rtl"
+        ? "20px 20px 20px 30px"
+        : "20px 30px 20px 20px"};
 
     i {
       font-size: 36px;
@@ -29,7 +29,7 @@ const CardWidgetWrapper = styled.div`
   .ovContentWrapper {
     .ovStatNumber {
       font-size: 19px;
-      color: ${palette('text', 0)};
+      color: ${palette("text", 0)};
       font-weight: 500;
       line-height: 1.2;
       margin: 0 0 10px;
@@ -37,7 +37,7 @@ const CardWidgetWrapper = styled.div`
 
     .ovLabel {
       font-size: 14px;
-      color: ${palette('text', 2)};
+      color: ${palette("text", 2)};
       font-weight: 400;
       margin: 0;
       text-transform: uppercase;

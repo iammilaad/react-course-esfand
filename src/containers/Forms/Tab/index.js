@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Icon } from 'antd';
-import Tabs, { TabPane } from '../../../components/uielements/tabs';
-import Select, { SelectOption } from '../../../components/uielements/select';
-import Button from '../../../components/uielements/button';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import IntlMessages from '../../../components/utility/intlMessages';
+import React, { Component } from "react";
+import { Icon } from "antd";
+import Tabs, { TabPane } from "../../../components/uielements/tabs";
+import Select, { SelectOption } from "../../../components/uielements/select";
+import Button from "../../../components/uielements/button";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import IntlMessages from "../../../components/utility/intlMessages";
 
 // const TabPane = Tabs.TabPane;
 const Option = SelectOption;
@@ -21,12 +21,12 @@ export default class extends Component {
     this.newTabIndex = 0;
     const panes = [
       {
-        title: 'Tab 1',
-        content: 'Content of Tab 1',
-        key: '1',
+        title: "Tab 1",
+        content: "Content of Tab 1",
+        key: "1",
         closable: false
       },
-      { title: 'Tab 2', content: 'Content of Tab 2', key: '2' }
+      { title: "Tab 2", content: "Content of Tab 2", key: "2" }
     ];
     this.state = {
       activeKey: panes[0].key,
@@ -44,8 +44,8 @@ export default class extends Component {
     const panes = this.state.panes;
     const activeKey = `newTab${this.newTabIndex++}`;
     panes.push({
-      title: 'New Tab',
-      content: 'Content of new Tab',
+      title: "New Tab",
+      content: "Content of new Tab",
       key: activeKey
     });
     this.setState({ panes, activeKey });
@@ -65,7 +65,7 @@ export default class extends Component {
     this.setState({ panes, activeKey });
   };
   state = {
-    tabPosition: 'top'
+    tabPosition: "top"
   };
   changeTabPosition = tabPosition => {
     this.setState({ tabPosition });
@@ -108,7 +108,8 @@ export default class extends Component {
             <TabPane
               tab={
                 <span>
-                  <Icon type="apple" />Tab 1
+                  <Icon type="apple" />
+                  Tab 1
                 </span>
               }
               key="1"
@@ -118,7 +119,8 @@ export default class extends Component {
             <TabPane
               tab={
                 <span>
-                  <Icon type="android" />Tab 2
+                  <Icon type="android" />
+                  Tab 2
                 </span>
               }
               key="2"

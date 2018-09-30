@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
-import WithDirection from '../../../settings/withDirection';
+import styled from "styled-components";
+import { palette } from "styled-theme";
+import WithDirection from "../../../settings/withDirection";
 
 const VarSingleProgressWidgetBar = styled.div`
   width: 100%;
@@ -9,7 +9,7 @@ const VarSingleProgressWidgetBar = styled.div`
 
   h3 {
     font-size: 14px;
-    color: ${palette('text', 2)};
+    color: ${palette("text", 2)};
     font-weight: 400;
     line-height: 1.2;
     margin: 0 0 5px;
@@ -17,12 +17,12 @@ const VarSingleProgressWidgetBar = styled.div`
 
   .ant-progress-text {
     font-size: 13px;
-    color: ${palette('text', 3)};
+    color: ${palette("text", 3)};
     font-weight: 400;
     line-height: 1.2;
     text-align: right;
-    margin-left: ${props => (props['data-rtl'] === 'rtl' ? '0' : '0.75em')};
-    margin-right: ${props => (props['data-rtl'] === 'rtl' ? '0.75em' : '0')};
+    margin-left: ${props => (props["data-rtl"] === "rtl" ? "0" : "0.75em")};
+    margin-right: ${props => (props["data-rtl"] === "rtl" ? "0.75em" : "0")};
   }
 
   .ant-progress-show-info .ant-progress-outer {
@@ -42,7 +42,7 @@ const CircleProgressWidgetBar = styled.div`
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2;
-    color: ${palette('text', 2)};
+    color: ${palette("text", 2)};
     margin: 15px 0 0;
   }
 
@@ -51,7 +51,7 @@ const CircleProgressWidgetBar = styled.div`
       font-size: 18px;
       font-weight: 400;
       line-height: 1.2;
-      color: ${palette('text', 3)};
+      color: ${palette("text", 3)};
     }
   }
 `;
@@ -63,7 +63,7 @@ const ProgressWidgetWrapper = styled.div`
   padding: 20px;
   background-color: #ffffff;
   overflow: hidden;
-  border: 1px solid ${palette('border', 2)};
+  border: 1px solid ${palette("border", 2)};
 
   .ovProgressWidgetTopbar {
     width: 100%;
@@ -74,7 +74,7 @@ const ProgressWidgetWrapper = styled.div`
 
     h3 {
       font-size: 19px;
-      color: ${palette('text', 0)};
+      color: ${palette("text", 0)};
       font-weight: 400;
       margin: 0;
       line-height: 1.2;
@@ -88,7 +88,7 @@ const ProgressWidgetWrapper = styled.div`
   .ovProgressWidgetBody {
     p {
       font-size: 14px;
-      color: ${palette('text', 3)};
+      color: ${palette("text", 3)};
       font-weight: 300;
       width: 100%;
       margin: 0 0 5px;
@@ -101,5 +101,5 @@ const SingleProgressWidgetBar = WithDirection(VarSingleProgressWidgetBar);
 export {
   SingleProgressWidgetBar,
   CircleProgressWidgetBar,
-  ProgressWidgetWrapper,
+  ProgressWidgetWrapper
 };

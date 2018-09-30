@@ -1,12 +1,12 @@
-import styled from 'styled-components';
-import { borderRadius } from '../../../settings/style-util';
+import styled from "styled-components";
+import { borderRadius } from "../../../settings/style-util";
 
 const StickerWidgetWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: stretch;
   overflow: hidden;
-  ${borderRadius('5px')};
+  ${borderRadius("5px")};
 
   .ovIconWrapper {
     display: flex;

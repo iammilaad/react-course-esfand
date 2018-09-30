@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { Icon } from 'antd';
-import { Row, Col } from 'antd';
+import React, { Component } from "react";
+import { Icon } from "antd";
+import { Row, Col } from "antd";
 
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
-import Badge from './badge.style';
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
+import Badge from "./badge.style";
 
 export default class extends Component {
   render() {

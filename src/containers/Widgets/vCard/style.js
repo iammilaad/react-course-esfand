@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
-import { borderRadius } from '../../../settings/style-util';
+import styled from "styled-components";
+import { palette } from "styled-theme";
+import { borderRadius } from "../../../settings/style-util";
 
 const VCardWidgetWrapper = styled.div`
   width: 100%;
@@ -9,7 +9,7 @@ const VCardWidgetWrapper = styled.div`
   align-items: center;
   background-color: #ffffff;
   overflow: hidden;
-  border: 1px solid ${palette('border', 2)};
+  border: 1px solid ${palette("border", 2)};
   padding: 50px 30px 30px;
 
   .ovVCardImage {
@@ -22,7 +22,7 @@ const VCardWidgetWrapper = styled.div`
     justify-content: center;
     overflow: hidden;
     margin-bottom: 35px;
-    ${borderRadius('50%')};
+    ${borderRadius("50%")};
 
     img {
       width: 100%;
@@ -40,7 +40,7 @@ const VCardWidgetWrapper = styled.div`
 
     .ovName {
       font-size: 17px;
-      color: ${palette('text', 0)};
+      color: ${palette("text", 0)};
       font-weight: 400;
       margin: 0 0 5px;
       line-height: 1.2;
@@ -48,7 +48,7 @@ const VCardWidgetWrapper = styled.div`
 
     .ovDesgTitle {
       font-size: 13px;
-      color: ${palette('text', 2)};
+      color: ${palette("text", 2)};
       font-weight: 400;
       margin: 0;
       line-height: 1.2;
@@ -56,7 +56,7 @@ const VCardWidgetWrapper = styled.div`
 
     .ovDescription {
       font-size: 13px;
-      color: ${palette('text', 2)};
+      color: ${palette("text", 2)};
       font-weight: 400;
       margin: 20px 0 0 0;
       line-height: 1.5;

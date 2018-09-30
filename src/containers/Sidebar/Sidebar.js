@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import clone from 'clone';
-import { Link } from 'react-router-dom';
-import { Layout } from 'antd';
-import options from './options';
-import Scrollbars from '../../components/utility/customScrollBar.js';
-import Menu from '../../components/uielements/menu';
-import IntlMessages from '../../components/utility/intlMessages';
-import SidebarWrapper from './sidebar.style';
-import appActions from '../../layouts/actions';
-import Logo from '../../components/utility/logo';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import clone from "clone";
+import { Link } from "react-router-dom";
+import { Layout } from "antd";
+import options from "./options";
+import Scrollbars from "../../components/utility/customScrollBar.js";
+import Menu from "../../components/uielements/menu";
+import IntlMessages from "../../components/utility/intlMessages";
+import SidebarWrapper from "./sidebar.style";
+import appActions from "../../layouts/actions";
+import Logo from "../../components/utility/logo";
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -19,10 +19,10 @@ const {
   toggleOpenDrawer,
   changeOpenKeys,
   changeCurrent,
-  toggleCollapsed,
+  toggleCollapsed
 } = appActions;
 const stripTrailingSlash = str => {
-  if (str.substr(-1) === '/') {
+  if (str.substr(-1) === "/") {
     return str.substr(0, str.length - 1);
   }
   return str;
@@ -36,7 +36,7 @@ class Sidebar extends Component {
   }
   handleClick(e) {
     this.props.changeCurrent([e.key]);
-    if (this.props.app.view === 'MobileView') {
+    if (this.props.app.view === "MobileView") {
       setTimeout(() => {
         this.props.toggleCollapsed();
         this.props.toggleOpenDrawer();
@@ -62,7 +62,7 @@ class Sidebar extends Component {
   }
   getAncestorKeys = key => {
     const map = {
-      sub3: ['sub2'],
+      sub3: ["sub2"]
     };
     return map[key] || [];
   };
@@ -114,7 +114,7 @@ class Sidebar extends Component {
     const { app, toggleOpenDrawer, customizedTheme, height } = this.props;
     const collapsed = clone(app.collapsed) && !clone(app.openDrawer);
     const { openDrawer } = app;
-    const mode = collapsed === true ? 'vertical' : 'inline';
+    const mode = collapsed === true ? "vertical" : "inline";
     const onMouseEnter = event => {
       if (openDrawer === false) {
         toggleOpenDrawer();
@@ -128,14 +128,14 @@ class Sidebar extends Component {
       return;
     };
     const styling = {
-      backgroundColor: customizedTheme.backgroundColor,
+      backgroundColor: customizedTheme.backgroundColor
     };
     const submenuStyle = {
-      backgroundColor: 'rgba(0,0,0,0.3)',
-      color: customizedTheme.textColor,
+      backgroundColor: "rgba(0,0,0,0.3)",
+      color: customizedTheme.textColor
     };
     const submenuColor = {
-      color: customizedTheme.textColor,
+      color: customizedTheme.textColor
     };
     return (
       <SidebarWrapper>
@@ -210,7 +210,7 @@ export default connect(
   state => ({
     app: state.App.toJS(),
     customizedTheme: state.ThemeSwitcher.toJS().sidebarTheme,
-    height: state.App.toJS().height,
+    height: state.App.toJS().height
   }),
   { toggleOpenDrawer, changeOpenKeys, changeCurrent, toggleCollapsed }
 )(Sidebar);

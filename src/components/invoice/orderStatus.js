@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import {
   DropdownButtons,
   DropdownMenu,
   MenuItem
-} from '../uielements/dropdown';
+} from "../uielements/dropdown";
 
 export default ({ value, onChange, orderStatusOptions }) => (
   <DropdownButtons

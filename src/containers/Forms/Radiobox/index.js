@@ -1,33 +1,33 @@
-import React, { Component } from 'react';
-import { Row, Col } from 'antd';
-import Radio, { RadioGroup } from '../../../components/uielements/radio';
-import Input from '../../../components/uielements/input';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
-import { rtl } from '../../../settings/withDirection';
+import React, { Component } from "react";
+import { Row, Col } from "antd";
+import Radio, { RadioGroup } from "../../../components/uielements/radio";
+import Input from "../../../components/uielements/input";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
+import { rtl } from "../../../settings/withDirection";
 
-const plainOptions = ['Apple', 'Pear', 'Orange'];
+const plainOptions = ["Apple", "Pear", "Orange"];
 const options = [
-  { label: 'Apple', value: 'Apple' },
-  { label: 'Pear', value: 'Pear' },
-  { label: 'Orange', value: 'Orange' }
+  { label: "Apple", value: "Apple" },
+  { label: "Pear", value: "Pear" },
+  { label: "Orange", value: "Orange" }
 ];
 const optionsWithDisabled = [
-  { label: 'Apple', value: 'Apple' },
-  { label: 'Pear', value: 'Pear' },
-  { label: 'Orange', value: 'Orange', disabled: false }
+  { label: "Apple", value: "Apple" },
+  { label: "Pear", value: "Pear" },
+  { label: "Orange", value: "Orange", disabled: false }
 ];
 
 export default class extends Component {
   state = {
     value: 1,
-    value1: 'Apple',
-    value2: 'Apple',
-    value3: 'Apple',
+    value1: "Apple",
+    value2: "Apple",
+    value3: "Apple",
     value4: 11
   };
   onChange = e => {
@@ -57,9 +57,9 @@ export default class extends Component {
   };
   render() {
     const radioStyle = {
-      display: 'block',
-      height: '30px',
-      lineHeight: '30px'
+      display: "block",
+      height: "30px",
+      lineHeight: "30px"
     };
     const { rowStyle, colStyle, gutter } = basicStyle;
     return (
@@ -106,8 +106,8 @@ export default class extends Component {
                       <Input
                         style={{
                           width: 100,
-                          marginLeft: rtl === 'rtl' ? 0 : 10,
-                          marginRight: rtl === 'rtl' ? 10 : 0
+                          marginLeft: rtl === "rtl" ? 0 : 10,
+                          marginRight: rtl === "rtl" ? 10 : 0
                         }}
                       />
                     ) : null}
@@ -144,13 +144,13 @@ export default class extends Component {
                   options={plainOptions}
                   onChange={this.onChange1}
                   value={this.state.value1}
-                  style={{ marginBottom: '10px' }}
+                  style={{ marginBottom: "10px" }}
                 />
                 <RadioGroup
                   options={options}
                   onChange={this.onChange2}
                   value={this.state.value2}
-                  style={{ marginBottom: '10px' }}
+                  style={{ marginBottom: "10px" }}
                 />
                 <RadioGroup
                   options={optionsWithDisabled}

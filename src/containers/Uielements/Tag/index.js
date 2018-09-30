@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import { Row, Col } from 'antd';
-import Tags from '../../../components/uielements/tag';
-import Input from '../../../components/uielements/input';
-import Tooltip from '../../../components/uielements/tooltip';
-import Button from '../../../components/uielements/button';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
-import TagWrapper from './tag.style';
+import React, { Component } from "react";
+import { Row, Col } from "antd";
+import Tags from "../../../components/uielements/tag";
+import Input from "../../../components/uielements/input";
+import Tooltip from "../../../components/uielements/tooltip";
+import Button from "../../../components/uielements/button";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
+import TagWrapper from "./tag.style";
 
 const CheckableTag = Tags.CheckableTag;
 
@@ -20,14 +20,14 @@ const Tag = props => (
   </TagWrapper>
 );
 
-const tagsFromServer = ['Movie', 'Books', 'Music'];
+const tagsFromServer = ["Movie", "Books", "Music"];
 
 export default class extends Component {
   state = {
     selectedTags: [],
-    tags: ['Unremovable', 'Tag 2', 'Tag 3'],
+    tags: ["Unremovable", "Tag 2", "Tag 3"],
     inputVisible: false,
-    inputValue: ''
+    inputValue: ""
   };
   log = e => {};
   handleChange = (tag, checked) => {
@@ -46,7 +46,7 @@ export default class extends Component {
   };
   showInput = () => {
     this.setState({ inputVisible: true }, () => {
-      document.getElementById('newTagsInput').focus();
+      document.getElementById("newTagsInput").focus();
     });
   };
 
@@ -64,7 +64,7 @@ export default class extends Component {
     this.setState({
       tags,
       inputVisible: false,
-      inputValue: ''
+      inputValue: ""
     });
   };
   render() {

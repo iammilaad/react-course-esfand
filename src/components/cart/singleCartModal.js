@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { notification } from '../index';
-import TopbarCartWrapper from './singleCartModal.style';
+import React, { Component } from "react";
+import { notification } from "../index";
+import TopbarCartWrapper from "./singleCartModal.style";
 
 export default class extends Component {
   onChange = value => {
@@ -9,7 +9,7 @@ export default class extends Component {
         this.props.changeQuantity(this.props.objectID, value);
       }
     } else {
-      notification('error', 'Please give valid number');
+      notification("error", "Please give valid number");
     }
   };
 
@@ -20,7 +20,7 @@ export default class extends Component {
       name,
       image,
       objectID,
-      cancelQuantity,
+      cancelQuantity
     } = this.props;
     return (
       <TopbarCartWrapper className="ovCartItems">
@@ -29,19 +29,13 @@ export default class extends Component {
         </div>
         <div className="ovCartDetails">
           <h3>
-            <a >
-              {name}
-            </a>
+            <a>{name}</a>
           </h3>
           <p className="ovItemPriceQuantity">
             <span>$</span>
-            <span>
-              {price.toFixed(2)}
-            </span>
+            <span>{price.toFixed(2)}</span>
             <span className="itemMultiplier">X</span>
-            <span className="ovItemQuantity">
-              {quantity}
-            </span>
+            <span className="ovItemQuantity">{quantity}</span>
           </p>
         </div>
         <a className="ovItemRemove" onClick={() => cancelQuantity(objectID)}>

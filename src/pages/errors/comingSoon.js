@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import Countdown from 'react-count-down';
-import Input from 'components/uielements/input';
-import Button from 'components/uielements/button';
-import IntlMessages from 'components/utility/intlMessages';
-import FourZeroFourStyleWrapper from './404.style';
+import React, { Component } from "react";
+import Countdown from "react-count-down";
+import Input from "components/uielements/input";
+import Button from "components/uielements/button";
+import IntlMessages from "components/utility/intlMessages";
+import FourZeroFourStyleWrapper from "./404.style";
 
 const validateEmail = email => {
   const regax = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -12,13 +12,13 @@ const validateEmail = email => {
 
 export default class extends Component {
   state = {
-    email: '',
+    email: "",
     disabled: true
   };
   render() {
     const options = {
-      endDate: '03/01/2019 10:55 AM',
-      prefix: 'until my birthday!'
+      endDate: "03/01/2019 10:55 AM",
+      prefix: "until my birthday!"
     };
     const { email, disabled } = this.state;
     const onChange = event => {

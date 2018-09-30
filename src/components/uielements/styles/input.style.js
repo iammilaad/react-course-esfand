@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
+import styled from "styled-components";
+import { palette } from "styled-theme";
 import {
   transition,
   borderRadius,
-  boxShadow,
-} from '../../../settings/style-util';
+  boxShadow
+} from "../../../settings/style-util";
 
 const InputWrapper = ComponentName => styled(ComponentName)`
   &.ant-input {
@@ -12,18 +12,18 @@ const InputWrapper = ComponentName => styled(ComponentName)`
     width: 100%;
     height: 35px;
     cursor: text;
-    text-align: ${props => (props['data-rtl'] === 'rtl' ? 'right' : 'left')};
+    text-align: ${props => (props["data-rtl"] === "rtl" ? "right" : "left")};
     font-size: 13px;
     line-height: 1.5;
-    color: ${palette('text', 1)};
+    color: ${palette("text", 1)};
     background-color: #fff;
     background-image: none;
-    border: 1px solid ${palette('border', 0)};
-    ${borderRadius('4px')};
+    border: 1px solid ${palette("border", 0)};
+    ${borderRadius("4px")};
     ${transition()};
 
     &:focus {
-      border-color: ${palette('primary', 0)};
+      border-color: ${palette("primary", 0)};
     }
 
     &.ant-input-lg {
@@ -37,22 +37,22 @@ const InputWrapper = ComponentName => styled(ComponentName)`
     }
 
     &::-webkit-input-placeholder {
-      text-align: ${props => (props['data-rtl'] === 'rtl' ? 'right' : 'left')};
-      color: ${palette('grayscale', 0)};
+      text-align: ${props => (props["data-rtl"] === "rtl" ? "right" : "left")};
+      color: ${palette("grayscale", 0)};
     }
 
     &:-moz-placeholder {
-      text-align: ${props => (props['data-rtl'] === 'rtl' ? 'right' : 'left')};
-      color: ${palette('grayscale', 0)};
+      text-align: ${props => (props["data-rtl"] === "rtl" ? "right" : "left")};
+      color: ${palette("grayscale", 0)};
     }
 
     &::-moz-placeholder {
-      text-align: ${props => (props['data-rtl'] === 'rtl' ? 'right' : 'left')};
-      color: ${palette('grayscale', 0)};
+      text-align: ${props => (props["data-rtl"] === "rtl" ? "right" : "left")};
+      color: ${palette("grayscale", 0)};
     }
     &:-ms-input-placeholder {
-      text-align: ${props => (props['data-rtl'] === 'rtl' ? 'right' : 'left')};
-      color: ${palette('grayscale', 0)};
+      text-align: ${props => (props["data-rtl"] === "rtl" ? "right" : "left")};
+      color: ${palette("grayscale", 0)};
     }
   }
 `;
@@ -61,13 +61,13 @@ const InputGroupWrapper = ComponentName => styled(ComponentName)`
     margin-bottom: 10px;
 
     .ant-select-auto-complete {
-      margin-right: ${props => (props['data-rtl'] === 'rtl' ? '-1px' : '0')};
+      margin-right: ${props => (props["data-rtl"] === "rtl" ? "-1px" : "0")};
     }
 
     .ant-input {
       &:first-child {
         border-radius: ${props =>
-          props['data-rtl'] === 'rtl' ? '0 4px 4px 0' : '4px 0 0 4px'};
+          props["data-rtl"] === "rtl" ? "0 4px 4px 0" : "4px 0 0 4px"};
       }
     }
 
@@ -76,35 +76,35 @@ const InputGroupWrapper = ComponentName => styled(ComponentName)`
     > .ant-input:not(:first-child):not(:last-child) {
       padding: 0 7px;
       border-left-width: ${props =>
-        props['data-rtl'] === 'rtl' ? '0' : '1px'};
-      margin-right: ${props => (props['data-rtl'] === 'rtl' ? '-1px' : '0')};
+        props["data-rtl"] === "rtl" ? "0" : "1px"};
+      margin-right: ${props => (props["data-rtl"] === "rtl" ? "-1px" : "0")};
     }
 
     .ant-input-group-addon {
       padding: 4px 7px;
       font-size: 12px;
-      color: ${palette('text', 1)};
+      color: ${palette("text", 1)};
       text-align: center;
-      background-color: ${palette('grayscale', 4)};
-      border: 1px solid ${palette('border', 0)};
+      background-color: ${palette("grayscale", 4)};
+      border: 1px solid ${palette("border", 0)};
       ${transition()};
 
       &:first-child {
         border-right-width: ${props =>
-          props['data-rtl'] === 'rtl' ? '1px' : '0'};
+          props["data-rtl"] === "rtl" ? "1px" : "0"};
         border-left-width: ${props =>
-          props['data-rtl'] === 'rtl' ? '0' : '1px'};
+          props["data-rtl"] === "rtl" ? "0" : "1px"};
         border-radius: ${props =>
-          props['data-rtl'] === 'rtl' ? '0 4px 4px 0' : '4px 0 0 4px'};
+          props["data-rtl"] === "rtl" ? "0 4px 4px 0" : "4px 0 0 4px"};
       }
 
       &:last-child {
         border-right-width: ${props =>
-          props['data-rtl'] === 'rtl' ? '0' : '1px'};
+          props["data-rtl"] === "rtl" ? "0" : "1px"};
         border-left-width: ${props =>
-          props['data-rtl'] === 'rtl' ? '1px' : '0'};
+          props["data-rtl"] === "rtl" ? "1px" : "0"};
         border-radius: ${props =>
-          props['data-rtl'] === 'rtl' ? '4px 0 0 4px' : '0 4px 4px 0'};
+          props["data-rtl"] === "rtl" ? "4px 0 0 4px" : "0 4px 4px 0"};
       }
 
       .ant-select {
@@ -124,7 +124,7 @@ const InputGroupWrapper = ComponentName => styled(ComponentName)`
     }
 
     & > .ant-input:not(:first-child):not(:last-child) {
-      ${'' /* border-left: 0; */};
+      ${"" /* border-left: 0; */};
     }
 
     .ant-input:first-child:last-child {
@@ -133,7 +133,7 @@ const InputGroupWrapper = ComponentName => styled(ComponentName)`
 
     &.ant-input-group-compact > * {
       border-right-width: ${props =>
-        props['data-rtl'] === 'rtl' ? '1px ' : '0'};
+        props["data-rtl"] === "rtl" ? "1px " : "0"};
     }
 
     &.ant-input-group-compact > .ant-select > .ant-select-selection,
@@ -143,7 +143,7 @@ const InputGroupWrapper = ComponentName => styled(ComponentName)`
     &.ant-input-group-compact > .ant-mention-wrapper .ant-mention-editor,
     &.ant-input-group-compact > .ant-time-picker .ant-time-picker-input {
       border-right-width: ${props =>
-        props['data-rtl'] === 'rtl' ? '1px ' : '0'};
+        props["data-rtl"] === "rtl" ? "1px " : "0"};
     }
 
     &.ant-input-group-compact > *:first-child,
@@ -160,9 +160,9 @@ const InputGroupWrapper = ComponentName => styled(ComponentName)`
       > .ant-time-picker:first-child
       .ant-time-picker-input {
       border-radius: ${props =>
-        props['data-rtl'] === 'rtl' ? '0 4px 4px 0' : '4px 0 0 4px'};
+        props["data-rtl"] === "rtl" ? "0 4px 4px 0" : "4px 0 0 4px"};
       border-left-width: 1px
-        ${'' /* border-right-width: ${props =>
+        ${"" /* border-right-width: ${props =>
         props['data-rtl'] === 'rtl' ? '1px' : '0'}; */};
     }
 
@@ -178,15 +178,15 @@ const InputGroupWrapper = ComponentName => styled(ComponentName)`
       > .ant-time-picker:last-child
       .ant-time-picker-input {
       border-radius: ${props =>
-        props['data-rtl'] === 'rtl' ? '4px 0 0 4px' : '0 4px 4px 0'};
+        props["data-rtl"] === "rtl" ? "4px 0 0 4px" : "0 4px 4px 0"};
       border-right-width: ${props =>
-        props['data-rtl'] === 'rtl' ? '0 ' : '1px'};
+        props["data-rtl"] === "rtl" ? "0 " : "1px"};
     }
 
     .ant-calendar-picker-clear,
     .ant-calendar-picker-icon {
-      right: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '8px')};
-      left: ${props => (props['data-rtl'] === 'rtl' ? '8px' : 'inherit')};
+      right: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "8px")};
+      left: ${props => (props["data-rtl"] === "rtl" ? "8px" : "inherit")};
     }
   }
 
@@ -207,30 +207,30 @@ const TextAreaWrapper = ComponentName => styled(ComponentName)`
     cursor: text;
     font-size: 13px;
     line-height: 1.5;
-    color: ${palette('text', 1)};
+    color: ${palette("text", 1)};
     background-color: #fff;
     background-image: none;
-    border: 1px solid ${palette('border', 0)};
-    ${borderRadius('4px')};
+    border: 1px solid ${palette("border", 0)};
+    ${borderRadius("4px")};
     ${transition()};
 
     &:focus {
-      border-color: ${palette('primary', 0)};
+      border-color: ${palette("primary", 0)};
     }
 
     &::-webkit-input-placeholder {
-      color: ${palette('grayscale', 0)};
+      color: ${palette("grayscale", 0)};
     }
 
     &:-moz-placeholder {
-      color: ${palette('grayscale', 0)};
+      color: ${palette("grayscale", 0)};
     }
 
     &::-moz-placeholder {
-      color: ${palette('grayscale', 0)};
+      color: ${palette("grayscale", 0)};
     }
     &:-ms-input-placeholder {
-      color: ${palette('grayscale', 0)};
+      color: ${palette("grayscale", 0)};
     }
   }
 `;
@@ -244,15 +244,15 @@ const InputSearchWrapper = ComponentName => styled(ComponentName)`
       cursor: text;
       font-size: 13px;
       line-height: 1.5;
-      color: ${palette('text', 1)};
+      color: ${palette("text", 1)};
       background-color: #fff;
       background-image: none;
-      border: 1px solid ${palette('border', 0)};
-      ${borderRadius('4px')};
+      border: 1px solid ${palette("border", 0)};
+      ${borderRadius("4px")};
       ${transition()};
 
       &:focus {
-        border-color: ${palette('primary', 0)};
+        border-color: ${palette("primary", 0)};
       }
 
       &.ant-input-lg {
@@ -266,36 +266,36 @@ const InputSearchWrapper = ComponentName => styled(ComponentName)`
       }
 
       &::-webkit-input-placeholder {
-        color: ${palette('grayscale', 0)};
+        color: ${palette("grayscale", 0)};
       }
 
       &:-moz-placeholder {
-        color: ${palette('grayscale', 0)};
+        color: ${palette("grayscale", 0)};
       }
 
       &::-moz-placeholder {
-        color: ${palette('grayscale', 0)};
+        color: ${palette("grayscale", 0)};
       }
       &:-ms-input-placeholder {
-        color: ${palette('grayscale', 0)};
+        color: ${palette("grayscale", 0)};
       }
     }
 
     .ant-input-suffix {
-      right: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '7px')};
-      left: ${props => (props['data-rtl'] === 'rtl' ? '7px' : 'inherit')};
+      right: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "7px")};
+      left: ${props => (props["data-rtl"] === "rtl" ? "7px" : "inherit")};
     }
 
     .ant-input-ant-input-prefix {
-      right: ${props => (props['data-rtl'] === 'rtl' ? '7px' : 'inherit')};
-      left: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '7px')};
+      right: ${props => (props["data-rtl"] === "rtl" ? "7px" : "inherit")};
+      left: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "7px")};
     }
 
     .ant-input-search-icon {
-      color: ${palette('grayscale', 0)};
+      color: ${palette("grayscale", 0)};
 
       &:hover {
-        color: ${palette('primary', 0)};
+        color: ${palette("primary", 0)};
       }
     }
   }

@@ -1,31 +1,31 @@
-import React, { Component } from 'react';
-import Mention from '../../../components/uielements/mention';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import PageHeader from '../../../components/utility/pageHeader';
-import ContentHolder from '../../../components/utility/contentHolder';
+import React, { Component } from "react";
+import Mention from "../../../components/uielements/mention";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import PageHeader from "../../../components/utility/pageHeader";
+import ContentHolder from "../../../components/utility/contentHolder";
 
 const Nav = Mention.Nav;
 
 const webFrameworks = [
   {
-    name: 'React',
-    type: 'JavaScript',
-    icon: 'https://zos.alipayobjects.com/rmsportal/LFIeMPzdLcLnEUe.svg'
+    name: "React",
+    type: "JavaScript",
+    icon: "https://zos.alipayobjects.com/rmsportal/LFIeMPzdLcLnEUe.svg"
   },
   {
-    name: 'Angular',
-    type: 'JavaScript',
-    icon: 'https://zos.alipayobjects.com/rmsportal/PJTbxSvzYWjDZnJ.png'
+    name: "Angular",
+    type: "JavaScript",
+    icon: "https://zos.alipayobjects.com/rmsportal/PJTbxSvzYWjDZnJ.png"
   },
   {
-    name: 'Dva',
-    type: 'Javascript',
-    icon: 'https://zos.alipayobjects.com/rmsportal/EYPwSeEJKxDtVxI.png'
+    name: "Dva",
+    type: "Javascript",
+    icon: "https://zos.alipayobjects.com/rmsportal/EYPwSeEJKxDtVxI.png"
   },
   {
-    name: 'Flask',
-    type: 'Python',
-    icon: 'https://zos.alipayobjects.com/rmsportal/xaypBUijfnpAlXE.png'
+    name: "Flask",
+    type: "Python",
+    icon: "https://zos.alipayobjects.com/rmsportal/xaypBUijfnpAlXE.png"
   }
 ];
 
@@ -47,7 +47,7 @@ export default class extends Component {
         <span>
           <img
             alt={suggestion.name}
-            style={{ height: 16, width: 16, marginRight: 5, float: 'left' }}
+            style={{ height: 16, width: 16, marginRight: 5, float: "left" }}
             src={suggestion.icon}
           />
           {suggestion.name} - {suggestion.type}
@@ -68,7 +68,7 @@ export default class extends Component {
 
           <ContentHolder>
             <Mention
-              style={{ width: '100%', height: 100 }}
+              style={{ width: "100%", height: 100 }}
               suggestions={suggestions}
               onSearchChange={this.onSearchChange}
             />

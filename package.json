@@ -108,6 +108,7 @@
     "leaflet": "^1.2.0",
     "leaflet-routing-machine": "^3.2.5",
     "leaflet.markercluster": "^1.0.6",
+    "prettier": "^1.14.3",
     "react-app-rewired": "^1.4.0",
     "redux-mock-store": "^1.2.3"
   },

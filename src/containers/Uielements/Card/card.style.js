@@ -1,23 +1,23 @@
-import React from 'react';
-import Cards from '../../../components/uielements/card';
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
+import React from "react";
+import Cards from "../../../components/uielements/card";
+import styled from "styled-components";
+import { palette } from "styled-theme";
 
 const CardComp = props => <Cards {...props} />;
 
 const Card = styled(CardComp)`
   .ant-card-head {
-    background-color: ${palette('grayscale', 4)};
-    ${'' /* border-bottom: 1px solid ${palette('border', 0)}; */} border-bottom: 0;
+    background-color: ${palette("grayscale", 4)};
+    ${"" /* border-bottom: 1px solid ${palette('border', 0)}; */} border-bottom: 0;
 
     .ant-card-head-title {
-      color: ${palette('text', 0)};
+      color: ${palette("text", 0)};
     }
   }
 
   .ant-card-extra {
     a {
-      color: ${palette('primary', 0)};
+      color: ${palette("primary", 0)};
       text-decoration: none;
 
       &:focus {
@@ -29,7 +29,7 @@ const Card = styled(CardComp)`
   .ant-card-body {
     p {
       font-size: 13px;
-      color: ${palette('text', 3)};
+      color: ${palette("text", 3)};
       line-height: 1.5;
       margin-bottom: 14px;
 
@@ -40,14 +40,14 @@ const Card = styled(CardComp)`
   }
 
   &.ant-card-bordered {
-    border: 1px solid ${palette('border', 0)};
+    border: 1px solid ${palette("border", 0)};
 
     .ant-card-head {
-      border-bottom: 1px solid ${palette('border', 0)};
+      border-bottom: 1px solid ${palette("border", 0)};
     }
 
     &:hover {
-      border: 1px solid ${palette('border', 0)} !important;
+      border: 1px solid ${palette("border", 0)} !important;
     }
   }
 
@@ -62,11 +62,11 @@ const Card = styled(CardComp)`
   .custom-card {
     padding: 10px 16px;
     h3 {
-      color: ${palette('text', 1)};
+      color: ${palette("text", 1)};
       font-weight: 500;
     }
     p {
-      color: ${palette('grayscale', 0)};
+      color: ${palette("grayscale", 0)};
     }
   }
 

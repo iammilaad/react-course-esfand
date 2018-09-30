@@ -334,6 +334,6 @@ const options = [
       //    withoutDashboard: true
       // }
     ]
-  },
+  }
 ];
 export default options;

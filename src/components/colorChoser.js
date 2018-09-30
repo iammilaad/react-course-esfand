@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Button from './uielements/button';
-import Popover from './uielements/popover';
-import ColorChooserDropdown from './colorChooser.style';
+import React, { Component } from "react";
+import Button from "./uielements/button";
+import Popover from "./uielements/popover";
+import ColorChooserDropdown from "./colorChooser.style";
 
 export default class extends Component {
   constructor(props) {

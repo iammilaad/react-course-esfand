@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import { Icon, Row, Col } from 'antd';
-import Menu from '../../../components/uielements/menu';
+import React, { Component } from "react";
+import { Icon, Row, Col } from "antd";
+import Menu from "../../../components/uielements/menu";
 import Dropdown, {
   DropdownButtons,
   DropdownMenu,
   MenuItem,
   SubMenu
-} from '../../../components/uielements/dropdown';
-import Buttons from '../../../components/uielements/button';
-import message from '../../../components/uielements/message';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
-import { rtl } from '../../../settings/withDirection';
+} from "../../../components/uielements/dropdown";
+import Buttons from "../../../components/uielements/button";
+import message from "../../../components/uielements/message";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
+import { rtl } from "../../../settings/withDirection";
 const MenuDivider = Menu.Divider;
 const DropdownButton = DropdownButtons;
 const Button = Buttons;
@@ -26,15 +26,15 @@ export default class ovDropDown extends Component {
   };
 
   handleButtonClick = e => {
-    message.info('Click on left button.');
+    message.info("Click on left button.");
   };
 
   handleMenuClickToLink = e => {
-    message.info('Click on menu item.');
+    message.info("Click on menu item.");
   };
 
   handleMenuClick = e => {
-    if (e.key === '3') {
+    if (e.key === "3") {
       this.setState({ visible: false });
     }
   };
@@ -45,8 +45,8 @@ export default class ovDropDown extends Component {
   render() {
     const { rowStyle, colStyle, gutter } = basicStyle;
     const demoStyle = {
-      marginBottom: '8px',
-      marginRight: '8px'
+      marginBottom: "8px",
+      marginRight: "8px"
     };
 
     const menuHover = (
@@ -119,7 +119,7 @@ export default class ovDropDown extends Component {
               <ContentHolder>
                 <Dropdown overlay={menuHover}>
                   <a className="ant-dropdown-link">
-                    {<IntlMessages id="uiElements.dropdown.hoverMe" />}{' '}
+                    {<IntlMessages id="uiElements.dropdown.hoverMe" />}{" "}
                     <Icon type="down" />
                   </a>
                 </Dropdown>
@@ -176,7 +176,7 @@ export default class ovDropDown extends Component {
               title={<IntlMessages id="uiElements.dropdown.clickedDropdown" />}
             >
               <ContentHolder>
-                <Dropdown overlay={menuHover} trigger={['click']}>
+                <Dropdown overlay={menuHover} trigger={["click"]}>
                   <a className="ant-dropdown-link">
                     Click me <Icon type="down" />
                   </a>
@@ -203,7 +203,7 @@ export default class ovDropDown extends Component {
                   overlay={menuClicked}
                   disabled
                   style={{
-                    margin: rtl === 'rtl' ? '0 8px 0 0' : '0 0 0 8px'
+                    margin: rtl === "rtl" ? "0 8px 0 0" : "0 0 0 8px"
                   }}
                 >
                   Dropdown
@@ -211,7 +211,7 @@ export default class ovDropDown extends Component {
                 <Dropdown overlay={menuClicked}>
                   <Button
                     style={{
-                      margin: rtl === 'rtl' ? '0 8px 0 0' : '0 0 0 8px'
+                      margin: rtl === "rtl" ? "0 8px 0 0" : "0 0 0 8px"
                     }}
                   >
                     Button <Icon type="down" />

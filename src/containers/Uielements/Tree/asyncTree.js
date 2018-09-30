@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Tree, { TreeNode } from '../../../components/uielements/tree';
+import React, { Component } from "react";
+import Tree, { TreeNode } from "../../../components/uielements/tree";
 
 function generateTreeNodes(treeNode) {
   const arr = [];
@@ -56,9 +56,9 @@ export default class extends Component {
     setTimeout(() => {
       this.setState({
         treeData: [
-          { name: 'pNode 01', key: '0-0' },
-          { name: 'pNode 02', key: '0-1' },
-          { name: 'pNode 03', key: '0-2', isLeaf: true }
+          { name: "pNode 01", key: "0-0" },
+          { name: "pNode 02", key: "0-1" },
+          { name: "pNode 03", key: "0-2", isLeaf: true }
         ]
       });
     }, 100);
@@ -94,7 +94,7 @@ export default class extends Component {
             title={item.name}
             key={item.key}
             isLeaf={item.isLeaf}
-            disabled={item.key === '0-0-0'}
+            disabled={item.key === "0-0-0"}
           />
         );
       });

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Tree, { TreeNode } from '../../../components/uielements/tree';
+import React, { Component } from "react";
+import Tree, { TreeNode } from "../../../components/uielements/tree";
 
 const x = 3;
 const y = 2;
@@ -7,7 +7,7 @@ const z = 1;
 const gData = [];
 
 const generateData = (_level, _preKey, _tns) => {
-  const preKey = _preKey || '0';
+  const preKey = _preKey || "0";
   const tns = _tns || gData;
 
   const children = [];
@@ -31,9 +31,9 @@ generateData(z);
 
 export default class extends Component {
   state = {
-    expandedKeys: ['0-0-0', '0-0-1'],
+    expandedKeys: ["0-0-0", "0-0-1"],
     autoExpandParent: true,
-    checkedKeys: ['0-0-0'],
+    checkedKeys: ["0-0-0"],
     selectedKeys: []
   };
   onExpand = expandedKeys => {
@@ -47,7 +47,7 @@ export default class extends Component {
   onCheck = checkedKeys => {
     this.setState({
       checkedKeys,
-      selectedKeys: ['0-3', '0-4']
+      selectedKeys: ["0-3", "0-4"]
     });
   };
   onSelect = (selectedKeys, info) => {
@@ -61,7 +61,7 @@ export default class extends Component {
             <TreeNode
               key={item.key}
               title={item.key}
-              disableCheckbox={item.key === '0-0-0'}
+              disableCheckbox={item.key === "0-0-0"}
             >
               {loop(item.children)}
             </TreeNode>

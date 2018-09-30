@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import Async from '../../../utils/helpers/asyncComponent';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import IntlMessages from '../../../components/utility/intlMessages';
+import React, { Component } from "react";
+import Async from "../../../utils/helpers/asyncComponent";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import IntlMessages from "../../../components/utility/intlMessages";
 
 const Editor = props => (
   <Async
-    load={import(/* webpackChunkName: "forms-editor" */ '../../../components/uielements/editor')}
+    load={import(/* webpackChunkName: "forms-editor" */ "../../../components/uielements/editor")}
     componentProps={props}
   />
 );
@@ -16,16 +16,16 @@ const Editor = props => (
 function uploadCallback(file) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://api.imgur.com/3/image');
-    xhr.setRequestHeader('Authorization', 'Client-ID 8d26ccd12712fca');
+    xhr.open("POST", "https://api.imgur.com/3/image");
+    xhr.setRequestHeader("Authorization", "Client-ID 8d26ccd12712fca");
     const data = new FormData();
-    data.append('image', file);
+    data.append("image", file);
     xhr.send(data);
-    xhr.addEventListener('load', () => {
+    xhr.addEventListener("load", () => {
       const response = JSON.parse(xhr.responseText);
       resolve(response);
     });
-    xhr.addEventListener('error', () => {
+    xhr.addEventListener("error", () => {
       const error = JSON.parse(xhr.responseText);
       reject(error);
     });
@@ -46,11 +46,11 @@ export default class extends Component {
       this.setState({ editorState });
     };
     const editorOption = {
-      style: { width: '90%', height: '70%' },
+      style: { width: "90%", height: "70%" },
       editorState: this.state.editorState,
-      toolbarClassName: 'home-toolbar',
-      wrapperClassName: 'home-wrapper',
-      editorClassName: 'home-editor',
+      toolbarClassName: "home-toolbar",
+      wrapperClassName: "home-wrapper",
+      editorClassName: "home-editor",
       onEditorStateChange: onEditorStateChange,
       uploadCallback: uploadCallback,
       toolbar: { image: { uploadCallback: uploadCallback } }

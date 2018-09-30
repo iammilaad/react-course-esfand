@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Row, Col } from 'antd';
-import Button, { ButtonGroup } from '../../../components/uielements/button';
-import Progress from '../../../components/uielements/progress';
-import PageHeader from '../../../components/utility/pageHeader';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import Box from '../../../components/utility/box';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
-import { rtl } from '../../../settings/withDirection';
+import React, { Component } from "react";
+import { Row, Col } from "antd";
+import Button, { ButtonGroup } from "../../../components/uielements/button";
+import Progress from "../../../components/uielements/progress";
+import PageHeader from "../../../components/utility/pageHeader";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import Box from "../../../components/utility/box";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
+import { rtl } from "../../../settings/withDirection";
 
 export default class extends Component {
   state = {
@@ -30,7 +30,7 @@ export default class extends Component {
   render() {
     const { rowStyle, colStyle, gutter } = basicStyle;
     const marginStyle = {
-      margin: rtl === 'rtl' ? '0 0 10px 10px' : '0 10px 10px 0'
+      margin: rtl === "rtl" ? "0 0 10px 10px" : "0 10px 10px 0"
     };
     return (
       <LayoutWrapper>
@@ -159,7 +159,7 @@ export default class extends Component {
               <Progress
                 type="circle"
                 percent={100}
-                format={() => 'Done'}
+                format={() => "Done"}
                 style={marginStyle}
               />
             </Box>

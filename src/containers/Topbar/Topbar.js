@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Layout } from 'antd';
-import appActions from '../../layouts/actions';
-import TopbarNotification from './topbarNotification';
-import TopbarMessage from './topbarMessage';
-import TopbarSearch from './topbarSearch';
-import TopbarUser from './topbarUser';
-import TopbarWrapper from './topbar.style';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { Layout } from "antd";
+import appActions from "../../layouts/actions";
+import TopbarNotification from "./topbarNotification";
+import TopbarMessage from "./topbarMessage";
+import TopbarSearch from "./topbarSearch";
+import TopbarUser from "./topbarUser";
+import TopbarWrapper from "./topbar.style";
 
 const { Header } = Layout;
 const { toggleCollapsed } = appActions;
@@ -17,8 +17,8 @@ class Topbar extends Component {
     const collapsed = this.props.collapsed && !this.props.openDrawer;
     const styling = {
       background: customizedTheme.backgroundColor,
-      position: 'fixed',
-      width: '100%',
+      position: "fixed",
+      width: "100%",
       height: 70
     };
     return (
@@ -26,13 +26,13 @@ class Topbar extends Component {
         <Header
           style={styling}
           className={
-            collapsed ? 'ovmorphicTopbar collapsed' : 'ovmorphicTopbar'
+            collapsed ? "ovmorphicTopbar collapsed" : "ovmorphicTopbar"
           }
         >
           <div className="ovLeft">
             <button
               className={
-                collapsed ? 'triggerBtn menuCollapsed' : 'triggerBtn menuOpen'
+                collapsed ? "triggerBtn menuCollapsed" : "triggerBtn menuOpen"
               }
               style={{ color: customizedTheme.textColor }}
               onClick={toggleCollapsed}
@@ -45,20 +45,20 @@ class Topbar extends Component {
             </li>
 
             <li
-              onClick={() => this.setState({ selectedItem: 'notification' })}
+              onClick={() => this.setState({ selectedItem: "notification" })}
               className="ovNotify"
             >
               <TopbarNotification locale={locale} />
             </li>
 
             <li
-              onClick={() => this.setState({ selectedItem: 'message' })}
+              onClick={() => this.setState({ selectedItem: "message" })}
               className="ovMsg"
             >
               <TopbarMessage locale={locale} />
             </li>
             <li
-              onClick={() => this.setState({ selectedItem: 'user' })}
+              onClick={() => this.setState({ selectedItem: "user" })}
               className="ovUser"
             >
               <TopbarUser locale={locale} />

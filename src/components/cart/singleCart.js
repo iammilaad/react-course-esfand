@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import InputNumber from '../uielements/InputNumber';
-import { notification } from '../index';
+import React, { Component } from "react";
+import InputNumber from "../uielements/InputNumber";
+import { notification } from "../index";
 
 export default class extends Component {
   onChange = value => {
@@ -9,7 +9,7 @@ export default class extends Component {
         this.props.changeQuantity(this.props.objectID, value);
       }
     } else {
-      notification('error', 'Please give valid number');
+      notification("error", "Please give valid number");
     }
   };
 

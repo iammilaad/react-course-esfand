@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Tree, { TreeNode } from '../../../components/uielements/tree';
-import { InputSearch } from '../../../components/uielements/input';
+import React, { Component } from "react";
+import Tree, { TreeNode } from "../../../components/uielements/tree";
+import { InputSearch } from "../../../components/uielements/input";
 
 const x = 3;
 const y = 2;
@@ -8,7 +8,7 @@ const z = 1;
 const gData = [];
 
 const generateData = (_level, _preKey, _tns) => {
-  const preKey = _preKey || '0';
+  const preKey = _preKey || "0";
   const tns = _tns || gData;
 
   const children = [];
@@ -61,13 +61,13 @@ const getParentKey = (key, tree) => {
 export default class extends Component {
   state = {
     expandedKeys: [],
-    searchValue: '',
-    autoExpandParent: true,
+    searchValue: "",
+    autoExpandParent: true
   };
   onExpand = expandedKeys => {
     this.setState({
       expandedKeys,
-      autoExpandParent: false,
+      autoExpandParent: false
     });
   };
   onChange = e => {
@@ -83,7 +83,7 @@ export default class extends Component {
     this.setState({
       expandedKeys,
       searchValue: value,
-      autoExpandParent: true,
+      autoExpandParent: true
     });
   };
   render() {
@@ -97,7 +97,7 @@ export default class extends Component {
           index > -1 ? (
             <span>
               {beforeStr}
-              <span style={{ color: '#f50' }}>{searchValue}</span>
+              <span style={{ color: "#f50" }}>{searchValue}</span>
               {afterStr}
             </span>
           ) : (

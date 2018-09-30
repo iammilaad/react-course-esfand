@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import InputNumber from '../../../components/uielements/InputNumber';
+import React, { Component } from "react";
+import InputNumber from "../../../components/uielements/InputNumber";
 
 export default class extends Component {
   onChange = value => {};

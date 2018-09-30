@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Row, Col, Icon } from 'antd';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import Breadcrumb from './breadcrumb.style';
+import React, { Component } from "react";
+import { Row, Col, Icon } from "antd";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import Breadcrumb from "./breadcrumb.style";
 
 export default class extends Component {
   render() {

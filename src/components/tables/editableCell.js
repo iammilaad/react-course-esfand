@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Input from '../uielements/input';
-import { Icon } from 'antd';
+import React, { Component } from "react";
+import Input from "../uielements/input";
+import { Icon } from "antd";
 
 export default class extends Component {
   state = {
@@ -39,7 +39,7 @@ export default class extends Component {
           </div>
         ) : (
           <p className="ovDataWrapper">
-            {value || ' '}
+            {value || " "}
             <Icon type="edit" className="ovEditIcon" onClick={this.edit} />
           </p>
         )}

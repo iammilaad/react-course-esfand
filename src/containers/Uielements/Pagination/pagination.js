@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Row, Col } from 'antd';
-import Pagination from '../../../components/uielements/pagination';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
+import React, { Component } from "react";
+import { Row, Col } from "antd";
+import Pagination from "../../../components/uielements/pagination";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
 
 export default class extends Component {
   state = {
@@ -127,7 +127,8 @@ export default class extends Component {
                 <Pagination
                   total={85}
                   showTotal={(total, range) =>
-                    `${range[0]}-${range[1]} of ${total} items`}
+                    `${range[0]}-${range[1]} of ${total} items`
+                  }
                   pageSize={20}
                   defaultCurrent={1}
                 />

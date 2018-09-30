@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Modal from '../../components/feedback/modal';
-import Button from '../../components/uielements/button';
-import actions from './actions';
-import config from './config';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Modal from "../../components/feedback/modal";
+import Button from "../../components/uielements/button";
+import actions from "./actions";
+import config from "./config";
 
 const { switchActivation, changeLanguage } = actions;
 
@@ -22,7 +22,7 @@ class LanguageSwitcher extends Component {
         </Button>
 
         <Modal
-          title={'Select Language'}
+          title={"Select Language"}
           visible={isActivated}
           onCancel={switchActivation}
           cancelText="Cancel"
@@ -32,7 +32,7 @@ class LanguageSwitcher extends Component {
             {config.options.map(option => {
               const { languageId, text } = option;
               const type =
-                languageId === language.languageId ? 'primary' : 'success';
+                languageId === language.languageId ? "primary" : "success";
               return (
                 <Button
                   type={type}

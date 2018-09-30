@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { Row, Col } from 'antd';
+import React, { Component } from "react";
+import { Row, Col } from "antd";
 import Checkbox, {
   CheckboxGroup
-} from '../../../components/uielements/checkbox';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
+} from "../../../components/uielements/checkbox";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
 
-const defaultCheckedList = ['Apple', 'Orange'];
-const plainOptions = ['Apple', 'Pear', 'Orange'];
+const defaultCheckedList = ["Apple", "Orange"];
+const plainOptions = ["Apple", "Pear", "Orange"];
 export default class extends Component {
   state = {
     checkedList: defaultCheckedList,
@@ -38,16 +38,16 @@ export default class extends Component {
   };
 
   render() {
-    const plainOptions = ['Apple', 'Pear', 'Orange'];
+    const plainOptions = ["Apple", "Pear", "Orange"];
     const options = [
-      { label: 'Apple', value: 'Apple' },
-      { label: 'Pear', value: 'Pear' },
-      { label: 'Orange', value: 'Orange' }
+      { label: "Apple", value: "Apple" },
+      { label: "Pear", value: "Pear" },
+      { label: "Orange", value: "Orange" }
     ];
     const optionsWithDisabled = [
-      { label: 'Apple', value: 'Apple' },
-      { label: 'Pear', value: 'Pear' },
-      { label: 'Orange', value: 'Orange', disabled: false }
+      { label: "Apple", value: "Apple" },
+      { label: "Pear", value: "Pear" },
+      { label: "Orange", value: "Orange", disabled: false }
     ];
     const { rowStyle, colStyle, gutter } = basicStyle;
     return (
@@ -72,20 +72,20 @@ export default class extends Component {
               <ContentHolder>
                 <CheckboxGroup
                   options={plainOptions}
-                  defaultValue={['Apple']}
+                  defaultValue={["Apple"]}
                   onChange={this.handleOnChange}
                 />
                 <br />
                 <CheckboxGroup
                   options={options}
-                  defaultValue={['Pear']}
+                  defaultValue={["Pear"]}
                   onChange={this.handleOnChange}
                 />
                 <br />
                 <CheckboxGroup
                   options={optionsWithDisabled}
                   disabled
-                  defaultValue={['Apple']}
+                  defaultValue={["Apple"]}
                   onChange={this.handleOnChange}
                 />
               </ContentHolder>
@@ -102,8 +102,8 @@ export default class extends Component {
                 <div>
                   <div
                     style={{
-                      borderBottom: '1px solid #E9E9E9',
-                      paddingBottom: '15px'
+                      borderBottom: "1px solid #E9E9E9",
+                      paddingBottom: "15px"
                     }}
                   >
                     <Checkbox

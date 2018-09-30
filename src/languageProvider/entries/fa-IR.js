@@ -5,11 +5,11 @@ import faMessages from "../locales/fa_IR.json";
 // getValues(enMessages);
 
 const Falang = {
-    messages: {
-        ...faMessages
-    },
-    antd: antdFa,
-    locale: "fa-IR",
-    data: appLocaleData
+  messages: {
+    ...faMessages
+  },
+  antd: antdFa,
+  locale: "fa-IR",
+  data: appLocaleData
 };
 export default Falang;

@@ -1,3 +1,3 @@
-import { notification } from 'antd';
+import { notification } from "antd";
 
 export default notification;

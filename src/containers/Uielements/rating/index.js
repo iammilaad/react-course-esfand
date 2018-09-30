@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Row, Col, Icon } from 'antd';
-import Rate from '../../../components/uielements/rate';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
+import React, { Component } from "react";
+import { Row, Col, Icon } from "antd";
+import Rate from "../../../components/uielements/rate";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
 
 export default class extends Component {
   state = {

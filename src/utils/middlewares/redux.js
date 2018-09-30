@@ -5,5 +5,5 @@ export const flush = () => ({ type: FLUSH });
 
 export const updateLocalStorageAction = () => ({ type: UPDATE_LOCAL_STORAGE });
 export const asyncRemoveLocalStorageAction = () => ({
-    type: REMOVE_LOCAL_STORAGE
+  type: REMOVE_LOCAL_STORAGE
 });

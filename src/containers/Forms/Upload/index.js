@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import { Icon } from 'antd';
-import Modal from '../../../components/feedback/modal';
-import Upload from '../../../components/uielements/upload';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
+import React, { Component } from "react";
+import { Icon } from "antd";
+import Modal from "../../../components/feedback/modal";
+import Upload from "../../../components/uielements/upload";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
 
 export default class extends Component {
   state = {
     previewVisible: false,
-    previewImage: '',
+    previewImage: "",
     fileList: [
       {
         uid: -1,
-        name: 'xxx.png',
-        status: 'done',
+        name: "xxx.png",
+        status: "done",
         url:
-          'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'
+          "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
       }
     ]
   };
@@ -64,7 +64,7 @@ export default class extends Component {
               footer={null}
               onCancel={this.handleCancel}
             >
-              <img alt="example" style={{ width: '100%' }} src={previewImage} />
+              <img alt="example" style={{ width: "100%" }} src={previewImage} />
             </Modal>
           </ContentHolder>
         </Box>

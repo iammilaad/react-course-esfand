@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import { Col, Row, Icon } from 'antd';
+import React, { Component } from "react";
+import { Col, Row, Icon } from "antd";
 import Input, {
   InputSearch,
   InputGroup,
   Textarea
-} from '../../../components/uielements/input';
-import InputNumber from '../../../components/uielements/InputNumber';
-import Select, { SelectOption } from '../../../components/uielements/select';
-import DatePicker from '../../../components/uielements/datePicker';
-import AutoComplete from '../../../components/uielements/autocomplete';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import IntlMessages from '../../../components/utility/intlMessages';
+} from "../../../components/uielements/input";
+import InputNumber from "../../../components/uielements/InputNumber";
+import Select, { SelectOption } from "../../../components/uielements/select";
+import DatePicker from "../../../components/uielements/datePicker";
+import AutoComplete from "../../../components/uielements/autocomplete";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import IntlMessages from "../../../components/utility/intlMessages";
 
 const Option = SelectOption;
 
@@ -39,7 +39,7 @@ export default class extends Component {
   handleChange = value => {
     this.setState({
       dataSource:
-        !value || value.indexOf('@') >= 0
+        !value || value.indexOf("@") >= 0
           ? []
           : [`${value}@gmail.com`, `${value}@163.com`, `${value}@qq.com`]
     });
@@ -47,12 +47,12 @@ export default class extends Component {
 
   render() {
     const rowStyle = {
-      width: '100%',
-      display: 'flex',
-      flexFlow: 'row wrap'
+      width: "100%",
+      display: "flex",
+      flexFlow: "row wrap"
     };
     const colStyle = {
-      marginBottom: '16px'
+      marginBottom: "16px"
     };
     const gutter = 16;
     return (
@@ -80,11 +80,11 @@ export default class extends Component {
                 <Input
                   size="large"
                   placeholder="large size"
-                  style={{ marginBottom: '15px' }}
+                  style={{ marginBottom: "15px" }}
                 />
                 <Input
                   placeholder="default size"
-                  style={{ marginBottom: '15px' }}
+                  style={{ marginBottom: "15px" }}
                 />
                 <Input size="small" placeholder="small size" />
               </ContentHolder>
@@ -99,7 +99,7 @@ export default class extends Component {
               subtitle={<IntlMessages id="forms.input.groupSubTitle" />}
             >
               <ContentHolder>
-                <InputGroup size="large" style={{ marginBottom: '15px' }}>
+                <InputGroup size="large" style={{ marginBottom: "15px" }}>
                   <Col span="4">
                     <Input defaultValue="0571" />
                   </Col>
@@ -108,43 +108,43 @@ export default class extends Component {
                   </Col>
                 </InputGroup>
 
-                <InputGroup compact style={{ marginBottom: '15px' }}>
-                  <Input style={{ width: '20%' }} defaultValue="0571" />
-                  <Input style={{ width: '30%' }} defaultValue="26888888" />
+                <InputGroup compact style={{ marginBottom: "15px" }}>
+                  <Input style={{ width: "20%" }} defaultValue="0571" />
+                  <Input style={{ width: "30%" }} defaultValue="26888888" />
                 </InputGroup>
 
-                <InputGroup compact style={{ marginBottom: '15px' }}>
+                <InputGroup compact style={{ marginBottom: "15px" }}>
                   <Select defaultValue="Zhejiang">
                     <Option value="Zhejiang">Zhejiang</Option>
                     <Option value="Jiangsu">Jiangsu</Option>
                   </Select>
                   <Input
-                    style={{ width: '50%' }}
+                    style={{ width: "50%" }}
                     defaultValue="Xihu District, Hangzhou"
                   />
                 </InputGroup>
 
-                <InputGroup compact style={{ marginBottom: '15px' }}>
-                  <Select defaultValue="Option1" style={{ width: '33%' }}>
+                <InputGroup compact style={{ marginBottom: "15px" }}>
+                  <Select defaultValue="Option1" style={{ width: "33%" }}>
                     <Option value="Option1">Option1</Option>
                     <Option value="Option2">Option2</Option>
                   </Select>
                   <Input
-                    style={{ width: '33%' }}
+                    style={{ width: "33%" }}
                     defaultValue="input content"
                   />
-                  <InputNumber style={{ width: '33%' }} />
+                  <InputNumber style={{ width: "33%" }} />
                 </InputGroup>
 
-                <InputGroup compact style={{ marginBottom: '15px' }}>
+                <InputGroup compact style={{ marginBottom: "15px" }}>
                   <Input
-                    style={{ width: '50%' }}
+                    style={{ width: "50%" }}
                     defaultValue="input content"
                   />
                   <DatePicker />
                 </InputGroup>
 
-                <InputGroup compact style={{ marginBottom: '15px' }}>
+                <InputGroup compact style={{ marginBottom: "15px" }}>
                   <Select defaultValue="Option1-1">
                     <Option value="Option1-1">Option1-1</Option>
                     <Option value="Option1-2">Option1-2</Option>
@@ -155,26 +155,26 @@ export default class extends Component {
                   </Select>
                 </InputGroup>
 
-                <InputGroup compact style={{ marginBottom: '15px' }}>
+                <InputGroup compact style={{ marginBottom: "15px" }}>
                   <Select defaultValue="1">
                     <Option value="1">Between</Option>
                     <Option value="2">Except</Option>
                   </Select>
                   <Input
-                    style={{ width: 100, textAlign: 'center' }}
+                    style={{ width: 100, textAlign: "center" }}
                     placeholder="Minimum"
                   />
                   <Input
-                    style={{ width: 24, borderLeft: 0, pointerEvents: 'none' }}
+                    style={{ width: 24, borderLeft: 0, pointerEvents: "none" }}
                     placeholder="~"
                   />
                   <Input
-                    style={{ width: 100, textAlign: 'center' }}
+                    style={{ width: 100, textAlign: "center" }}
                     placeholder="Maximum"
                   />
                 </InputGroup>
 
-                <InputGroup compact style={{ marginBottom: '15px' }}>
+                <InputGroup compact style={{ marginBottom: "15px" }}>
                   <Select defaultValue="Sign Up">
                     <Option value="Sign Up">Sign Up</Option>
                     <Option value="Sign In">Sign In</Option>
@@ -201,7 +201,7 @@ export default class extends Component {
                 <Input
                   type="textarea"
                   placeholder="Autosize height based on content lines"
-                  style={{ marginBottom: '15px' }}
+                  style={{ marginBottom: "15px" }}
                 />
                 <Input
                   type="textarea"

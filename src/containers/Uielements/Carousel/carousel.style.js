@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
-import WithDirection from '../../../settings/withDirection';
+import styled from "styled-components";
+import { palette } from "styled-theme";
+import WithDirection from "../../../settings/withDirection";
 
 const CarouselStyleWrapper = styled.div`
   .ovCarousalDemoContainer {
@@ -10,7 +10,7 @@ const CarouselStyleWrapper = styled.div`
   }
   .ant-carousel {
     .slick-slider {
-      direction: ${props => (props['data-rtl'] === 'rtl' ? 'ltr' : 'inherit')};
+      direction: ${props => (props["data-rtl"] === "rtl" ? "ltr" : "inherit")};
       .slick-track {
         left: auto;
         right: 0;
@@ -19,7 +19,7 @@ const CarouselStyleWrapper = styled.div`
           text-align: center;
           height: 160px;
           line-height: 160px;
-          background: ${palette('secondary', 4)};
+          background: ${palette("secondary", 4)};
           color: #fff;
           overflow: hidden;
           float: left !important;

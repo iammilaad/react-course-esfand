@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Actions from './actions.js';
-import Switcher from '../../components/themeSwitcher/themeSwitcher';
-import LanguageSwitcher from '../LanguageSwitcher';
-import Themes from './config';
-import IntlMessages from '../../components/utility/intlMessages';
-import ThemeSwitcherStyle from './themeSwitcher.style';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Actions from "./actions.js";
+import Switcher from "../../components/themeSwitcher/themeSwitcher";
+import LanguageSwitcher from "../LanguageSwitcher";
+import Themes from "./config";
+import IntlMessages from "../../components/utility/intlMessages";
+import ThemeSwitcherStyle from "./themeSwitcher.style";
 
 const { switchActivation, changeTheme } = Actions;
 
@@ -25,7 +25,7 @@ class ThemeSwitcher extends Component {
 
     return (
       <ThemeSwitcherStyle
-        className={isActivated ? 'ovThemeSwitcher active' : 'ovThemeSwitcher'}
+        className={isActivated ? "ovThemeSwitcher active" : "ovThemeSwitcher"}
       >
         <div className="componentTitleWrapper" style={styleButton}>
           <h3 className="componentTitle">
@@ -89,7 +89,10 @@ function mapStateToProps(state) {
     LanguageSwitcher: state.LanguageSwitcher.toJS()
   };
 }
-export default connect(mapStateToProps, {
-  switchActivation,
-  changeTheme
-})(ThemeSwitcher);
+export default connect(
+  mapStateToProps,
+  {
+    switchActivation,
+    changeTheme
+  }
+)(ThemeSwitcher);

@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
-import { transition, borderRadius, boxShadow } from '../../settings/style-util';
-import WithDirection from '../../settings/withDirection';
+import styled from "styled-components";
+import { palette } from "styled-theme";
+import { transition, borderRadius, boxShadow } from "../../settings/style-util";
+import WithDirection from "../../settings/withDirection";
 
 const TopbarWrapper = styled.div`
   .ovmorphicTopbar {
@@ -10,25 +10,25 @@ const TopbarWrapper = styled.div`
     background-color: #ffffff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: ${props =>
-      props['data-rtl'] === 'rtl' ? '0 265px 0 31px' : '0 31px 0 265px'};
+      props["data-rtl"] === "rtl" ? "0 265px 0 31px" : "0 31px 0 265px"};
     z-index: 1000;
     ${transition()};
 
     @media only screen and (max-width: 767px) {
       padding: ${props =>
-        props['data-rtl'] === 'rtl'
-          ? '0px 260px 0px 15px !important'
-          : '0px 15px 0px 260px !important'};
+        props["data-rtl"] === "rtl"
+          ? "0px 260px 0px 15px !important"
+          : "0px 15px 0px 260px !important"};
     }
 
     &.collapsed {
       padding: ${props =>
-        props['data-rtl'] === 'rtl' ? '0 109px 0 31px' : '0 31px 0 109px'};
+        props["data-rtl"] === "rtl" ? "0 109px 0 31px" : "0 31px 0 109px"};
       @media only screen and (max-width: 767px) {
         padding: ${props =>
-          props['data-rtl'] === 'rtl'
-            ? '0px 15px !important'
-            : '0px 15px !important'};
+          props["data-rtl"] === "rtl"
+            ? "0px 15px !important"
+            : "0px 15px !important"};
       }
     }
 
@@ -38,7 +38,7 @@ const TopbarWrapper = styled.div`
 
       @media only screen and (max-width: 767px) {
         margin: ${props =>
-          props['data-rtl'] === 'rtl' ? '0 0 0 20px' : '0 20px 0 0'};
+          props["data-rtl"] === "rtl" ? "0 0 0 20px" : "0 20px 0 0"};
       }
 
       .triggerBtn {
@@ -56,8 +56,8 @@ const TopbarWrapper = styled.div`
         cursor: pointer;
 
         &:before {
-          content: '\f20e';
-          font-family: 'Ionicons';
+          content: "\f20e";
+          font-family: "Ionicons";
           font-size: 26px;
           color: inherit;
           line-height: 0;
@@ -71,17 +71,17 @@ const TopbarWrapper = styled.div`
       align-items: center;
 
       li {
-        margin-left: ${props => (props['data-rtl'] === 'rtl' ? '35px' : '0')};
-        margin-right: ${props => (props['data-rtl'] === 'rtl' ? '0' : '35px')};
+        margin-left: ${props => (props["data-rtl"] === "rtl" ? "35px" : "0")};
+        margin-right: ${props => (props["data-rtl"] === "rtl" ? "0" : "35px")};
         cursor: pointer;
         line-height: normal;
         position: relative;
         display: inline-block;
 
         @media only screen and (max-width: 360px) {
-          margin-left: ${props => (props['data-rtl'] === 'rtl' ? '25px' : '0')};
+          margin-left: ${props => (props["data-rtl"] === "rtl" ? "25px" : "0")};
           margin-right: ${props =>
-            props['data-rtl'] === 'rtl' ? '0' : '25px'};
+            props["data-rtl"] === "rtl" ? "0" : "25px"};
         }
 
         &:last-child {
@@ -90,7 +90,7 @@ const TopbarWrapper = styled.div`
 
         i {
           font-size: 24px;
-          color: ${palette('text', 0)};
+          color: ${palette("text", 0)};
           line-height: 1;
         }
 
@@ -101,7 +101,7 @@ const TopbarWrapper = styled.div`
           span {
             font-size: 12px;
             color: #fff;
-            background-color: ${palette('secondary', 1)};
+            background-color: ${palette("secondary", 1)};
             width: 20px;
             height: 20px;
             display: -webkit-inline-flex;
@@ -114,17 +114,17 @@ const TopbarWrapper = styled.div`
             position: absolute;
             top: -8px;
             left: ${props =>
-              props['data-rtl'] === 'rtl' ? 'inherit' : '10px'};
+              props["data-rtl"] === "rtl" ? "inherit" : "10px"};
             right: ${props =>
-              props['data-rtl'] === 'rtl' ? '10px' : 'inherit'};
-            ${borderRadius('50%')};
+              props["data-rtl"] === "rtl" ? "10px" : "inherit"};
+            ${borderRadius("50%")};
           }
         }
 
         &.ovMail {
           .ovIconWrapper {
             span {
-              background-color: ${palette('color', 0)};
+              background-color: ${palette("color", 0)};
             }
           }
         }
@@ -132,7 +132,7 @@ const TopbarWrapper = styled.div`
         &.ovNotify {
           .ovIconWrapper {
             span {
-              background-color: ${palette('primary', 2)};
+              background-color: ${palette("primary", 2)};
             }
           }
         }
@@ -140,7 +140,7 @@ const TopbarWrapper = styled.div`
         &.ovMsg {
           .ovIconWrapper {
             span {
-              background-color: ${palette('color', 1)};
+              background-color: ${palette("color", 1)};
             }
           }
         }
@@ -148,7 +148,7 @@ const TopbarWrapper = styled.div`
         &.ovCart {
           .ovIconWrapper {
             span {
-              background-color: ${palette('color', 2)};
+              background-color: ${palette("color", 2)};
             }
           }
         }
@@ -161,8 +161,8 @@ const TopbarWrapper = styled.div`
             align-items: center;
             justify-content: center;
             position: relative;
-            background-color: ${palette('grayscale', 9)};
-            ${borderRadius('50%')};
+            background-color: ${palette("grayscale", 9)};
+            ${borderRadius("50%")};
 
             img {
               height: 100%;
@@ -173,12 +173,12 @@ const TopbarWrapper = styled.div`
               width: 10px;
               height: 10px;
               display: block;
-              background-color: ${palette('color', 3)};
+              background-color: ${palette("color", 3)};
               position: absolute;
               bottom: 0;
               right: 3px;
               border: 1px solid #ffffff;
-              ${borderRadius('50%')};
+              ${borderRadius("50%")};
             }
           }
         }
@@ -201,13 +201,13 @@ const TopbarWrapper = styled.div`
           min-width: 160px;
           flex-shrink: 0;
           .ovBorderRadius(5px);
-          ${borderRadius('5px')};
-          ${boxShadow('0 2px 10px rgba(0,0,0,0.2)')};
+          ${borderRadius("5px")};
+          ${boxShadow("0 2px 10px rgba(0,0,0,0.2)")};
           ${transition()};
 
           .ovDropdownLink {
             font-size: 13px;
-            color: ${palette('text', 1)};
+            color: ${palette("text", 1)};
             line-height: 1.1;
             padding: 7px 15px;
             background-color: transparent;
@@ -217,7 +217,7 @@ const TopbarWrapper = styled.div`
             ${transition()};
 
             &:hover {
-              background-color: ${palette('secondary', 6)};
+              background-color: ${palette("secondary", 6)};
             }
           }
         }
@@ -239,8 +239,8 @@ const TopbarWrapper = styled.div`
           width: 360px;
           min-width: 160px;
           flex-shrink: 0;
-          ${borderRadius('5px')};
-          ${boxShadow('0 2px 10px rgba(0,0,0,0.2)')};
+          ${borderRadius("5px")};
+          ${boxShadow("0 2px 10px rgba(0,0,0,0.2)")};
           ${transition()};
 
           @media only screen and (max-width: 767px) {
@@ -259,7 +259,7 @@ const TopbarWrapper = styled.div`
             h3 {
               font-size: 14px;
               font-weight: 500;
-              color: ${palette('text', 0)};
+              color: ${palette("text", 0)};
               text-align: center;
               text-transform: uppercase;
               margin: 0;
@@ -273,7 +273,7 @@ const TopbarWrapper = styled.div`
             display: flex;
             flex-direction: column;
             margin-bottom: 10px;
-            background-color: ${palette('grayscale', 6)};
+            background-color: ${palette("grayscale", 6)};
 
             .ovDropdownListItem {
               padding: 15px 30px;
@@ -286,7 +286,7 @@ const TopbarWrapper = styled.div`
               ${transition()};
 
               &:hover {
-                background-color: ${palette('grayscale', 3)};
+                background-color: ${palette("grayscale", 3)};
               }
 
               .ovListHead {
@@ -299,14 +299,14 @@ const TopbarWrapper = styled.div`
               h5 {
                 font-size: 13px;
                 font-weight: 500;
-                color: ${palette('text', 0)};
+                color: ${palette("text", 0)};
                 margin-top: 0;
               }
 
               p {
                 font-size: 12px;
                 font-weight: 400;
-                color: ${palette('text', 2)};
+                color: ${palette("text", 2)};
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
@@ -314,7 +314,7 @@ const TopbarWrapper = styled.div`
 
               .ovDate {
                 font-size: 11px;
-                color: ${palette('grayscale', 1)};
+                color: ${palette("grayscale", 1)};
                 flex-shrink: 0;
               }
             }
@@ -323,7 +323,7 @@ const TopbarWrapper = styled.div`
           .ovViewAllBtn {
             font-size: 13px;
             font-weight: 500;
-            color: ${palette('text', 2)};
+            color: ${palette("text", 2)};
             padding: 10px 15px 20px;
             display: flex;
             text-decoration: none;
@@ -333,7 +333,7 @@ const TopbarWrapper = styled.div`
             ${transition()};
 
             &:hover {
-              color: ${palette('primary', 0)};
+              color: ${palette("primary", 0)};
             }
           }
 
@@ -346,19 +346,19 @@ const TopbarWrapper = styled.div`
             a {
               font-size: 13px;
               font-weight: 500;
-              color: ${palette('text', 0)};
+              color: ${palette("text", 0)};
               text-decoration: none;
               padding: 10px 20px;
               line-height: 1;
-              border: 1px solid ${palette('border', 1)};
+              border: 1px solid ${palette("border", 1)};
               display: flex;
               align-items: center;
               justify-content: center;
               ${transition()};
 
               &:hover {
-                background-color: ${palette('primary', 0)};
-                border-color: ${palette('primary', 0)};
+                background-color: ${palette("primary", 0)};
+                border-color: ${palette("primary", 0)};
                 color: #ffffff;
               }
             }
@@ -366,7 +366,7 @@ const TopbarWrapper = styled.div`
             h3 {
               font-size: 14px;
               font-weight: 500;
-              color: ${palette('text', 0)};
+              color: ${palette("text", 0)};
               line-height: 1.3;
             }
           }
@@ -387,8 +387,8 @@ const TopbarWrapper = styled.div`
                 align-items: center;
                 justify-content: center;
                 flex-shrink: 0;
-                background-color: ${palette('grayscale', 9)};
-                ${borderRadius('50%')};
+                background-color: ${palette("grayscale", 9)};
+                ${borderRadius("50%")};
 
                 img {
                   width: 100%;
@@ -416,7 +416,7 @@ const TopbarWrapper = styled.div`
 
                 .ovDate {
                   font-size: 11px;
-                  color: ${palette('grayscale', 1)};
+                  color: ${palette("grayscale", 1)};
                   flex-shrink: 0;
                 }
 
@@ -480,7 +480,7 @@ const TopbarWrapper = styled.div`
             }
 
             .ovDropdownBody {
-              background-color: ${palette('grayscale', 6)};
+              background-color: ${palette("grayscale", 6)};
             }
           }
         }

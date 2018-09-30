@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { InputSearch } from '../uielements/input';
+import React, { Component } from "react";
+import { InputSearch } from "../uielements/input";
 export default class extends Component {
   componentDidMount() {
     setTimeout(() => {
       try {
-        document.getElementById('InputTopbarSearch').focus();
+        document.getElementById("InputTopbarSearch").focus();
       } catch (e) {}
     }, 200);
   }

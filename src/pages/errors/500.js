@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import IntlMessages from 'components/utility/intlMessages';
-import FiveZeroZeroStyleWrapper from './500.style';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import IntlMessages from "components/utility/intlMessages";
+import FiveZeroZeroStyleWrapper from "./500.style";
 
 export default class extends Component {
   render() {

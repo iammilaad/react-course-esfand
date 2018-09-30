@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import IntlMessages from '../utility/intlMessages';
-import { InputSearch } from '../uielements/input';
-import DeleteButton from './deleteButton';
-import { PropTypes } from 'prop-types';
-import { ContactListWrapper } from './contactList.style';
-import Scrollbar from '../utility/customScrollBar';
+import React, { Component } from "react";
+import IntlMessages from "../utility/intlMessages";
+import { InputSearch } from "../uielements/input";
+import DeleteButton from "./deleteButton";
+import { PropTypes } from "prop-types";
+import { ContactListWrapper } from "./contactList.style";
+import Scrollbar from "../utility/customScrollBar";
 
 function filterContacts(contacts, search) {
   search = search.toUpperCase();
@@ -19,12 +19,12 @@ export default class ContactList extends Component {
     this.singleContact = this.singleContact.bind(this);
     this.onChange = this.onChange.bind(this);
     this.state = {
-      search: '',
+      search: ""
     };
   }
   singleContact(contact) {
     const { seectedId, deleteContact, changeContact } = this.props;
-    const activeClass = seectedId === contact.id ? 'active' : '';
+    const activeClass = seectedId === contact.id ? "active" : "";
     const onChange = () => changeContact(contact.id);
     return (
       <div
@@ -33,10 +33,10 @@ export default class ContactList extends Component {
         onClick={onChange}
       >
         <div className="ovAvatar">
-          {contact.avatar ? <img alt="#" src={contact.avatar} /> : ''}
+          {contact.avatar ? <img alt="#" src={contact.avatar} /> : ""}
         </div>
         <div className="ovContactName">
-          <h3>{contact.name ? contact.name : 'No Name'}</h3>
+          <h3>{contact.name ? contact.name : "No Name"}</h3>
         </div>
         <DeleteButton deleteContact={deleteContact} contact={contact} />
       </div>
@@ -52,7 +52,7 @@ export default class ContactList extends Component {
       <ContactListWrapper className="ovContactListWrapper">
         <InputSearch
           placeholder={this.context.intl.formatMessage({
-            id: 'contactlist.searchContacts',
+            id: "contactlist.searchContacts"
           })}
           value={search}
           onChange={this.onChange}
@@ -75,5 +75,5 @@ export default class ContactList extends Component {
 }
 
 ContactList.contextTypes = {
-  intl: PropTypes.object.isRequired,
+  intl: PropTypes.object.isRequired
 };

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Row, Col } from 'antd';
-import Collapses from '../../../components/uielements/collapse';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
-import CollapseWrapper from './collapse.style';
+import React, { Component } from "react";
+import { Row, Col } from "antd";
+import Collapses from "../../../components/uielements/collapse";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
+import CollapseWrapper from "./collapse.style";
 
 const text = <IntlMessages id="uiElements.collapse.text" />;
 const Panel = Collapses.Panel;
@@ -114,7 +114,7 @@ export default class extends Component {
               }
             >
               <ContentHolder>
-                <Collapse bordered={false} defaultActiveKey={['1']}>
+                <Collapse bordered={false} defaultActiveKey={["1"]}>
                   <Panel
                     header={<IntlMessages id="uiElements.collapse.headerOne" />}
                     key="1"

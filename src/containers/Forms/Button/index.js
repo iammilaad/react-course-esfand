@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import { Row, Col, Icon } from 'antd';
-import Button, { ButtonGroup } from '../../../components/uielements/button';
-import { RadioGroup, RadioButton } from '../../../components/uielements/radio';
+import React, { Component } from "react";
+import { Row, Col, Icon } from "antd";
+import Button, { ButtonGroup } from "../../../components/uielements/button";
+import { RadioGroup, RadioButton } from "../../../components/uielements/radio";
 import Dropdown, {
   DropdownMenu,
   MenuItem
-} from '../../../components/uielements/dropdown';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
-import { rtl } from '../../../settings/withDirection';
+} from "../../../components/uielements/dropdown";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
+import { rtl } from "../../../settings/withDirection";
 
 function handleMenuClick(e) {}
 
@@ -26,7 +26,7 @@ const menu = (
 
 export default class extends Component {
   state = {
-    size: 'default',
+    size: "default",
     loading: false,
     iconLoading: false
   };
@@ -46,7 +46,7 @@ export default class extends Component {
   render() {
     const size = this.state.size;
     const margin = {
-      margin: rtl === 'rtl' ? '0 0 8px 8px' : '0 8px 8px 0'
+      margin: rtl === "rtl" ? "0 0 8px 8px" : "0 8px 8px 0"
     };
     const { rowStyle, colStyle, gutter } = basicStyle;
     return (
@@ -142,10 +142,12 @@ export default class extends Component {
               <ContentHolder>
                 <ButtonGroup size={size}>
                   <Button type="primary">
-                    <Icon type="left" />Backward
+                    <Icon type="left" />
+                    Backward
                   </Button>
                   <Button type="primary">
-                    Forward<Icon type="right" />
+                    Forward
+                    <Icon type="right" />
                   </Button>
                 </ButtonGroup>
               </ContentHolder>
@@ -262,10 +264,12 @@ export default class extends Component {
                 <h4>With Icon</h4>
                 <ButtonGroup style={margin}>
                   <Button type="primary">
-                    <Icon type="left" />Go back
+                    <Icon type="left" />
+                    Go back
                   </Button>
                   <Button type="primary">
-                    Go forward<Icon type="right" />
+                    Go forward
+                    <Icon type="right" />
                   </Button>
                 </ButtonGroup>
                 <ButtonGroup>

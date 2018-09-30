@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Rate from '../../../components/uielements/rate';
+import React, { Component } from "react";
+import Rate from "../../../components/uielements/rate";
 
 export default class extends Component {
   state = {

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-import IntlMessages from 'components/utility/intlMessages';
-import FourZeroFourStyleWrapper from './404.style';
+import IntlMessages from "components/utility/intlMessages";
+import FourZeroFourStyleWrapper from "./404.style";
 
 export default class extends Component {
   render() {
@@ -26,7 +26,7 @@ export default class extends Component {
         </div>
 
         <div className="ov404Artwork">
-          <img alt="#" src='/images/rob.png' />
+          <img alt="#" src="/images/rob.png" />
         </div>
       </FourZeroFourStyleWrapper>
     );

@@ -1,12 +1,12 @@
-import { Map } from 'immutable';
+import { Map } from "immutable";
 
 export function clearToken() {
-  localStorage.removeItem('id_token');
+  localStorage.removeItem("id_token");
 }
 
 export function getToken() {
   try {
-    const idToken = localStorage.getItem('id_token');
+    const idToken = localStorage.getItem("id_token");
     return new Map({ idToken });
   } catch (err) {
     clearToken();
@@ -18,9 +18,9 @@ export function timeDifference(givenTime) {
   givenTime = new Date(givenTime);
   const milliseconds = new Date().getTime() - givenTime.getTime();
   const numberEnding = number => {
-    return number > 1 ? 's' : '';
+    return number > 1 ? "s" : "";
   };
-  const number = num => (num > 9 ? '' + num : '0' + num);
+  const number = num => (num > 9 ? "" + num : "0" + num);
   const getTime = () => {
     let temp = Math.floor(milliseconds / 1000);
     const years = Math.floor(temp / 31536000);
@@ -33,21 +33,21 @@ export function timeDifference(givenTime) {
     const days = Math.floor((temp %= 31536000) / 86400);
     if (days) {
       if (days < 28) {
-        return days + ' day' + numberEnding(days);
+        return days + " day" + numberEnding(days);
       } else {
         const months = [
-          'Jan',
-          'Feb',
-          'Mar',
-          'Apr',
-          'May',
-          'Jun',
-          'Jul',
-          'Aug',
-          'Sep',
-          'Oct',
-          'Nov',
-          'Dec'
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
         ];
         const month = months[givenTime.getUTCMonth()];
         const day = number(givenTime.getUTCDate());
@@ -62,7 +62,7 @@ export function timeDifference(givenTime) {
     if (minutes) {
       return `${minutes} minute${numberEnding(minutes)} ago`;
     }
-    return 'a few seconds ago';
+    return "a few seconds ago";
   };
   return getTime();
 }

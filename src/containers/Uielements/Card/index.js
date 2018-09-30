@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Row, Col } from 'antd';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
-import Card from './card.style';
+import React, { Component } from "react";
+import { Row, Col } from "antd";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
+import Card from "./card.style";
 
 export default class extends Component {
   render() {
@@ -26,7 +26,7 @@ export default class extends Component {
                 <Card
                   title={<IntlMessages id="uiElements.cards.cardTitle" />}
                   extra={<a>{<IntlMessages id="uiElements.cards.more" />}</a>}
-                  style={{ width: '100%' }}
+                  style={{ width: "100%" }}
                 >
                   <p>{<IntlMessages id="uiElements.cards.lorem" />}</p>
                   <p>{<IntlMessages id="uiElements.cards.cardContent" />}</p>
@@ -43,7 +43,7 @@ export default class extends Component {
                 <Card
                   title={<IntlMessages id="uiElements.cards.cardTitle" />}
                   bordered={false}
-                  style={{ width: '100%' }}
+                  style={{ width: "100%" }}
                 >
                   <p>{<IntlMessages id="uiElements.cards.lorem" />}</p>
                   <p>{<IntlMessages id="uiElements.cards.cardContent" />}</p>
@@ -59,22 +59,22 @@ export default class extends Component {
               subtitle={<IntlMessages id="uiElements.cards.gridCardSubTitle" />}
             >
               <Row>
-                <ContentHolder style={{ overflow: 'hidden' }}>
-                  <Col md={8} sm={8} xs={24} style={{ padding: '0 8px' }}>
+                <ContentHolder style={{ overflow: "hidden" }}>
+                  <Col md={8} sm={8} xs={24} style={{ padding: "0 8px" }}>
                     <Card
                       title={<IntlMessages id="uiElements.cards.cardTitle" />}
                     >
                       {<IntlMessages id="uiElements.cards.cardContent" />}
                     </Card>
                   </Col>
-                  <Col md={8} sm={8} xs={24} style={{ padding: '0 8px' }}>
+                  <Col md={8} sm={8} xs={24} style={{ padding: "0 8px" }}>
                     <Card
                       title={<IntlMessages id="uiElements.cards.cardTitle" />}
                     >
                       {<IntlMessages id="uiElements.cards.cardContent" />}
                     </Card>
                   </Col>
-                  <Col md={8} sm={8} xs={24} style={{ padding: '0 8px' }}>
+                  <Col md={8} sm={8} xs={24} style={{ padding: "0 8px" }}>
                     <Card
                       title={<IntlMessages id="uiElements.cards.cardTitle" />}
                     >
@@ -99,7 +99,7 @@ export default class extends Component {
                 <Card
                   loading
                   title={<IntlMessages id="uiElements.cards.cardTitle" />}
-                  style={{ width: '100%' }}
+                  style={{ width: "100%" }}
                 >
                   {<IntlMessages id="uiElements.cards.whateverContent" />}
                 </Card>

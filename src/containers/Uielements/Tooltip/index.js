@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Row, Col } from 'antd';
-import Tooltip from '../../../components/uielements/tooltip';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import basicStyle from '../../../settings/basicStyle';
-import IntlMessages from '../../../components/utility/intlMessages';
+import React, { Component } from "react";
+import { Row, Col } from "antd";
+import Tooltip from "../../../components/uielements/tooltip";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import basicStyle from "../../../settings/basicStyle";
+import IntlMessages from "../../../components/utility/intlMessages";
 
 const text = (
   <span>{<IntlMessages id="uiElements.tooltip.contentSpan" />}</span>

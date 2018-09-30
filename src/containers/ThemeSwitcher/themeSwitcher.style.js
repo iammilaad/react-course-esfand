@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { palette } from 'styled-theme';
-import { transition, borderRadius, boxShadow } from '../../settings/style-util';
-import WithDirection from '../../settings/withDirection';
+import styled from "styled-components";
+import { palette } from "styled-theme";
+import { transition, borderRadius, boxShadow } from "../../settings/style-util";
+import WithDirection from "../../settings/withDirection";
 
 const ThemeSwitcherStyle = styled.div`
   background-color: #ffffff;
@@ -11,32 +11,32 @@ const ThemeSwitcherStyle = styled.div`
   flex-shrink: 0;
   position: fixed;
   top: 70px;
-  right: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '-340px')};
-  left: ${props => (props['data-rtl'] === 'rtl' ? '-340px' : 'inherit')};
+  right: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "-340px")};
+  left: ${props => (props["data-rtl"] === "rtl" ? "-340px" : "inherit")};
   z-index: 1001;
   ${transition()};
-  ${boxShadow('-1px 0 5px rgba(0,0,0,0.25)')};
+  ${boxShadow("-1px 0 5px rgba(0,0,0,0.25)")};
 
   @media only screen and (max-width: 767px) {
     width: 270px;
-    right: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '-270px')};
-    left: ${props => (props['data-rtl'] === 'rtl' ? '-270px' : 'inherit')};
+    right: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "-270px")};
+    left: ${props => (props["data-rtl"] === "rtl" ? "-270px" : "inherit")};
   }
 
   &.active {
-    right: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '0')};
-    left: ${props => (props['data-rtl'] === 'rtl' ? '0' : 'inherit')};
+    right: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "0")};
+    left: ${props => (props["data-rtl"] === "rtl" ? "0" : "inherit")};
   }
 
   .switcher {
-    right: ${props => (props['data-rtl'] === 'rtl' ? '-98px' : 'inherit')};
-    left: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '-98px')};
+    right: ${props => (props["data-rtl"] === "rtl" ? "-98px" : "inherit")};
+    left: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "-98px")};
   }
 
   .componentTitleWrapper {
     padding: 25px 15px;
     height: 70px;
-    background-color: ${palette('text', 0)};
+    background-color: ${palette("text", 0)};
 
     .componentTitle {
       font-size: 21px;
@@ -71,7 +71,7 @@ const ThemeSwitcherStyle = styled.div`
       h4 {
         font-size: 14px;
         font-weight: 700;
-        color: ${palette('text', 0)};
+        color: ${palette("text", 0)};
         line-height: 1.3;
         margin-bottom: 0;
         padding: 0 15px;
@@ -89,7 +89,7 @@ const ThemeSwitcherStyle = styled.div`
           height: 20px;
           display: flex;
           margin: ${props =>
-            props['data-rtl'] === 'rtl' ? '0 0 0 10px' : '0 10px 0 0'};
+            props["data-rtl"] === "rtl" ? "0 0 0 10px" : "0 10px 0 0"};
           border: 1px solid #e4e4e4;
           outline: 0;
           padding: 0;
@@ -97,7 +97,7 @@ const ThemeSwitcherStyle = styled.div`
           justify-content: center;
           position: relative;
           cursor: pointer;
-          ${borderRadius('3px')};
+          ${borderRadius("3px")};
 
           &.languageSwitch {
             border: 0;
@@ -109,9 +109,9 @@ const ThemeSwitcherStyle = styled.div`
               &:after {
                 top: 2px;
                 left: ${props =>
-                  props['data-rtl'] === 'rtl' ? 'inherit' : '-3px'};
+                  props["data-rtl"] === "rtl" ? "inherit" : "-3px"};
                 right: ${props =>
-                  props['data-rtl'] === 'rtl' ? '-3px' : 'inherit'};
+                  props["data-rtl"] === "rtl" ? "-3px" : "inherit"};
               }
             }
           }
@@ -122,40 +122,40 @@ const ThemeSwitcherStyle = styled.div`
 
           &.selectedTheme {
             &:before {
-              content: '';
+              content: "";
               width: 6px;
               height: 6px;
               display: -webkit-inline-flex;
               display: -ms-inline-flex;
               display: inline-flex;
-              background-color: ${palette('color', 13)};
+              background-color: ${palette("color", 13)};
               position: absolute;
               top: -2px;
               left: ${props =>
-                props['data-rtl'] === 'rtl' ? 'inherit' : '-2px'};
+                props["data-rtl"] === "rtl" ? "inherit" : "-2px"};
               right: ${props =>
-                props['data-rtl'] === 'rtl' ? '-2px' : 'inherit'};
-              ${borderRadius('50%')};
+                props["data-rtl"] === "rtl" ? "-2px" : "inherit"};
+              ${borderRadius("50%")};
             }
 
             &:after {
-              content: '';
+              content: "";
               width: 6px;
               height: 6px;
               display: -webkit-inline-flex;
               display: -ms-inline-flex;
               display: inline-flex;
-              border: 1px solid ${palette('color', 13)};
-              background-color: ${palette('color', 13)};
+              border: 1px solid ${palette("color", 13)};
+              background-color: ${palette("color", 13)};
               position: absolute;
               top: -2px;
               left: ${props =>
-                props['data-rtl'] === 'rtl' ? 'inherit' : '-2px'};
+                props["data-rtl"] === "rtl" ? "inherit" : "-2px"};
               right: ${props =>
-                props['data-rtl'] === 'rtl' ? '-2px' : 'inherit'};
+                props["data-rtl"] === "rtl" ? "-2px" : "inherit"};
               -webkit-animation: selectedAnimation 1.2s infinite ease-in-out;
               animation: selectedAnimation 1.2s infinite ease-in-out;
-              ${borderRadius('50%')};
+              ${borderRadius("50%")};
             }
           }
         }
@@ -176,12 +176,12 @@ const ThemeSwitcherStyle = styled.div`
     position: absolute;
     text-align: center;
     top: 200px;
-    left: ${props => (props['data-rtl'] === 'rtl' ? 'inherit' : '-50px')};
-    right: ${props => (props['data-rtl'] === 'rtl' ? '-50px' : 'inherit')};
+    left: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "-50px")};
+    right: ${props => (props["data-rtl"] === "rtl" ? "-50px" : "inherit")};
     cursor: pointer;
     border-radius: ${props =>
-      props['data-rtl'] === 'rtl' ? '0 3px 3px 0' : '3px 0 0 3px'};
-    ${boxShadow('-2px 0 5px rgba(0,0,0,0.2)')};
+      props["data-rtl"] === "rtl" ? "0 3px 3px 0" : "3px 0 0 3px"};
+    ${boxShadow("-2px 0 5px rgba(0,0,0,0.2)")};
 
     img {
       width: 23px;
@@ -205,7 +205,7 @@ const ThemeSwitcherStyle = styled.div`
       font-weight: 700;
       color: #fff;
       text-decoration: none;
-      background-color: ${palette('primary', 0)};
+      background-color: ${palette("primary", 0)};
       text-transform: uppercase;
       line-height: 1;
       text-align: center;
@@ -213,11 +213,11 @@ const ThemeSwitcherStyle = styled.div`
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      ${borderRadius('5px')};
+      ${borderRadius("5px")};
       ${transition()};
 
       &:hover {
-        background-color: ${palette('primary', 13)};
+        background-color: ${palette("primary", 13)};
       }
     }
   }

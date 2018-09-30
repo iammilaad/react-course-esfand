@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Popover from '../../components/uielements/popover';
-import IntlMessages from '../../components/utility/intlMessages';
-import TopbarDropdownWrapper from './topbarDropdown.style';
-
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Popover from "../../components/uielements/popover";
+import IntlMessages from "../../components/utility/intlMessages";
+import TopbarDropdownWrapper from "./topbarDropdown.style";
 
 class TopbarUser extends Component {
   constructor(props) {
@@ -56,4 +55,7 @@ class TopbarUser extends Component {
     );
   }
 }
-export default connect(null, null)(TopbarUser);
+export default connect(
+  null,
+  null
+)(TopbarUser);

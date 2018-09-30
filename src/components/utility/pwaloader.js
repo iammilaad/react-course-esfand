@@ -1,7 +1,7 @@
-import React from 'react';
-import PwaLoader from './pwaloader.style';
+import React from "react";
+import PwaLoader from "./pwaloader.style";
 
-export default PWALoader =>
+export default PWALoader => (
   <PwaLoader>
     <div className="pwaLoaderWrapper">
       <div className="pwaLoader">
@@ -49,4 +49,5 @@ export default PWALoader =>
         </div>
       </div>
     </div>
-  </PwaLoader>;
+  </PwaLoader>
+);

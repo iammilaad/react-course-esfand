@@ -1,7 +1,7 @@
-  import { getCurrentLanguage } from './config';
+import { getCurrentLanguage } from "./config";
 const actions = {
-  CHANGE_LANGUAGE: 'CHANGE_LANGUAGE',
-  ACTIVATE_LANG_MODAL: 'ACTIVATE_LANG_MODAL',
+  CHANGE_LANGUAGE: "CHANGE_LANGUAGE",
+  ACTIVATE_LANG_MODAL: "ACTIVATE_LANG_MODAL",
   switchActivation: () => ({
     type: actions.ACTIVATE_LANG_MODAL
   }),

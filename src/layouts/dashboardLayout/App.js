@@ -89,5 +89,5 @@ export default connect(
     selectedTheme: state.ThemeSwitcher.toJS().changeThemes.themeName,
     height: state.App.toJS().height
   }),
-  {toggleAll}
+  { toggleAll }
 )(App);

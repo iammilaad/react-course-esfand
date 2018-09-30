@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import Transfer from '../../../components/uielements/transfer';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
-import IntlMessages from '../../../components/utility/intlMessages';
+import React, { Component } from "react";
+import Transfer from "../../../components/uielements/transfer";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
+import IntlMessages from "../../../components/utility/intlMessages";
 
 export default class extends Component {
   state = {

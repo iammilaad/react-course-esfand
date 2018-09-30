@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import Slider from '../../../components/uielements/slider';
-import PageHeader from '../../../components/utility/pageHeader';
-import Box from '../../../components/utility/box';
-import LayoutWrapper from '../../../components/utility/layoutWrapper.js';
-import ContentHolder from '../../../components/utility/contentHolder';
+import React, { Component } from "react";
+import Slider from "../../../components/uielements/slider";
+import PageHeader from "../../../components/utility/pageHeader";
+import Box from "../../../components/utility/box";
+import LayoutWrapper from "../../../components/utility/layoutWrapper.js";
+import ContentHolder from "../../../components/utility/contentHolder";
 
 export default class extends Component {
   onChange = value => {};

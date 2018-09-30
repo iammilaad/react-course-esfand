@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { WidgetBox } from './style';
+import React, { Component } from "react";
+import { WidgetBox } from "./style";
 
 export default class extends Component {
   render() {

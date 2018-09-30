@@ -1,5 +1,5 @@
-import React from 'react';
-import IntlMessages from '../../components/utility/intlMessages';
+import React from "react";
+import IntlMessages from "../../components/utility/intlMessages";
 
 export default ({ config, changeTheme, selectedId }) => {
   const { id, label, options } = config;
@@ -14,7 +14,7 @@ export default ({ config, changeTheme, selectedId }) => {
           const onClick = () => {
             changeTheme(id, themeName);
           };
-          const customClass = themeName === selectedId ? 'selectedTheme' : '';
+          const customClass = themeName === selectedId ? "selectedTheme" : "";
           return (
             <button
               type="button"
