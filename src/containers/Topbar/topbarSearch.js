@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Searchbar from "../../components/topbar/searchBox";
+import Searchbar from "components/topbar/searchBox";
 import TopbarSearchModal from "./topbarSearchModal.style";
+import {toJS} from 'utils/higherOrderComponents/toJsHoc';
 
 class TopbarSearch extends Component {
   state = {
@@ -50,7 +51,8 @@ class TopbarSearch extends Component {
   }
 }
 
-export default connect(state => ({
-  ...state.App.toJS(),
-  customizedTheme: state.ThemeSwitcher.toJS().topbarTheme
-}))(TopbarSearch);
+const mapStateToProps = state => ({
+    customizedTheme: state.getIn(["ThemeSwitcher","topbarTheme"]),
+    App: state.getIn(["App"])
+});
+export default connect(mapStateToProps)(toJS(TopbarSearch));

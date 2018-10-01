@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Layout } from "antd";
-import appActions from "../../layouts/actions";
+import appActions from "layouts/actions";
 import TopbarNotification from "./topbarNotification";
 import TopbarMessage from "./topbarMessage";
 import TopbarSearch from "./topbarSearch";
 import TopbarUser from "./topbarUser";
 import TopbarWrapper from "./topbar.style";
+import {bindActionCreators} from 'redux';
+import {toJS} from 'utils/higherOrderComponents/toJsHoc';
 
 const { Header } = Layout;
 const { toggleCollapsed } = appActions;
@@ -69,12 +71,19 @@ class Topbar extends Component {
     );
   }
 }
+const mapStateToProps = state => ({
+    locale: state.getIn(["LanguageSwitcher","language","locale"]),
+    customizedTheme: state.getIn(["ThemeSwitcher","topbarTheme"]),
+    App: state.getIn(["App"])
+});
 
-export default connect(
-  state => ({
-    ...state.App.toJS(),
-    locale: state.LanguageSwitcher.toJS().language.locale,
-    customizedTheme: state.ThemeSwitcher.toJS().topbarTheme
-  }),
-  { toggleCollapsed }
-)(Topbar);
+const mapDispatchToProps = dispatch => {
+    return bindActionCreators(
+        {
+            toggleCollapsed
+        },
+        dispatch
+    );
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(toJS(Topbar));

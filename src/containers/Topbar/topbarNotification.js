@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Popover } from "antd";
+import  Popover from "antd/lib/popover";
 import { connect } from "react-redux";
-import IntlMessages from "../../components/utility/intlMessages";
+import IntlMessages from "components/utility/intlMessages";
 import TopbarDropdownWrapper from "./topbarDropdown.style";
+import {toJS} from 'utils/higherOrderComponents/toJsHoc';
 
 const demoNotifications = [
   {
@@ -88,7 +89,8 @@ class TopbarNotification extends Component {
   }
 }
 
-export default connect(state => ({
-  ...state.App.toJS(),
-  customizedTheme: state.ThemeSwitcher.toJS().topbarTheme
-}))(TopbarNotification);
+const mapStateToProps = state => ({
+    customizedTheme: state.getIn(["ThemeSwitcher","topbarTheme"]),
+    App: state.getIn(["App"])
+});
+export default connect(mapStateToProps)(toJS(TopbarNotification));

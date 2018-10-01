@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import IntlMessages from "../../components/utility/intlMessages";
+import IntlMessages from "components/utility/intlMessages";
 import actions from "./actions";
 import config from "./config";
+import {bindActionCreators} from 'redux';
+import {toJS} from 'utils/higherOrderComponents/toJsHoc';
 
 const { changeLanguage } = actions;
 
 class LanguageSwitcher extends Component {
   render() {
-    const { language, changeLanguage } = this.props;
+    const { language, changeLanguage } = this.props.LanguageSwitcher;
     return (
       <div className="themeSwitchBlock">
         <h4>
@@ -41,9 +43,16 @@ class LanguageSwitcher extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    ...state.LanguageSwitcher.toJS()
-  }),
-  { changeLanguage }
-)(LanguageSwitcher);
+const mapStateToProps = state => ({
+    LanguageSwitcher: state.get("LanguageSwitcher"),
+});
+const mapDispatchToProps = dispatch => {
+    return bindActionCreators(
+        {
+            changeLanguage,
+        },
+        dispatch
+    );
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(toJS(LanguageSwitcher));

@@ -4,12 +4,14 @@ import clone from "clone";
 import { Link } from "react-router-dom";
 import { Layout } from "antd";
 import options from "./options";
-import Scrollbars from "../../components/utility/customScrollBar.js";
-import Menu from "../../components/uielements/menu";
-import IntlMessages from "../../components/utility/intlMessages";
+import Scrollbars from "components/utility/customScrollBar.js";
+import Menu from "components/uielements/menu";
+import IntlMessages from "components/utility/intlMessages";
 import SidebarWrapper from "./sidebar.style";
-import appActions from "../../layouts/actions";
-import Logo from "../../components/utility/logo";
+import appActions from "layouts/actions";
+import Logo from "components/utility/logo";
+import {bindActionCreators} from 'redux';
+import {toJS} from 'utils/higherOrderComponents/toJsHoc';
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -206,11 +208,22 @@ class Sidebar extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    app: state.App.toJS(),
-    customizedTheme: state.ThemeSwitcher.toJS().sidebarTheme,
-    height: state.App.toJS().height
-  }),
-  { toggleOpenDrawer, changeOpenKeys, changeCurrent, toggleCollapsed }
-)(Sidebar);
+const mapStateToProps = state => ({
+    height: state.getIn(["App","height"]),
+    customizedTheme: state.getIn(["ThemeSwitcher","sidebarTheme"]),
+    app: state.getIn(["App"])
+});
+
+const mapDispatchToProps = dispatch => {
+    return bindActionCreators(
+        {
+            toggleOpenDrawer,
+            changeOpenKeys,
+            changeCurrent,
+            toggleCollapsed
+        },
+        dispatch
+    );
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(toJS(Sidebar));

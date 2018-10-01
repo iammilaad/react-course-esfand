@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Actions from "./actions.js";
-import Switcher from "../../components/themeSwitcher/themeSwitcher";
+import Actions from "./actions";
+import Switcher from "components/themeSwitcher/themeSwitcher";
 import LanguageSwitcher from "../LanguageSwitcher";
 import Themes from "./config";
-import IntlMessages from "../../components/utility/intlMessages";
+import IntlMessages from "components/utility/intlMessages";
 import ThemeSwitcherStyle from "./themeSwitcher.style";
+import {bindActionCreators} from 'redux';
+import {toJS} from 'utils/higherOrderComponents/toJsHoc';
 
 const { switchActivation, changeTheme } = Actions;
 
@@ -17,10 +19,8 @@ class ThemeSwitcher extends Component {
       topbarTheme,
       sidebarTheme,
       layoutTheme,
-      switchActivation,
-      changeTheme
-    } = this.props;
-
+    } = this.props.ThemeSwitcher;
+    const {switchActivation,changeTheme} = this.props;
     const styleButton = { background: sidebarTheme.buttonColor };
 
     return (
@@ -83,16 +83,19 @@ class ThemeSwitcher extends Component {
     );
   }
 }
-function mapStateToProps(state) {
-  return {
-    ...state.ThemeSwitcher.toJS(),
-    LanguageSwitcher: state.LanguageSwitcher.toJS()
-  };
-}
-export default connect(
-  mapStateToProps,
-  {
-    switchActivation,
-    changeTheme
-  }
-)(ThemeSwitcher);
+
+const mapStateToProps = state => ({
+    ThemeSwitcher:state.get("ThemeSwitcher"),
+    LanguageSwitcher: state.get("LanguageSwitcher"),
+});
+const mapDispatchToProps = dispatch => {
+    return bindActionCreators(
+        {
+            switchActivation,
+            changeTheme
+        },
+        dispatch
+    );
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(toJS(ThemeSwitcher));

@@ -12,21 +12,32 @@ import IntlMessages from "components/utility/intlMessages";
 import ResetPasswordStyleWrapper from "./resetPassword.style";
 import * as constants from './constants';
 import * as actions from './actions';
+import * as userConstants from "utils/globalRedux/user/constants";
 
 const FormItem = Form.Item;
 
 
-const HandleReseted = () => {
-
-}
 
 class resetPassword extends Component {
     constructor(props) {
         super(props);
         this.state = {
             confirmDirty: false,
+            redirectIfLoggedIn: false,
+            ...props,
         }
     }
+    static getDerivedStateFromProps = nextProps => {
+        if (nextProps.isLoggedIn === true) {
+            return {
+                redirectIfLoggedIn: true
+            };
+        }
+        return {
+            redirectIfLoggedIn: false
+        };
+    }
+
     componentDidMount = () => {
         const {getCheckTokenRequest} = this.props;
         const queryString = query.parse(window.location.search);
@@ -213,7 +224,11 @@ class resetPassword extends Component {
     }
 
     render() {
+        const { redirectIfLoggedIn } = this.state;
 
+        if (redirectIfLoggedIn) {
+            this.props.history.push('/dashboard')
+        }
         return (
             <ResetPasswordStyleWrapper className="ovResetPassPage">
                 <div className="ovFormContentWrapper">
@@ -243,6 +258,7 @@ const mapStateToProps = state => ({
     loading: state.getIn(["loading", constants.RESET_PASSWORD, "status"], false),
     tokenStatus:state.getIn([constants.RESET_PASSWORD,"tokenStatus"]),
     resetStatus:state.getIn([constants.RESET_PASSWORD,"status"]),
+    isLoggedIn: state.getIn([userConstants.USER,"token"], null) !== null,
 });
 export default connect(
     mapStateToProps,

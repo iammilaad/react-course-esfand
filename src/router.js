@@ -4,6 +4,7 @@ import { ConnectedRouter } from "react-router-redux";
 import { connect } from "react-redux";
 import App from "layouts/dashboardLayout/App";
 import asyncComponent from "utils/helpers/AsyncFunc";
+import * as constants from 'utils/globalRedux/user/constants';
 
 const RestrictedRoute = ({ component: Component, isLoggedIn, ...rest }) => (
   <Route
@@ -23,6 +24,7 @@ const RestrictedRoute = ({ component: Component, isLoggedIn, ...rest }) => (
   />
 );
 const PublicRoutes = ({ history, isLoggedIn }) => {
+    console.log("hey",history)
   return (
     <ConnectedRouter history={history}>
       <Switch>
@@ -77,5 +79,5 @@ const PublicRoutes = ({ history, isLoggedIn }) => {
 };
 
 export default connect(state => ({
-  isLoggedIn: "23"
+    isLoggedIn: state.getIn([constants.USER,"token"], null) !== null
 }))(PublicRoutes);

@@ -15,6 +15,7 @@ import { AppLocale } from "../baseLayout";
 import themes from "settings/themes/index";
 import AppHolder from "./commonStyle";
 import "settings/styles/antd/global.less";
+import {toJS} from 'utils/higherOrderComponents/toJsHoc';
 
 const { Content, Footer } = Layout;
 const { toggleAll } = appActions;
@@ -73,7 +74,7 @@ export class App extends Component {
                     </Footer>
                   </Layout>
                 </Layout>
-                <ThemeSwitcher />
+                {/*<ThemeSwitcher />*/}
               </Layout>
             </AppHolder>
           </ThemeProvider>
@@ -83,11 +84,12 @@ export class App extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    locale: state.LanguageSwitcher.toJS().language.locale,
-    selectedTheme: state.ThemeSwitcher.toJS().changeThemes.themeName,
-    height: state.App.toJS().height
-  }),
-  { toggleAll }
-)(App);
+const mapStateToProps = state => ({
+    selectedTheme: state.getIn(["ThemeSwitcher","changeThemes","themeName"]),
+    locale: state.getIn(["LanguageSwitcher","language","locale"]),
+    height: state.getIn(["App","height"])
+});
+
+const mapDispatchToProps = { toggleAll };
+
+export default connect(mapStateToProps, mapDispatchToProps)(toJS(App));

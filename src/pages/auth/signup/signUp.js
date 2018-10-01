@@ -10,9 +10,28 @@ import SignUpStyleWrapper from "./signUp.style";
 import { toJS } from "utils/higherOrderComponents/toJsHoc";
 import * as actions from './actions';
 import * as constants from './constants';
+import * as userConstants from "utils/globalRedux/user/constants";
 
 const FormItem = Form.Item;
 class SignUp extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            redirectIfLoggedIn: false,
+            ...props,
+        }
+    }
+
+    static getDerivedStateFromProps = nextProps => {
+        if (nextProps.isLoggedIn === true) {
+            return {
+                redirectIfLoggedIn: true
+            };
+        }
+        return {
+            redirectIfLoggedIn: false
+        };
+    }
 
     handleSubmit = e => {
         const { registerRequest } = this.props;
@@ -24,6 +43,11 @@ class SignUp extends Component {
         });
     };
     render() {
+        const { redirectIfLoggedIn } = this.state;
+
+        if (redirectIfLoggedIn) {
+            this.props.history.push('/dashboard')
+        }
         const { getFieldDecorator } = this.props.form;
         const {loading} = this.props;
         return (
@@ -177,7 +201,8 @@ const mapDispatchToProps = {
     registerRequest: actions.setRegisterRequest
 };
 const mapStateToProps = state => ({
-    loading: state.getIn(["loading", constants.REGISTER, "status"], false)
+    loading: state.getIn(["loading", constants.REGISTER, "status"], false),
+    isLoggedIn: state.getIn([userConstants.USER,"token"], null) !== null,
 });
 export default connect(
     mapStateToProps,

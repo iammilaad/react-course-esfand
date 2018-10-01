@@ -14,7 +14,7 @@ function* login(action) {
     yield put(loadingAction(constants.LOGIN, true));
     yield put(userAction.setUser(data1));
     yield call(updateLocalStorage);
-    // yield put(push("/"));
+    yield put(push("/dashboard"));
   } catch (e) {
     console.error("i`m here with error");
   }
