@@ -6,13 +6,13 @@ import { ThemeProvider } from "styled-components";
 import LocaleProvider from "antd/lib/locale-provider";
 import { IntlProvider } from "react-intl";
 import themes from "settings/themes/index";
-import AppLocale from "languageProvider/index";
+import AppLocale from "languageProvider";
 import config, { getCurrentLanguage } from "containers/LanguageSwitcher/config";
 import { themeConfig } from "settings/index";
 import Style from "./style";
 
 const currentAppLocale =
-  AppLocale[getCurrentLanguage(config.defaultLanguage || "persian").locale];
+  AppLocale[getCurrentLanguage(config.defaultLanguage || "fa").locale];
 
 const DashApp = () => (
   <LocaleProvider locale={currentAppLocale.antd}>

@@ -1,18 +1,18 @@
-import { language } from "../../settings";
+import { language } from "settings";
 
 const config = {
   defaultLanguage: language,
   options: [
     {
-      languageId: "english",
+      languageId: "en",
       locale: "en",
-      text: "English",
+      text: "en",
       icon: "/images/fa.svg"
     },
     {
-      languageId: "persian",
+      languageId: "fa",
       locale: "fa",
-      text: "persian",
+      text: "fa",
       icon: "/images/fa.svg"
     }
   ]

@@ -11,6 +11,7 @@ import Topbar from "containers/Topbar/Topbar";
 import ThemeSwitcher from "containers/ThemeSwitcher/index";
 import PrivateRoutes from "src/privateRoutes";
 import { siteConfig } from "settings/index";
+import { language } from "settings";
 import { AppLocale } from "../baseLayout";
 import themes from "settings/themes/index";
 import AppHolder from "./commonStyle";
@@ -22,7 +23,7 @@ const { toggleAll } = appActions;
 export class App extends Component {
   render() {
     const { url } = this.props.match;
-    const { locale, selectedTheme, height } = this.props;
+    const { locale = language, selectedTheme = "themedefault", height } = this.props;
     const currentAppLocale = AppLocale[locale];
     return (
       <LocaleProvider locale={currentAppLocale.antd}>
@@ -86,7 +87,7 @@ export class App extends Component {
 
 const mapStateToProps = state => ({
     selectedTheme: state.getIn(["ThemeSwitcher","changeThemes","themeName"]),
-    locale: state.getIn(["LanguageSwitcher","language","locale"]),
+    locale: state.getIn(["LanguageSwitcher","language","locale"], "fa"),
     height: state.getIn(["App","height"])
 });
 

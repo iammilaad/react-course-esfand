@@ -4,6 +4,7 @@ export default {
 };
 const siteConfig = {
   siteName: "Ovilo",
+  logoAddress: "/images/logo.png",
   siteIcon: "ion-flash",
   footerText: "Copy Right Text"
 };
@@ -14,5 +15,5 @@ const themeConfig = {
   layout: "themedefault",
   theme: "themedefault"
 };
-const language = "persian";
+const language = "fa";
 export { siteConfig, themeConfig, language };

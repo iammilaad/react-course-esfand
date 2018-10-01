@@ -5,7 +5,7 @@ import actions from "./actions";
 
 const initState = new Map({
   isActivated: false,
-  language: getCurrentLanguage(config.defaultLanguage || "persian")
+  language: getCurrentLanguage(config.defaultLanguage || "fa")
 });
 
 export default function(state = initState, action) {
