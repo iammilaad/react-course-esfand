@@ -235,7 +235,7 @@ class resetPassword extends Component {
                     <div className="ovFormContent">
                         <div className="ovLogoWrapper">
                             <Link to="/">
-                                <IntlMessages id="resetPassword.title" />
+                                <img src="/images/logo.png" style={{ width: '100px'}}/>
                             </Link>
                         </div>
                         {this.HandleCheckToken()}

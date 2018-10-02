@@ -68,8 +68,8 @@ class ForgotPassword extends Component {
                 <div className="ovFormContentWrapper">
                     <div className="ovFormContent">
                         <div className="ovLogoWrapper">
-                            <Link to="/dashboard">
-                                <IntlMessages id="forgotPassword.title" />
+                            <Link to="/">
+                                <img src="/images/logo.png" style={{ width: '100px'}}/>
                             </Link>
                         </div>
 

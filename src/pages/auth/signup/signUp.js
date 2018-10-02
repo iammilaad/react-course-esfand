@@ -56,7 +56,7 @@ class SignUp extends Component {
                     <div className="ovSignUpContent">
                         <div className="ovLogoWrapper">
                             <Link to="/">
-                                <IntlMessages id="signUp.title" />
+                                <img src="/images/logo.png" style={{ width: '100px'}}/>
                             </Link>
                         </div>
 

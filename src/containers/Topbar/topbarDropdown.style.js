@@ -169,9 +169,9 @@ const TopbarDropdownWrapper = styled.div`
         ${borderRadius("50%")};
 
         img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          height: 100%; 
+          width: 40px;
+          height: auto;
         }
       }
 

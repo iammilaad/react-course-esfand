@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Popover from "../../components/uielements/popover";
-import IntlMessages from "../../components/utility/intlMessages";
+import Popover from "components/uielements/popover";
+import IntlMessages from "components/utility/intlMessages";
 import TopbarDropdownWrapper from "./topbarDropdown.style";
+import {toJS} from 'utils/higherOrderComponents/toJsHoc';
+import * as actions from 'pages/auth/signin/actions';
+
 
 class TopbarUser extends Component {
   constructor(props) {
@@ -19,6 +22,10 @@ class TopbarUser extends Component {
   handleVisibleChange() {
     this.setState({ visible: !this.state.visible });
   }
+    logout = () => {
+        const {logoutRequest} = this.props;
+        logoutRequest()
+    };
 
   render() {
     const content = (
@@ -32,7 +39,7 @@ class TopbarUser extends Component {
         <a className="ovDropdownLink">
           <IntlMessages id="topbar.help" />
         </a>
-        <a className="ovDropdownLink" onClick={this.props.logout}>
+        <a className="ovDropdownLink" onClick={this.logout}>
           <IntlMessages id="topbar.logout" />
         </a>
       </TopbarDropdownWrapper>
@@ -48,14 +55,19 @@ class TopbarUser extends Component {
         placement="bottomLeft"
       >
         <div className="ovImgWrapper">
-          <img alt="user" src="/images/user1.png" />
+          <img alt="user" src="/images/user.png" />
           <span className="userActivity online" />
         </div>
       </Popover>
     );
   }
 }
+
+const mapDispatchToProps = {
+    logoutRequest: actions.setLogoutRequest
+};
+
 export default connect(
-  null,
-  null
-)(TopbarUser);
+    null,
+    mapDispatchToProps
+)(toJS(TopbarUser));

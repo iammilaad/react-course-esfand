@@ -1,5 +1,5 @@
 export default {
-  apiUrl: "http://yoursite.com/api/",
+  apiUrl: process.env.REACT_APP_OVILO_API,
   localStorageName: "ovilo"
 };
 const siteConfig = {

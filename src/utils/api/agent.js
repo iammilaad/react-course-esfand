@@ -7,7 +7,9 @@ import config from "settings";
 
 export const bareRequest = (bareCallback, parse = true) => {
   return (url, data = {}, query = {}, callback = null) => {
-    const accessToken = "123";
+    const accessToken = reduxGetter(state =>
+        state.getIn(["USER", "token"])
+    );
     const locale = reduxGetter(state =>
       state.getIn(["LanguageSwitcher", "language", "locale"])
     );
@@ -74,7 +76,9 @@ export const downloadRequest = bareRequest(
 );
 
 export const syncRequest = (method, url) => {
-  const accessToken = "123";
+    const accessToken = reduxGetter(state =>
+        state.getIn(["USER", "token"])
+    );
   console.log(apiRoot + url);
   const responseBody = request(method, apiRoot + url, {
     headers: {

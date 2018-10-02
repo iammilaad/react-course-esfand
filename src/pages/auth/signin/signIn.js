@@ -55,7 +55,7 @@ render() {
                 <div className="ovLoginContent">
                     <div className="ovLogoWrapper">
                         <Link to="/">
-                            <IntlMessages id="signIn.title" />
+                            <img src="/images/logo.png" style={{ width: '100px'}}/>
                         </Link>
                     </div>
                     <div className="ovSignInForm">

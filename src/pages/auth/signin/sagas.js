@@ -6,6 +6,8 @@ import { push } from "react-router-redux";
 import loadingAction from "utils/globalRedux/loading/action";
 import * as userAction from "utils/globalRedux/user/actions";
 import { updateLocalStorage } from "utils/localStorage";
+import { store } from "src/store";
+import { asyncRemoveLocalStorageAction, flush } from "utils/middlewares/redux";
 
 function* login(action) {
   const { data } = action.payload;
@@ -20,7 +22,26 @@ function* login(action) {
   }
 }
 
+function* logout() {
+  try {
+    yield put(loadingAction(constants.LOGOUT, true));
+      yield put(asyncRemoveLocalStorageAction());
+      yield put(flush());
+      yield put(push("/signin"));
+  } catch (e) {
+    console.error("i`m here with error");
+  }
+}
+
+
+
 export function* loginRequestSaga() {
   yield takeEvery(constants.LOGIN_REQUEST, login);
 }
-export default [loginRequestSaga()];
+export function* logoutRequestSaga() {
+  yield takeEvery(constants.LOGOUT_REQUEST, logout);
+}
+export default [
+    loginRequestSaga(),
+    logoutRequestSaga()
+];

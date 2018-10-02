@@ -87,7 +87,7 @@ export class App extends Component {
 
 const mapStateToProps = state => ({
     selectedTheme: state.getIn(["ThemeSwitcher","changeThemes","themeName"]),
-    locale: state.getIn(["LanguageSwitcher","language","locale"], "fa"),
+    locale: state.getIn(["LanguageSwitcher","language","locale"]),
     height: state.getIn(["App","height"])
 });
 

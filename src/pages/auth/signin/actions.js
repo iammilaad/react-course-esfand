@@ -6,3 +6,6 @@ export const setLoginRequest = data => ({
     data
   }
 });
+export const setLogoutRequest = () => ({
+    type: constants.LOGOUT_REQUEST,
+});
