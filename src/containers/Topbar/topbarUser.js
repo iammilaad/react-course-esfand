@@ -10,14 +10,16 @@ import * as actions from 'pages/auth/signin/actions';
 class TopbarUser extends Component {
   constructor(props) {
     super(props);
+    this.handleVisibleChange = this.handleVisibleChange.bind(this);
+    this.hide = this.hide.bind(this);
     this.state = {
       visible: false
     };
   }
-  hide = () => {
+  hide() {
     this.setState({ visible: false });
   }
-  handleVisibleChange = () => {
+  handleVisibleChange() {
     this.setState({ visible: !this.state.visible });
   }
     logout = () => {
