@@ -54,7 +54,7 @@ export default class extends Component {
               targetKeys={this.state.targetKeys}
               onChange={this.handleChange}
               render={item => item.title}
-              className="tavmorphicTransfer"
+              className="ovmorphicTransfer"
             />
           </ContentHolder>
         </Box>

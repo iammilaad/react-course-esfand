@@ -6,4 +6,3 @@ tmp
 bin
 /build
 /node_modules
-.env

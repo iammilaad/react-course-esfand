@@ -13,7 +13,7 @@ export default class extends Component {
       width: width
     };
     return (
-      <div className="tavWidgetsHolder" style={holderStyle}>
+      <div className="ovWidgetsHolder" style={holderStyle}>
         {this.props.children}
       </div>
     );

@@ -11,16 +11,12 @@ import { toJS } from "utils/higherOrderComponents/toJsHoc";
 import * as actions from './actions';
 import * as constants from './constants';
 import * as userConstants from "utils/globalRedux/user/constants";
-import * as tokenConstants from 'utils/globalRedux/token/constants';
-import {autoDirection} from 'utils/helpers/inputAutoDirection';
-import NewPassword from './NewPassword';
 
 const FormItem = Form.Item;
 class ForgotPassword extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            formData: {},
             redirectIfLoggedIn: false,
             ...props,
         }
@@ -36,13 +32,16 @@ class ForgotPassword extends Component {
         };
     }
 
-    resetView = () => {
-        const {setViewStatus} = this.props;
-        setViewStatus(constants.FORGOT_PASSWORD_VIEW);
-    }
+  toggleToNotSend = () => {
+      const {forgotPasswordStatus} = this.props;
+      forgotPasswordStatus(constants.NOT_SEND);
+  }
 
     componentWillUnmount = () => {
-        this.resetView();
+       this.toggleToNotSend();
+    };
+    resendAgain = () => {
+        this.toggleToNotSend();
     };
 
     handleSubmit = e => {
@@ -51,75 +50,9 @@ class ForgotPassword extends Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 forgotPasswordRequest(values);
-                this.setState({formData: values});
             }
         });
     };
-
-    renderFarm = () => {
-        const {viewStatus} = this.props;
-        if(viewStatus === constants.FORGOT_PASSWORD_VIEW) {
-            return this.forgotPasswordView();
-        } else if (viewStatus === constants.NEW_PASSWORD_VIEW) {
-            return <NewPassword formData={this.state.formData}/>
-        }
-    };
-
-    forgotPasswordView = () => {
-        const { getFieldDecorator } = this.props.form;
-        const {loading} = this.props;
-        return (
-            <Fragment>
-                <div className="tavFormHeadText">
-                    <h3>
-                        <IntlMessages id="forgotPassword.title"/>
-                    </h3>
-                    <p>
-                        <IntlMessages id="forgotPassword.description"/>
-                    </p>
-                </div>
-                <div className="tavForgotPassForm">
-                    <Form onSubmit={this.handleSubmit} className="forgot-form">
-                        <div className="tavInputWrapper">
-                            <FormItem>
-                                {getFieldDecorator("mobile", {
-                                    rules: [
-                                        {
-                                            message: this.context.intl.formatMessage({
-                                                id: "forgotPassword.mobile"
-                                            })
-                                        },
-                                        {
-                                            required: true,
-                                            message: this.context.intl.formatMessage({
-                                                id: "forgotPassword.mobile"
-                                            })
-                                        }
-                                    ]
-                                })(
-                                    <Input
-                                        onChange={(event) => autoDirection(event, "mobile")}
-                                        size="large"
-                                        placeholder={this.context.intl.formatMessage({
-                                            id: "forgotPassword.mobile"
-                                        })}
-                                    />
-                                )}
-                            </FormItem>
-                        </div>
-
-                        <div className="tavInputWrapper">
-                            <FormItem>
-                                <Button type="primary" htmlType="submit" loading={loading}>
-                                    <IntlMessages id="forgotPassword.button"/>
-                                </Button>
-                            </FormItem>
-                        </div>
-                    </Form>
-                </div>
-            </Fragment>
-        )
-    }
 
     render() {
         const { redirectIfLoggedIn } = this.state;
@@ -127,21 +60,89 @@ class ForgotPassword extends Component {
         if (redirectIfLoggedIn) {
             this.props.history.push('/dashboard')
         }
+        const { getFieldDecorator } = this.props.form;
+        const {loading, sendStatus} = this.props;
+        console.log("milad",sendStatus)
         return (
-            <ForgotPasswordStyleWrapper className="tavForgotPassPage">
-                <div className="tavFormContentWrapper">
-                    <div className="tavFormContent">
-                        <div className="tavLogoWrapper">
+            <ForgotPasswordStyleWrapper className="ovForgotPassPage">
+                <div className="ovFormContentWrapper">
+                    <div className="ovFormContent">
+                        <div className="ovLogoWrapper">
                             <Link to="/">
                                 <img src="/images/logo.png" style={{ width: '100px'}}/>
                             </Link>
                         </div>
-                        {this.renderFarm()}
-                        <div className="tavInputWrapper tavCenterComponent tavHelperWrapper">
-                            <Link to="/signin">
-                                <IntlMessages id="forgotPassword.login"/>
-                            </Link>
-                        </div>
+
+                        {sendStatus === constants.NOT_SEND ? <Fragment>
+                                <div className="ovFormHeadText">
+                                    <h3>
+                                        <IntlMessages id="forgotPassword.title"/>
+                                    </h3>
+                                    <p>
+                                        <IntlMessages id="forgotPassword.description"/>
+                                    </p>
+                                </div>
+                                <div className="ovForgotPassForm">
+                                    <Form onSubmit={this.handleSubmit} className="forgot-form">
+                                        <div className="ovInputWrapper">
+                                            <FormItem>
+                                                {getFieldDecorator("email", {
+                                                    rules: [
+                                                        {
+                                                            type: "email",
+                                                            message: this.context.intl.formatMessage({
+                                                                id: "forgotPassword.email"
+                                                            })
+                                                        },
+                                                        {
+                                                            required: true,
+                                                            message: this.context.intl.formatMessage({
+                                                                id: "forgotPassword.email"
+                                                            })
+                                                        }
+                                                    ]
+                                                })(
+                                                    <Input
+                                                        size="large"
+                                                        placeholder={this.context.intl.formatMessage({
+                                                            id: "forgotPassword.email"
+                                                        })}
+                                                    />
+                                                )}
+                                            </FormItem>
+                                        </div>
+
+                                        <div className="ovInputWrapper">
+                                            <FormItem>
+                                                <Button type="primary" htmlType="submit" loading={loading}>
+                                                    <IntlMessages id="forgotPassword.button"/>
+                                                </Button>
+                                            </FormItem>
+                                        </div>
+                                        <div className="ovInputWrapper ovCenterComponent ovHelperWrapper">
+                                            <Link to="/signin">
+                                                <IntlMessages id="forgotPassword.login"/>
+                                            </Link>
+                                        </div>
+                                    </Form>
+                                </div>
+                            </Fragment> :
+                            <Fragment>
+                                <div className="ovFormHeadText">
+                                    <h3>
+                                        <IntlMessages id="forgotPassword.sentTitle"/>
+                                    </h3>
+                                    <p>
+                                        <IntlMessages id="forgotPassword.sentDescription"/>
+                                    </p>
+                                </div>
+                                <div className="ovInputWrapper ovCenterComponent ovHelperWrapper">
+                                    <Button type="primary" onClick={this.resendAgain}>
+                                        <IntlMessages id="forgotPassword.resendAgain"/>
+                                    </Button>
+                                </div>
+                            </Fragment>
+                        }
                     </div>
                 </div>
             </ForgotPasswordStyleWrapper>
@@ -153,14 +154,12 @@ ForgotPassword.contextTypes = {
 };
 const mapDispatchToProps = {
     forgotPasswordRequest: actions.setForgotPasswordRequest,
-    setViewStatus: actions.setViewStatus
+    forgotPasswordStatus: actions.setForgotPasswordStatus
 };
 const mapStateToProps = state => ({
     loading: state.getIn(["loading", constants.FORGOT_PASSWORD_REQUEST, "status"], false),
-    viewStatus:state.getIn([constants.FORGOT_PASSWORD,"viewStatus"]),
-    isLoggedIn:
-    state.getIn([tokenConstants.TOKEN,"access_token"], null) &&
-    state.getIn([userConstants.USER, "mobile_verified_at"], null) !== null,
+    sendStatus:state.getIn([constants.FORGOT_PASSWORD,"sendStatus"]),
+    isLoggedIn: state.getIn([userConstants.USER,"token"], null) !== null,
 });
 export default connect(
     mapStateToProps,

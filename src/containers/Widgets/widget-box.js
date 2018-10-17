@@ -11,7 +11,7 @@ export default class extends Component {
     };
 
     return (
-      <WidgetBox className="tavWidgetBox" style={boxStyle}>
+      <WidgetBox className="ovWidgetBox" style={boxStyle}>
         {children}
       </WidgetBox>
     );

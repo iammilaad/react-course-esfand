@@ -27,7 +27,7 @@ export default class extends Component {
     return (
       <tr>
         <td
-          className="tavItemRemove"
+          className="ovItemRemove"
           onClick={() => {
             cancelQuantity(objectID);
           }}
@@ -36,18 +36,18 @@ export default class extends Component {
             <i className="ion-android-close" />
           </a>
         </td>
-        <td className="tavItemImage">
+        <td className="ovItemImage">
           <img alt="#" src={image} />
         </td>
-        <td className="tavItemName">
+        <td className="ovItemName">
           <h3>{name}</h3>
           <p>{description}</p>
         </td>
-        <td className="tavItemPrice">
+        <td className="ovItemPrice">
           <span className="itemPricePrefix">$</span>
           {price.toFixed(2)}
         </td>
-        <td className="tavItemQuantity">
+        <td className="ovItemQuantity">
           <InputNumber
             min={1}
             max={1000}
@@ -56,7 +56,7 @@ export default class extends Component {
             onChange={this.onChange}
           />
         </td>
-        <td className="tavItemPriceTotal">${totalPrice}</td>
+        <td className="ovItemPriceTotal">${totalPrice}</td>
       </tr>
     );
   }

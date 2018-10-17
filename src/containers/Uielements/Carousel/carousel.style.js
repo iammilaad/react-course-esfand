@@ -3,7 +3,7 @@ import { palette } from "styled-theme";
 import WithDirection from "../../../settings/withDirection";
 
 const CarouselStyleWrapper = styled.div`
-  .tavCarousalDemoContainer {
+  .ovCarousalDemoContainer {
     width: 100%;
     display: flex;
     flex-flow: row wrap;

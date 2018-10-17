@@ -6,8 +6,8 @@ import FiveZeroZeroStyleWrapper from "./500.style";
 export default class extends Component {
   render() {
     return (
-      <FiveZeroZeroStyleWrapper className="tav500Page">
-        <div className="tav500Content">
+      <FiveZeroZeroStyleWrapper className="ov500Page">
+        <div className="ov500Content">
           <h1>
             <IntlMessages id="page500.title" />
           </h1>
@@ -24,7 +24,7 @@ export default class extends Component {
           </button>
         </div>
 
-        <div className="tav500Artwork">
+        <div className="ov500Artwork">
           <img alt="#" src="/images/rob.png" />
         </div>
       </FiveZeroZeroStyleWrapper>

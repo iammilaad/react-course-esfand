@@ -23,10 +23,10 @@ const steps = [
   {
     title: "First",
     content: (
-      <div className="tavExampleWrapper">
+      <div className="ovExampleWrapper">
         <div style={{ padding: "10px 20px" }}>
-          <FormFieldTitle className="tavFormFieldTitle">Input</FormFieldTitle>
-          <Input className="tavmorphicInputBox" />
+          <FormFieldTitle className="ovFormFieldTitle">Input</FormFieldTitle>
+          <Input className="ovmorphicInputBox" />
         </div>
 
         <div style={{ padding: "20px" }}>
@@ -34,11 +34,11 @@ const steps = [
         </div>
 
         <div style={{ padding: "20px" }}>
-          <AntdUpload className="tavmorphicUpload" />
+          <AntdUpload className="ovmorphicUpload" />
         </div>
 
         <div style={{ padding: "20px" }}>
-          <AntdCheckbox className="tavmorphicCheckbox" />
+          <AntdCheckbox className="ovmorphicCheckbox" />
         </div>
       </div>
     )
@@ -46,7 +46,7 @@ const steps = [
   {
     title: "Second",
     content: (
-      <div className="tavExampleWrapper">
+      <div className="ovExampleWrapper">
         <AntdAutocomplete />
         <AntdRadiobox />
         <AntdSelectBox />
@@ -57,7 +57,7 @@ const steps = [
   {
     title: "Last",
     content: (
-      <div className="tavExampleWrapper">
+      <div className="ovExampleWrapper">
         <AntdRater />
         <AntdSlider />
         <AntdInputNumber />

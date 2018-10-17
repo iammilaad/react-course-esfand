@@ -13,7 +13,6 @@ import ResetPasswordStyleWrapper from "./resetPassword.style";
 import * as constants from './constants';
 import * as actions from './actions';
 import * as userConstants from "utils/globalRedux/user/constants";
-import * as tokenConstants from 'utils/globalRedux/token/constants';
 
 const FormItem = Form.Item;
 
@@ -100,12 +99,12 @@ class resetPassword extends Component {
         } else if(tokenStatus === constants.TOKEN_EXPIRED) {
             return (
                 <Fragment>
-                    <div className="tavFormHeadText tavCenterComponent">
+                    <div className="ovFormHeadText ovCenterComponent">
                         <p>
                             <IntlMessages id="resetPassword.tokenExpired" />
                         </p>
                     </div>
-                    <div className="tavInputWrapper tavCenterComponent tavHelperWrapper">
+                    <div className="ovInputWrapper ovCenterComponent ovHelperWrapper">
                         <Link to="/forgot-password">
                             <IntlMessages id="forgot.title"/>
                         </Link>
@@ -122,15 +121,15 @@ class resetPassword extends Component {
         if(resetStatus === constants.NOT_RESETED) {
             return (
                 <Fragment>
-                    <div className="tavFormHeadText">
+                    <div className="ovFormHeadText">
                         <p>
                             <IntlMessages id="resetPassword.description" />
                         </p>
                     </div>
 
-                    <div className="tavResetPassForm">
+                    <div className="ovResetPassForm">
                         <Form onSubmit={this.handleSubmit} className="forgot-form">
-                            <div className="tavInputWrapper">
+                            <div className="ovInputWrapper">
                                 <FormItem>
                                     {getFieldDecorator("password", {
                                         rules: [
@@ -162,7 +161,7 @@ class resetPassword extends Component {
                                 </FormItem>
                             </div>
 
-                            <div className="tavInputWrapper">
+                            <div className="ovInputWrapper">
                                 <FormItem>
                                     {getFieldDecorator("confirmPassword", {
                                         rules: [
@@ -195,7 +194,7 @@ class resetPassword extends Component {
                                 </FormItem>
                             </div>
 
-                            <div className="tavInputWrapper">
+                            <div className="ovInputWrapper">
                                 <FormItem>
                                     <Button type="primary" htmlType="submit" loading={loading}>
                                         <IntlMessages id="resetPassword.button" />
@@ -209,12 +208,12 @@ class resetPassword extends Component {
         } else {
             return (
                 <Fragment>
-                    <div className="tavFormHeadText">
+                    <div className="ovFormHeadText">
                         <p>
                             <IntlMessages id="resetPassword.resetedDone" />
                         </p>
                     </div>
-                    <div className="tavInputWrapper ovCenterComponent tavHelperWrapper">
+                    <div className="ovInputWrapper ovCenterComponent ovHelperWrapper">
                         <Link to="/signin">
                             <IntlMessages id="signin.title"/>
                         </Link>
@@ -231,10 +230,10 @@ class resetPassword extends Component {
             this.props.history.push('/dashboard')
         }
         return (
-            <ResetPasswordStyleWrapper className="tavResetPassPage">
-                <div className="tavFormContentWrapper">
-                    <div className="tavFormContent">
-                        <div className="tavLogoWrapper">
+            <ResetPasswordStyleWrapper className="ovResetPassPage">
+                <div className="ovFormContentWrapper">
+                    <div className="ovFormContent">
+                        <div className="ovLogoWrapper">
                             <Link to="/">
                                 <img src="/images/logo.png" style={{ width: '100px'}}/>
                             </Link>
@@ -259,9 +258,7 @@ const mapStateToProps = state => ({
     loading: state.getIn(["loading", constants.RESET_PASSWORD, "status"], false),
     tokenStatus:state.getIn([constants.RESET_PASSWORD,"tokenStatus"]),
     resetStatus:state.getIn([constants.RESET_PASSWORD,"status"]),
-    isLoggedIn:
-    state.getIn([tokenConstants.TOKEN,"access_token"], null) &&
-    state.getIn([userConstants.USER, "mobile_verified_at"], null) !== null,
+    isLoggedIn: state.getIn([userConstants.USER,"token"], null) !== null,
 });
 export default connect(
     mapStateToProps,

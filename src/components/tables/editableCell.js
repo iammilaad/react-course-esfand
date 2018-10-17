@@ -27,20 +27,20 @@ export default class extends Component {
   render() {
     const { value, editable } = this.state;
     return (
-      <div className="tavEditData">
+      <div className="ovEditData">
         {editable ? (
-          <div className="tavEditDataWrapper">
+          <div className="ovEditDataWrapper">
             <Input
               value={value}
               onChange={this.handleChange}
               onPressEnter={this.check}
             />
-            <Icon type="check" className="tavEditIcon" onClick={this.check} />
+            <Icon type="check" className="ovEditIcon" onClick={this.check} />
           </div>
         ) : (
-          <p className="tavDataWrapper">
+          <p className="ovDataWrapper">
             {value || " "}
-            <Icon type="edit" className="tavEditIcon" onClick={this.edit} />
+            <Icon type="edit" className="ovEditIcon" onClick={this.edit} />
           </p>
         )}
       </div>

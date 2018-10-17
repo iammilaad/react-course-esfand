@@ -9,7 +9,7 @@ const WDContactListWrapper = styled.div`
   flex-direction: column;
   height: 100%;
 
-  .tavNoResultMsg {
+  .ovNoResultMsg {
     padding: 15px 20px;
     text-align: center;
     color: ${palette("secondary", 2)};
@@ -17,7 +17,7 @@ const WDContactListWrapper = styled.div`
     font-size: 14px;
   }
 
-  .tavSearchBar {
+  .ovSearchBar {
     .ant-input {
       width: 100%;
       font-size: 14px;
@@ -71,7 +71,7 @@ const WDContactListWrapper = styled.div`
     color: ${palette("grayscale", 0)};
   }
 
-  .tavContactList {
+  .ovContactList {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -87,7 +87,7 @@ const WDContactListWrapper = styled.div`
       }
     }
 
-    .tavSingleContact {
+    .ovSingleContact {
       width: 100%;
       margin: 0;
       display: flex;
@@ -111,7 +111,7 @@ const WDContactListWrapper = styled.div`
         border-bottom: 0;
       }
 
-      .tavAvatar {
+      .ovAvatar {
         width: 35px;
         height: 35px;
         display: flex;
@@ -132,13 +132,13 @@ const WDContactListWrapper = styled.div`
         }
       }
 
-      .tavContactName {
+      .ovContactName {
         h3 {
           font-size: 15px;
         }
       }
 
-      .tavNoteText {
+      .ovNoteText {
         width: calc(100% - 60px);
         margin-right: ${props =>
           props["data-rtl"] === "rtl" ? "inherit" : "20px"};
@@ -156,13 +156,13 @@ const WDContactListWrapper = styled.div`
           font-weight: 500;
         }
 
-        .tavNoteCreatedDate {
+        .ovNoteCreatedDate {
           font-size: 13px;
           color: ${palette("grayscale", 0)};
         }
       }
 
-      .tavDeleteBtn {
+      .ovDeleteBtn {
         width: 24px;
         height: 24px;
         background-color: transparent;
@@ -183,7 +183,7 @@ const WDContactListWrapper = styled.div`
       }
     }
 
-    .tavNotlistNotice {
+    .ovNotlistNotice {
       font-size: 14px;
       font-weight: 400;
       color: ${palette("grayscale", 0)};

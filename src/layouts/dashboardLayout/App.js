@@ -48,13 +48,13 @@ export class App extends Component {
                 <Layout style={{ flexDirection: "row", overflowX: "hidden" }}>
                   <Sidebar url={url} />
                   <Layout
-                    className="tavContentMainLayout"
+                    className="ovContentMainLayout"
                     style={{
                       height: height
                     }}
                   >
                     <Content
-                      className="tavmorphicContent"
+                      className="ovmorphicContent"
                       style={{
                         padding: "70px 0 0",
                         flexShrink: "0",

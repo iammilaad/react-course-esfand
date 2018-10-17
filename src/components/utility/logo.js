@@ -4,7 +4,7 @@ import { siteConfig } from "settings";
 
 export default ({ collapsed }) => {
   return (
-    <div className="tavLogoWrapper">
+    <div className="ovLogoWrapper">
       {collapsed ? (
         <div>
           <h3>

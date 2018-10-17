@@ -8,7 +8,7 @@ const StickerWidgetWrapper = styled.div`
   overflow: hidden;
   ${borderRadius("5px")};
 
-  .tavIconWrapper {
+  .ovIconWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,20 +21,20 @@ const StickerWidgetWrapper = styled.div`
     }
   }
 
-  .tavContentWrapper {
+  .ovContentWrapper {
     width: 100%;
     padding: 20px 15px 20px 20px;
     display: flex;
     flex-direction: column;
 
-    .tavStatNumber {
+    .ovStatNumber {
       font-size: 20px;
       font-weight: 500;
       line-height: 1.1;
       margin: 0 0 5px;
     }
 
-    .tavLabel {
+    .ovLabel {
       font-size: 16px;
       font-weight: 400;
       margin: 0;

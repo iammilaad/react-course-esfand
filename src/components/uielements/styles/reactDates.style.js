@@ -29,7 +29,7 @@ const ReactDatesStyleWrapper = styled.div`
 `;
 
 const ReactDateWrapper = ComponentName => styled(ComponentName)`
-  .tavReactDate {
+  .ovReactDate {
     height: 100vh;
 
     .DateInput__display-text--focused {

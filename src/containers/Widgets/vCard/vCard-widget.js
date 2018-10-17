@@ -5,18 +5,18 @@ export default class extends Component {
   render() {
     const { src, alt, name, title, description, children, style } = this.props;
     return (
-      <VCardWidgetWrapper className="tavVCardWidgetWrapper" style={style}>
-        <div className="tavVCardImage">
+      <VCardWidgetWrapper className="ovVCardWidgetWrapper" style={style}>
+        <div className="ovVCardImage">
           <img src={src} alt={alt} />
         </div>
 
-        <div className="tavVCardBody">
-          <h3 className="tavName">{name}</h3>
-          <span className="tavDesgTitle">{title}</span>
+        <div className="ovVCardBody">
+          <h3 className="ovName">{name}</h3>
+          <span className="ovDesgTitle">{title}</span>
 
-          <p className="tavDescription">{description}</p>
+          <p className="ovDescription">{description}</p>
 
-          <div className="tavWidgetSocial">{children}</div>
+          <div className="ovWidgetSocial">{children}</div>
         </div>
       </VCardWidgetWrapper>
     );

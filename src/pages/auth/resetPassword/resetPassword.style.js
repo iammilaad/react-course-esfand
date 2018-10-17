@@ -26,7 +26,7 @@ const ResetPasswordStyleWrapper = styled.div`
     right: ${props => (props["data-rtl"] === "rtl" ? "0" : "inherit")};
   }
 
-  .tavFormContentWrapper {
+  .ovFormContentWrapper {
     width: 500px;
     height: 100%;
     overflow-y: auto;
@@ -34,7 +34,7 @@ const ResetPasswordStyleWrapper = styled.div`
     position: relative;
   }
 
-  .tavFormContent {
+  .ovFormContent {
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ const ResetPasswordStyleWrapper = styled.div`
       padding: 70px 20px;
     }
 
-    .tavLogoWrapper {
+    .ovLogoWrapper {
       width: 100%;
       display: flex;
       margin-bottom: 70px;
@@ -62,7 +62,7 @@ const ResetPasswordStyleWrapper = styled.div`
       }
     }
 
-    .tavFormHeadText {
+    .ovFormHeadText {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -86,13 +86,13 @@ const ResetPasswordStyleWrapper = styled.div`
       }
     }
 
-    .tavResetPassForm {
+    .ovResetPassForm {
       width: 100%;
       display: flex;
       flex-shrink: 0;
       flex-direction: column;
 
-      .tavInputWrapper {
+      .ovInputWrapper {
         margin-bottom: 10px;
 
         &:last-child {

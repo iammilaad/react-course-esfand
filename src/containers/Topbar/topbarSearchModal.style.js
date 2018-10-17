@@ -27,7 +27,7 @@ const TopbarSearchModal = styled(Modal)`
     .ant-modal-body {
       padding: 0px;
 
-      .tavSearchContainer {
+      .ovSearchContainer {
         .ant-input-search {
           .ant-input {
             border: 0;

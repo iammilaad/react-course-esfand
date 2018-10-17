@@ -1,9 +1,9 @@
 export default {
-  apiUrl: process.env.REACT_APP_TAVANITO_API,
-  localStorageName: "tavanito"
+  apiUrl: process.env.REACT_APP_OVILO_API,
+  localStorageName: "ovilo"
 };
 const siteConfig = {
-  siteName: "tavanito",
+  siteName: "Ovilo",
   logoAddress: "/images/logo.png",
   siteIcon: "ion-flash",
   footerText: "Copy Right Text"

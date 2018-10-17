@@ -162,7 +162,7 @@ const Buttons = ComponentName => styled(ComponentName)`
         props["data-rtl"] === "rtl" ? "0 -14px 0 0" : "0 0 0 -14px"};
     }
 
-    &.tavButton {
+    &.ovButton {
       display: inline-block;
       margin-bottom: 0;
       font-weight: 500;
@@ -191,13 +191,13 @@ const Buttons = ComponentName => styled(ComponentName)`
         background-color: ${palette("primary", 2)};
       }
 
-      &.tavBtnSm {
+      &.ovBtnSm {
         padding: 0 15px;
         height: 28px;
         font-size: 12px;
       }
 
-      &.tavBtnLg {
+      &.ovBtnLg {
         padding: 0 35px;
         font-size: 14px;
         height: 42px;

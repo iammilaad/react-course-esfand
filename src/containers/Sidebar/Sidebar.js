@@ -76,7 +76,7 @@ class Sidebar extends Component {
         <SubMenu
           key={key}
           title={
-            <span className="tavMenuHolder" style={submenuColor}>
+            <span className="ovMenuHolder" style={submenuColor}>
               <i className={leftIcon} />
               <span className="nav-text">
                 <IntlMessages id={label} />
@@ -102,7 +102,7 @@ class Sidebar extends Component {
     return (
       <Menu.Item key={key}>
         <Link to={`${url}/${key}`}>
-          <span className="tavMenuHolder" style={submenuColor}>
+          <span className="ovMenuHolder" style={submenuColor}>
             <i className={leftIcon} />
             <span className="nav-text">
               <IntlMessages id={label} />
@@ -146,7 +146,7 @@ class Sidebar extends Component {
           collapsible={true}
           collapsed={collapsed}
           width="240"
-          className="tavmorphicSidebar"
+          className="ovmorphicSidebar"
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
           style={styling}
@@ -156,7 +156,7 @@ class Sidebar extends Component {
             <Menu
               onClick={this.handleClick}
               theme="dark"
-              className="tavDashboardMenu"
+              className="ovDashboardMenu"
               mode={mode}
               openKeys={collapsed ? [] : app.openKeys}
               selectedKeys={app.current}
@@ -169,7 +169,7 @@ class Sidebar extends Component {
               <SubMenu
                 key="sub1"
                 title={
-                  <span className="tavMenuHolder" style={submenuColor}>
+                  <span className="ovMenuHolder" style={submenuColor}>
                     <i className="ion-android-options" />
                     <span className="nav-text">
                       <IntlMessages id="sidebar.menuLevels" />

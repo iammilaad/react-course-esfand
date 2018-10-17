@@ -26,7 +26,7 @@ const SignUpStyleWrapper = styled.div`
     right: ${props => (props["data-rtl"] === "rtl" ? "0" : "inherit")};
   }
 
-  .tavSignUpContentWrapper {
+  .ovSignUpContentWrapper {
     width: 500px;
     height: 100%;
     overflow-y: auto;
@@ -34,7 +34,7 @@ const SignUpStyleWrapper = styled.div`
     position: relative;
   }
 
-  .tavSignUpContent {
+  .ovSignUpContent {
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ const SignUpStyleWrapper = styled.div`
       padding: 70px 20px;
     }
 
-    .tavLogoWrapper {
+    .ovLogoWrapper {
       width: 100%;
       display: flex;
       margin-bottom: 50px;
@@ -63,13 +63,13 @@ const SignUpStyleWrapper = styled.div`
       }
     }
 
-    .tavSignUpForm {
+    .ovSignUpForm {
       width: 100%;
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
 
-      .tavInputWrapper {
+      .ovInputWrapper {
         margin-bottom: 15px;
 
         &:last-child {
@@ -94,7 +94,7 @@ const SignUpStyleWrapper = styled.div`
         }
       }
 
-      .tavLeftRightComponent {
+      .ovLeftRightComponent {
         input {
           width: calc(100% - 10px);
 
@@ -107,12 +107,12 @@ const SignUpStyleWrapper = styled.div`
         }
       }
 
-      .tavHelperWrapper {
+      .ovHelperWrapper {
         margin-top: 35px;
         flex-direction: column;
       }
 
-      .tavForgotPass {
+      .ovForgotPass {
         font-size: 12px;
         color: ${palette("text", 2)};
         margin-bottom: 10px;

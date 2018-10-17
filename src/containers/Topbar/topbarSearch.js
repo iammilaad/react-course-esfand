@@ -38,11 +38,11 @@ class TopbarSearch extends Component {
           visible={visible}
           onOk={this.handleCancel}
           onCancel={this.handleCancel}
-          wrapclassName="tavSearchModal"
+          wrapClassName="ovSearchModal"
           width="60%"
           footer={null}
         >
-          <div className="tavSearchContainer">
+          <div className="ovSearchContainer">
             {visible ? <Searchbar onBlur={this.handleBlur} /> : ""}
           </div>
         </TopbarSearchModal>

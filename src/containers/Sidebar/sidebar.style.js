@@ -4,7 +4,7 @@ import { transition, borderRadius } from "../../settings/style-util";
 import WithDirection from "../../settings/withDirection";
 
 const SidebarWrapper = styled.div`
-  .tavmorphicSidebar {
+  .ovmorphicSidebar {
     z-index: 1000;
     background: ${palette("secondary", 0)};
     width: 280px;
@@ -28,7 +28,7 @@ const SidebarWrapper = styled.div`
       }
     }
 
-    .tavLogoWrapper {
+    .ovLogoWrapper {
       height: 70px;
       background: rgba(0, 0, 0, 0.3);
       margin: 0;
@@ -52,7 +52,7 @@ const SidebarWrapper = styled.div`
     }
 
     &.ant-layout-sider-collapsed {
-      .tavLogoWrapper {
+      .ovLogoWrapper {
         padding: 0;
 
         h3 {
@@ -65,7 +65,7 @@ const SidebarWrapper = styled.div`
       }
     }
 
-    .tavDashboardMenu {
+    .ovDashboardMenu {
       padding-top: 35px;
       padding-bottom: 35px;
       background: transparent;
@@ -85,7 +85,7 @@ const SidebarWrapper = styled.div`
         margin: 0;
       }
 
-      .tavMenuHolder {
+      .ovMenuHolder {
         display: flex;
         align-items: center;
 

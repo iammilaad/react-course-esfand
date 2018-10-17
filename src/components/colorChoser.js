@@ -21,7 +21,7 @@ export default class extends Component {
   render() {
     const { colors, seectedColor, changeColor } = this.props;
     const content = () => (
-      <ColorChooserDropdown className="tavColorOptions">
+      <ColorChooserDropdown className="ovColorOptions">
         {colors.map((color, index) => {
           const onClick = () => {
             this.hide();
@@ -43,7 +43,7 @@ export default class extends Component {
       >
         <Button
           style={{ backgroundColor: colors[seectedColor] }}
-          className="tavColorChooser"
+          className="ovColorChooser"
         />
       </Popover>
     );

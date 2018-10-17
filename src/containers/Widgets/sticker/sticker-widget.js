@@ -17,16 +17,16 @@ export default class extends Component {
     };
 
     return (
-      <StickerWidgetWrapper className="tavStickerWidget" style={widgetStyle}>
-        <div className="tavIconWrapper">
+      <StickerWidgetWrapper className="ovStickerWidget" style={widgetStyle}>
+        <div className="ovIconWrapper">
           <i className={icon} style={iconStyle} />
         </div>
 
-        <div className="tavContentWrapper">
-          <h3 className="tavStatNumber" style={textColor}>
+        <div className="ovContentWrapper">
+          <h3 className="ovStatNumber" style={textColor}>
             {number}
           </h3>
-          <span className="tavLabel" style={textColor}>
+          <span className="ovLabel" style={textColor}>
             {text}
           </span>
         </div>

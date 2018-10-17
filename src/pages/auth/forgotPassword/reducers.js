@@ -3,14 +3,14 @@ import { createReducer } from "redux-immutablejs";
 import * as constants from "./constants";
 
 const initialState = fromJS({
-    viewStatus: constants.FORGOT_PASSWORD_VIEW
+    sendStatus: constants.NOT_SEND
 });
 
 export default {
   [constants.FORGOT_PASSWORD]: createReducer(initialState, {
-    [constants.FORGOT_PASSWORD_VIEW_STATUS]: (state, action) =>
+    [constants.FORGOT_PASSWORD_SEND_STATUS]: (state, action) =>
       state.merge({
-          viewStatus: action.payload.viewStatus
+          sendStatus: action.payload.status
       })
   })
 };

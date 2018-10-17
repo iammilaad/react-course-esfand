@@ -23,22 +23,22 @@ export default class extends Component {
       cancelQuantity
     } = this.props;
     return (
-      <TopbarCartWrapper className="tavCartItems">
-        <div className="tavItemImage">
+      <TopbarCartWrapper className="ovCartItems">
+        <div className="ovItemImage">
           <img alt="#" src={image} />
         </div>
-        <div className="tavCartDetails">
+        <div className="ovCartDetails">
           <h3>
             <a>{name}</a>
           </h3>
-          <p className="tavItemPriceQuantity">
+          <p className="ovItemPriceQuantity">
             <span>$</span>
             <span>{price.toFixed(2)}</span>
             <span className="itemMultiplier">X</span>
-            <span className="tavItemQuantity">{quantity}</span>
+            <span className="ovItemQuantity">{quantity}</span>
           </p>
         </div>
-        <a className="tavItemRemove" onClick={() => cancelQuantity(objectID)}>
+        <a className="ovItemRemove" onClick={() => cancelQuantity(objectID)}>
           <i className="ion-android-close" />
         </a>
       </TopbarCartWrapper>

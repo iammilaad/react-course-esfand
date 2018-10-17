@@ -26,8 +26,8 @@ export default class extends Component {
       this.setState({ disabled: !validateEmail(value), email: value });
     };
     return (
-      <FourZeroFourStyleWrapper className="tav404Page">
-        <div className="tav404Content">
+      <FourZeroFourStyleWrapper className="ov404Page">
+        <div className="ov404Content">
           <h1>Hey! Thank you for checking out our app.</h1>
           <h3>
             It’s not quite ready yet, but we are working hard and it will be
@@ -47,7 +47,7 @@ export default class extends Component {
           </Button>
         </div>
 
-        <div className="tav404Artwork">
+        <div className="ov404Artwork">
           <img alt="#" src="/images/rob.png" />
         </div>
       </FourZeroFourStyleWrapper>

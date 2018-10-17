@@ -3,9 +3,9 @@ import LoaderComponent from "./loader.style";
 
 export default Loader => (
   <LoaderComponent>
-    <svg className="tavContentLoader" viewBox="0 0 50 50">
+    <svg className="ovContentLoader" viewBox="0 0 50 50">
       <circle
-        className="tavContentLoaderCircle"
+        className="ovContentLoaderCircle"
         cx="25"
         cy="25"
         r="20"

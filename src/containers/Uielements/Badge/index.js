@@ -26,33 +26,33 @@ export default class extends Component {
             >
               <ContentHolder>
                 <Badge count={5}>
-                  <a className="tavBadgeLink"> </a>
+                  <a className="ovBadgeLink"> </a>
                 </Badge>
                 <Badge count={0} showZero>
-                  <a className="tavBadgeLink"> </a>
+                  <a className="ovBadgeLink"> </a>
                 </Badge>
               </ContentHolder>
             </Box>
           </Col>
           <Col md={12} sm={12} xs={24} style={colStyle}>
             <Box
-              title={<IntlMessages id="uiElements.badge.taverflowCount" />}
+              title={<IntlMessages id="uiElements.badge.overflowCount" />}
               subtitle={
-                <IntlMessages id="uiElements.badge.taverflowCountSubTitle" />
+                <IntlMessages id="uiElements.badge.overflowCountSubTitle" />
               }
             >
               <ContentHolder>
                 <Badge count={99}>
-                  <a className="tavBadgeLink"> </a>
+                  <a className="ovBadgeLink"> </a>
                 </Badge>
                 <Badge count={100}>
-                  <a className="tavBadgeLink"> </a>
+                  <a className="ovBadgeLink"> </a>
                 </Badge>
                 <Badge count={99} overflowCount={10}>
-                  <a className="tavBadgeLink"> </a>
+                  <a className="ovBadgeLink"> </a>
                 </Badge>
                 <Badge count={1000} overflowCount={999}>
-                  <a className="tavBadgeLink"> </a>
+                  <a className="ovBadgeLink"> </a>
                 </Badge>
               </ContentHolder>
             </Box>

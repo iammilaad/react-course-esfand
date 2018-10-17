@@ -51,20 +51,20 @@ class TopbarNotification extends Component {
     const { customizedTheme } = this.props;
     const content = (
       <TopbarDropdownWrapper className="topbarNotification">
-        <div className="tavDropdownHeader">
+        <div className="ovDropdownHeader">
           <h3>
             <IntlMessages id="sidebar.notification" />
           </h3>
         </div>
-        <div className="tavDropdownBody">
+        <div className="ovDropdownBody">
           {demoNotifications.map(notification => (
-            <a className="tavDropdownListItem" key={notification.id}>
+            <a className="ovDropdownListItem" key={notification.id}>
               <h5>{notification.name}</h5>
               <p>{notification.notification}</p>
             </a>
           ))}
         </div>
-        <a className="tavViewAllBtn">
+        <a className="ovViewAllBtn">
           <IntlMessages id="topbar.viewAll" />
         </a>
       </TopbarDropdownWrapper>
@@ -77,7 +77,7 @@ class TopbarNotification extends Component {
         onVisibleChange={this.handleVisibleChange}
         placement="bottomLeft"
       >
-        <div className="tavIconWrapper">
+        <div className="ovIconWrapper">
           <i
             className="ion-android-notifications"
             style={{ color: customizedTheme.textColor }}

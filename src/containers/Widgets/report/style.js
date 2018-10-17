@@ -9,7 +9,7 @@ const ReportWidgetWrapper = styled.div`
   background-color: #ffffff;
   border: 1px solid ${palette("border", 2)};
 
-  .tavWidgetLabel {
+  .ovWidgetLabel {
     font-size: 21px;
     color: ${palette("text", 0)};
     font-weight: 400;
@@ -17,12 +17,12 @@ const ReportWidgetWrapper = styled.div`
     margin: 0 0 25px;
   }
 
-  .tavReportsWidgetBar {
+  .ovReportsWidgetBar {
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
 
-    .tavSingleProgressBar {
+    .ovSingleProgressBar {
       margin-bottom: 10px;
 
       &:last-child {
@@ -31,7 +31,7 @@ const ReportWidgetWrapper = styled.div`
     }
   }
 
-  .tavDescription {
+  .ovDescription {
     font-size: 13px;
     color: ${palette("text", 2)};
     font-weight: 400;

@@ -7,7 +7,7 @@ export default class extends Component {
   render() {
     const { searchText, onInputChange, onSearch } = this.props;
     return (
-      <div className="tavTableSearchBox">
+      <div className="ovTableSearchBox">
         <Input
           id="tableFilterInput"
           placeholder="Search name"

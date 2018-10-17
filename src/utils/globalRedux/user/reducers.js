@@ -6,9 +6,9 @@ const initialState = fromJS({});
 
 export default {
   [constants.USER]: createReducer(initialState, {
-      [constants.SET]: (state, action) =>
-          state.merge({
-              ...action.payload.data
-          })
+    [constants.SET]: (state, action) =>
+      state.merge({
+          ...action.payload.data
+      })
   })
 };

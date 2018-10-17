@@ -26,7 +26,7 @@ const SignInStyleWrapper = styled.div`
     right: ${props => (props["data-rtl"] === "rtl" ? "0" : "inherit")};
   }
 
-  .tavLoginContentWrapper {
+  .ovLoginContentWrapper {
     width: 500px;
     height: 100%;
     overflow-y: auto;
@@ -34,7 +34,7 @@ const SignInStyleWrapper = styled.div`
     position: relative;
   }
 
-  .tavLoginContent {
+  .ovLoginContent {
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ const SignInStyleWrapper = styled.div`
       padding: 70px 20px;
     }
 
-    .tavLogoWrapper {
+    .ovLogoWrapper {
       width: 100%;
       display: flex;
       margin-bottom: 50px;
@@ -63,13 +63,13 @@ const SignInStyleWrapper = styled.div`
       }
     }
 
-    .tavSignInForm {
+    .ovSignInForm {
       width: 100%;
       display: flex;
       flex-shrink: 0;
       flex-direction: column;
 
-      .tavInputWrapper {
+      .ovInputWrapper {
         margin-bottom: 15px;
 
         &:last-of-type {
@@ -94,7 +94,7 @@ const SignInStyleWrapper = styled.div`
         }
       }
 
-      .tavHelperText {
+      .ovHelperText {
         font-size: 12px;
         font-weight: 400;
         line-height: 1.2;
@@ -121,12 +121,12 @@ const SignInStyleWrapper = styled.div`
         }
       }
 
-      .tavHelperWrapper {
+      .ovHelperWrapper {
         margin-top: 35px;
         flex-direction: column;
       }
 
-      .tavOtherLogin {
+      .ovOtherLogin {
         padding-top: 40px;
         margin-top: 35px;
         border-top: 1px dashed ${palette("grayscale", 2)};
@@ -183,7 +183,7 @@ const SignInStyleWrapper = styled.div`
         }
       }
 
-      .tavForgotPass {
+      .ovForgotPass {
         font-size: 12px;
         color: ${palette("text", 3)};
         margin-bottom: 10px;
