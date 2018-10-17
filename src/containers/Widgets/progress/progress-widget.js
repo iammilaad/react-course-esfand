@@ -18,14 +18,14 @@ export default class ProgressWidget extends Component {
     };
 
     return (
-      <ProgressWidgetWrapper className="ovProgressWidget">
-        <div className="ovProgressWidgetTopbar">
+      <ProgressWidgetWrapper className="tavProgressWidget">
+        <div className="tavProgressWidgetTopbar">
           <h3>{label}</h3>
           <i className={icon} style={iconStyle} />
         </div>
 
-        <div className="ovProgressWidgetBody">
-          <p className="ovDescription">{details}</p>
+        <div className="tavProgressWidgetBody">
+          <p className="tavDescription">{details}</p>
           <Progress
             percent={percent}
             strokeWidth={barHeight}

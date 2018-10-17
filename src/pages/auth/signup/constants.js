@@ -1,2 +1,8 @@
+export const API_URL = "register";
+
 export const REGISTER = "REGISTER";
 export const REGISTER_REQUEST = `${REGISTER}/REGISTER_REQUEST`;
+
+export const VIEW_STATUS = `${REGISTER}/VIEW_STATUS`;
+export const REGISTRATION_VIEW = `REGISTRATION_VIEW`;
+export const ACTIVATION_VIEW = `ACTIVATION_VIEW`;

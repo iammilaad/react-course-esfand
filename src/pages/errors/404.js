@@ -7,8 +7,8 @@ import FourZeroFourStyleWrapper from "./404.style";
 export default class extends Component {
   render() {
     return (
-      <FourZeroFourStyleWrapper className="ov404Page">
-        <div className="ov404Content">
+      <FourZeroFourStyleWrapper className="tav404Page">
+        <div className="tav404Content">
           <h1>
             <IntlMessages id="page404.title" />
           </h1>
@@ -25,7 +25,7 @@ export default class extends Component {
           </button>
         </div>
 
-        <div className="ov404Artwork">
+        <div className="tav404Artwork">
           <img alt="#" src="/images/rob.png" />
         </div>
       </FourZeroFourStyleWrapper>

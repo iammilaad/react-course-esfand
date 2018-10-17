@@ -26,7 +26,7 @@ export default class extends Component {
           deleteContact(contact.id);
         }}
       >
-        <Button icon="close" type="button" className="ovDeleteBtn" />
+        <Button icon="close" type="button" className="tavDeleteBtn" />
       </Popconfirm>
     );
   }

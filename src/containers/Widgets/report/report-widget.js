@@ -5,12 +5,12 @@ export default class extends Component {
   render() {
     const { label, details, children } = this.props;
     return (
-      <ReportWidgetWrapper className="ovReportsWidget">
-        <h3 className="ovWidgetLabel">{label}</h3>
+      <ReportWidgetWrapper className="tavReportsWidget">
+        <h3 className="tavWidgetLabel">{label}</h3>
 
-        <div className="ovReportsWidgetBar">{children}</div>
+        <div className="tavReportsWidgetBar">{children}</div>
 
-        <p className="ovDescription">{details}</p>
+        <p className="tavDescription">{details}</p>
       </ReportWidgetWrapper>
     );
   }

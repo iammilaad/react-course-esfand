@@ -27,17 +27,17 @@ class TopbarUser extends Component {
 
   render() {
     const content = (
-      <TopbarDropdownWrapper className="ovUserDropdown">
-        <a className="ovDropdownLink">
+      <TopbarDropdownWrapper className="tavUserDropdown">
+        <a className="tavDropdownLink">
           <IntlMessages id="themeSwitcher.settings" />
         </a>
-        <a className="ovDropdownLink">
+        <a className="tavDropdownLink">
           <IntlMessages id="sidebar.feedback" />
         </a>
-        <a className="ovDropdownLink">
+        <a className="tavDropdownLink">
           <IntlMessages id="topbar.help" />
         </a>
-        <a className="ovDropdownLink" onClick={this.logout}>
+        <a className="tavDropdownLink" onClick={this.logout}>
           <IntlMessages id="topbar.logout" />
         </a>
       </TopbarDropdownWrapper>
@@ -52,7 +52,7 @@ class TopbarUser extends Component {
         arrowPointAtCenter={true}
         placement="bottomLeft"
       >
-        <div className="ovImgWrapper">
+        <div className="tavImgWrapper">
           <img alt="user" src="/images/user.png" />
           <span className="userActivity online" />
         </div>

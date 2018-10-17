@@ -5,7 +5,7 @@ import {
   InputSearchWrapper,
   TextAreaWrapper
 } from "./styles/input.style";
-import WithDirection from "../../settings/withDirection";
+import WithDirection from "settings/withDirection";
 
 const { Search, TextArea, Group } = Input;
 

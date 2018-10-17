@@ -23,7 +23,7 @@ const WDContactCardWrapper = styled.div`
     flex-direction: column;
   }
 
-  .ovContactCardHead {
+  .tavContactCardHead {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +42,7 @@ const WDContactCardWrapper = styled.div`
       margin-bottom: 20px;
     }
 
-    .ovPersonImage {
+    .tavPersonImage {
       width: 120px;
       height: 120px;
       display: flex;
@@ -65,7 +65,7 @@ const WDContactCardWrapper = styled.div`
       }
     }
 
-    .ovPersonName {
+    .tavPersonName {
       font-size: 15px;
       font-weight: 500;
       color: ${palette("text", 0)};
@@ -74,7 +74,7 @@ const WDContactCardWrapper = styled.div`
     }
   }
 
-  .ovContactInfoWrapper {
+  .tavContactInfoWrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@ const WDContactCardWrapper = styled.div`
       padding: 20px 0;
     }
 
-    .ovContactCardInfos {
+    .tavContactCardInfos {
       width: 100%;
       display: flex;
       flex-shrink: 0;
@@ -96,7 +96,7 @@ const WDContactCardWrapper = styled.div`
         margin-bottom: 20px;
       }
 
-      .ovInfoLabel {
+      .tavInfoLabel {
         font-size: 14px;
         font-weight: 500;
         color: ${palette("text", 0)};
@@ -132,7 +132,7 @@ const WDContactCardWrapper = styled.div`
         }
       }
 
-      .ovInfoDetails {
+      .tavInfoDetails {
         font-size: 14px;
         font-weight: 400;
         color: ${palette("text", 2)};

@@ -19,7 +19,7 @@ const FourZeroFourStyleWrapper = styled.div`
     flex-wrap: nowrap;
   }
 
-  .ov404Content {
+  .tav404Content {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -109,7 +109,7 @@ const FourZeroFourStyleWrapper = styled.div`
     }
   }
 
-  .ov404Artwork {
+  .tav404Artwork {
     display: flex;
     align-items: center;
     justify-content: center;

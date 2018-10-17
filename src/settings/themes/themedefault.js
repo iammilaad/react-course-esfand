@@ -1,6 +1,6 @@
 import {LightenDarkenColor} from 'utils/helpers/lightenDarkenColor'
 const theme = {};
-const primary = "#17B890";
+const primary = "#2dcc70";
 const secondary = "#4F6D7A";
 theme.palette = {
     primary: [

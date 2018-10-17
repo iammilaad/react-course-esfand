@@ -56,23 +56,23 @@ class TopbarMessage extends Component {
     const { customizedTheme } = this.props;
     const content = (
       <TopbarDropdownWrapper className="topbarMessage withImg">
-        <div className="ovDropdownHeader">
+        <div className="tavDropdownHeader">
           <h3>
             <IntlMessages id="sidebar.message" />
           </h3>
         </div>
-        <div className="ovDropdownBody">
+        <div className="tavDropdownBody">
           <Scrollbar style={{ height: 300 }}>
             {demoMassage.map(massage => (
-              <a className="ovDropdownListItem" key={massage.id}>
-                <div className="ovImgWrapper">
+              <a className="tavDropdownListItem" key={massage.id}>
+                <div className="tavImgWrapper">
                   <img alt="#" src="/images/user3.png" />
                 </div>
 
-                <div className="ovListContent">
-                  <div className="ovListHead">
+                <div className="tavListContent">
+                  <div className="tavListHead">
                     <h5>{massage.name}</h5>
-                    <span className="ovDate">{massage.time}</span>
+                    <span className="tavDate">{massage.time}</span>
                   </div>
                   <p>{massage.massage}</p>
                 </div>
@@ -80,7 +80,7 @@ class TopbarMessage extends Component {
             ))}
           </Scrollbar>
         </div>
-        <a className="ovViewAllBtn">
+        <a className="tavViewAllBtn">
           <IntlMessages id="topbar.viewAll" />
         </a>
       </TopbarDropdownWrapper>
@@ -93,7 +93,7 @@ class TopbarMessage extends Component {
         onVisibleChange={this.handleVisibleChange}
         placement="bottomLeft"
       >
-        <div className="ovIconWrapper">
+        <div className="tavIconWrapper">
           <i
             className="ion-chatbubbles"
             style={{ color: customizedTheme.textColor }}

@@ -9,14 +9,14 @@ export default class extends Component {
     };
 
     return (
-      <CardWidgetWrapper className="ovCardWidget">
-        <div className="ovIconWrapper">
+      <CardWidgetWrapper className="tavCardWidget">
+        <div className="tavIconWrapper">
           <i className={icon} style={iconStyle} />
         </div>
 
-        <div className="ovContentWrapper">
-          <h3 className="ovStatNumber">{number}</h3>
-          <span className="ovLabel">{text}</span>
+        <div className="tavContentWrapper">
+          <h3 className="tavStatNumber">{number}</h3>
+          <span className="tavLabel">{text}</span>
         </div>
       </CardWidgetWrapper>
     );

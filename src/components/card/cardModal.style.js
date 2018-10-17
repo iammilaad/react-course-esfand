@@ -18,12 +18,12 @@ const CardInfoWrapper = styled.div`
 `;
 
 const WDInfoFormWrapper = styled.div`
-  .ovCardInfoForm {
+  .tavCardInfoForm {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
 
-    .ovCardInput {
+    .tavCardInput {
       margin-bottom: 10px;
 
       &.name {

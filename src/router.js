@@ -4,7 +4,8 @@ import { ConnectedRouter } from "react-router-redux";
 import { connect } from "react-redux";
 import App from "layouts/dashboardLayout/App";
 import asyncComponent from "utils/helpers/AsyncFunc";
-import * as constants from 'utils/globalRedux/user/constants';
+import * as userConstants from './utils/globalRedux/user/constants';
+import * as tokenConstants from './utils/globalRedux/token/constants';
 
 const RestrictedRoute = ({ component: Component, isLoggedIn, ...rest }) => (
   <Route
@@ -79,5 +80,7 @@ const PublicRoutes = ({ history, isLoggedIn }) => {
 };
 
 export default connect(state => ({
-    isLoggedIn: state.getIn([constants.USER,"token"], null) !== null
+    isLoggedIn:
+    state.getIn([tokenConstants.TOKEN,"access_token"], null) &&
+    state.getIn([userConstants.USER, "mobile_verified_at"], null) !== null,
 }))(PublicRoutes);

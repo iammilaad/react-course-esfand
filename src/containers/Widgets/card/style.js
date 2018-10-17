@@ -12,7 +12,7 @@ const CardWidgetWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  .ovIconWrapper {
+  .tavIconWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,8 +26,8 @@ const CardWidgetWrapper = styled.div`
     }
   }
 
-  .ovContentWrapper {
-    .ovStatNumber {
+  .tavContentWrapper {
+    .tavStatNumber {
       font-size: 19px;
       color: ${palette("text", 0)};
       font-weight: 500;
@@ -35,7 +35,7 @@ const CardWidgetWrapper = styled.div`
       margin: 0 0 10px;
     }
 
-    .ovLabel {
+    .tavLabel {
       font-size: 14px;
       color: ${palette("text", 2)};
       font-weight: 400;

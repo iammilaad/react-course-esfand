@@ -26,7 +26,7 @@ const ForgotPasswordStyleWrapper = styled.div`
     right: ${props => (props["data-rtl"] === "rtl" ? "0" : "inherit")};
   }
 
-  .ovFormContentWrapper {
+  .tavFormContentWrapper {
     width: 500px;
     height: 100%;
     overflow-y: auto;
@@ -34,7 +34,7 @@ const ForgotPasswordStyleWrapper = styled.div`
     position: relative;
   }
 
-  .ovFormContent {
+  .tavFormContent {
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ const ForgotPasswordStyleWrapper = styled.div`
       padding: 70px 20px;
     }
 
-    .ovLogoWrapper {
+    .tavLogoWrapper {
       width: 100%;
       display: flex;
       margin-bottom: 70px;
@@ -62,7 +62,7 @@ const ForgotPasswordStyleWrapper = styled.div`
       }
     }
 
-    .ovFormHeadText {
+    .tavFormHeadText {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -85,13 +85,13 @@ const ForgotPasswordStyleWrapper = styled.div`
       }
     }
 
-    .ovForgotPassForm {
+    .tavForgotPassForm {
       width: 100%;
       display: flex;
       flex-shrink: 0;
       flex-direction: column;
 
-      .ovInputWrapper {
+      .tavInputWrapper {
         margin-bottom: 10px;
 
         &:last-child {

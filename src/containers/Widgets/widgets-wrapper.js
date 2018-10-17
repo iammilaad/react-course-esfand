@@ -24,7 +24,7 @@ export default class extends Component {
     };
 
     return (
-      <WidgetWrapper className="ovWidgetsWrapper" style={wrapperStyle}>
+      <WidgetWrapper className="tavWidgetsWrapper" style={wrapperStyle}>
         {children}
       </WidgetWrapper>
     );

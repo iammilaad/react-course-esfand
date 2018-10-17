@@ -6,7 +6,7 @@ export default class CircleProgressWidget extends Component {
   render() {
     const { label, percent, barHeight, status, info, fontColor } = this.props;
     return (
-      <CircleProgressWidgetBar className="ovCircleProgress">
+      <CircleProgressWidgetBar className="tavCircleProgress">
         <Progress
           type="circle"
           percent={percent}

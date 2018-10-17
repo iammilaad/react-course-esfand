@@ -65,7 +65,7 @@ const ProgressWidgetWrapper = styled.div`
   overflow: hidden;
   border: 1px solid ${palette("border", 2)};
 
-  .ovProgressWidgetTopbar {
+  .tavProgressWidgetTopbar {
     width: 100%;
     display: flex;
     align-items: center;
@@ -85,7 +85,7 @@ const ProgressWidgetWrapper = styled.div`
     }
   }
 
-  .ovProgressWidgetBody {
+  .tavProgressWidgetBody {
     p {
       font-size: 14px;
       color: ${palette("text", 3)};

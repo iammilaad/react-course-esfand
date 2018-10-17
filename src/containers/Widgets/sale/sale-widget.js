@@ -10,12 +10,12 @@ export default class extends Component {
     };
 
     return (
-      <SaleWidgetWrapper className="ovSaleWidget">
-        <h3 className="ovSaleLabel">{label}</h3>
-        <span className="ovSalePrice" style={textColor}>
+      <SaleWidgetWrapper className="tavSaleWidget">
+        <h3 className="tavSaleLabel">{label}</h3>
+        <span className="tavSalePrice" style={textColor}>
           {price}
         </span>
-        <p className="ovSaleDetails">{details}</p>
+        <p className="tavSaleDetails">{details}</p>
       </SaleWidgetWrapper>
     );
   }

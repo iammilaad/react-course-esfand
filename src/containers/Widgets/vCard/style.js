@@ -12,7 +12,7 @@ const VCardWidgetWrapper = styled.div`
   border: 1px solid ${palette("border", 2)};
   padding: 50px 30px 30px;
 
-  .ovVCardImage {
+  .tavVCardImage {
     width: 70px;
     height: 70px;
     display: -webkit-inline-flex;
@@ -31,14 +31,14 @@ const VCardWidgetWrapper = styled.div`
     }
   }
 
-  .ovVCardBody {
+  .tavVCardBody {
     align-items: center;
     display: flex;
     width: 100%;
     flex-direction: column;
     text-align: center;
 
-    .ovName {
+    .tavName {
       font-size: 17px;
       color: ${palette("text", 0)};
       font-weight: 400;
@@ -46,7 +46,7 @@ const VCardWidgetWrapper = styled.div`
       line-height: 1.2;
     }
 
-    .ovDesgTitle {
+    .tavDesgTitle {
       font-size: 13px;
       color: ${palette("text", 2)};
       font-weight: 400;
@@ -54,7 +54,7 @@ const VCardWidgetWrapper = styled.div`
       line-height: 1.2;
     }
 
-    .ovDescription {
+    .tavDescription {
       font-size: 13px;
       color: ${palette("text", 2)};
       font-weight: 400;
@@ -62,7 +62,7 @@ const VCardWidgetWrapper = styled.div`
       line-height: 1.5;
     }
 
-    .ovSocialWidgetWrapper {
+    .tavSocialWidgetWrapper {
       margin-top: 25px;
     }
   }

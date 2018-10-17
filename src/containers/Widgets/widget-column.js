@@ -37,7 +37,7 @@ export default class extends Component {
       alignContent: alignContent
     };
     return (
-      <WidgetColumn className="ovWidgetsColumn" style={columnStyle}>
+      <WidgetColumn className="tavWidgetsColumn" style={columnStyle}>
         {this.props.children}
       </WidgetColumn>
     );

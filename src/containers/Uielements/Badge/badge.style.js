@@ -27,7 +27,7 @@ const Badge = styled(AntBadge)`
     color: ${palette("primary", 0)};
   }
 
-  .ovBadgeLink {
+  .tavBadgeLink {
     width: 42px;
     height: 42px;
     ${borderRadius("6px")};

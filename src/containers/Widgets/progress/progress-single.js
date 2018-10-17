@@ -6,7 +6,7 @@ export default class SingleProgressWidget extends Component {
   render() {
     const { label, percent, barHeight, status, info, fontColor } = this.props;
     return (
-      <SingleProgressWidgetBar className="ovSingleProgressBar">
+      <SingleProgressWidgetBar className="tavSingleProgressBar">
         <h3 style={{ color: fontColor }}>{label}</h3>
         <Progress
           percent={percent}

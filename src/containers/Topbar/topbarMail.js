@@ -58,19 +58,19 @@ class TopbarMail extends Component {
 
     const content = (
       <TopbarDropdownWrapper className="topbarMail">
-        <div className="ovDropdownHeader">
+        <div className="tavDropdownHeader">
           <h3>
             <IntlMessages id="sidebar.email" />
           </h3>
         </div>
-        <div className="ovDropdownBody">
+        <div className="tavDropdownBody">
           <Scrollbar style={{ height: 300 }}>
             {demoMails.map(mail => (
               <Link to={`${url}/mailbox`} onClick={this.hide} key={mail.id}>
-                <div className="ovDropdownListItem">
-                  <div className="ovListHead">
+                <div className="tavDropdownListItem">
+                  <div className="tavListHead">
                     <h5>{mail.name}</h5>
-                    <span className="ovDate">{mail.time}</span>
+                    <span className="tavDate">{mail.time}</span>
                   </div>
                   <p>{mail.desc}</p>
                 </div>
@@ -78,7 +78,7 @@ class TopbarMail extends Component {
             ))}
           </Scrollbar>
         </div>
-        <a className="ovViewAllBtn">
+        <a className="tavViewAllBtn">
           <IntlMessages id="topbar.viewAll" />
         </a>
       </TopbarDropdownWrapper>
@@ -91,7 +91,7 @@ class TopbarMail extends Component {
         onVisibleChange={this.handleVisibleChange}
         placement="bottomLeft"
       >
-        <div className="ovIconWrapper">
+        <div className="tavIconWrapper">
           <i
             className="ion-email"
             style={{ color: customizedTheme.textColor }}

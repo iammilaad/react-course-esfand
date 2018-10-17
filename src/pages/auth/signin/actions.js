@@ -9,3 +9,9 @@ export const setLoginRequest = data => ({
 export const setLogoutRequest = () => ({
     type: constants.LOGOUT_REQUEST,
 });
+export const setViewStatus = viewStatus => ({
+    type: constants.VIEW_STATUS,
+    payload: {
+        viewStatus
+    }
+});

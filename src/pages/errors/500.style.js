@@ -17,7 +17,7 @@ const FiveZeroZeroStyleWrapper = styled.div`
     flex-wrap: nowrap;
   }
 
-  .ov500Content {
+  .tav500Content {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -106,7 +106,7 @@ const FiveZeroZeroStyleWrapper = styled.div`
     }
   }
 
-  .ov500Artwork {
+  .tav500Artwork {
     display: flex;
     align-items: center;
     justify-content: center;

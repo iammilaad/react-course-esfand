@@ -25,7 +25,7 @@ const AppHolder = styled.div`
   .ant-layout {
     background: ${palette("secondary", 1)};
 
-    &.ovContentMainLayout {
+    &.tavContentMainLayout {
       overflow: auto;
       overflow-x: hidden;
       @media only screen and (min-width: 768px) and (max-width: 1220px) {
@@ -40,7 +40,7 @@ const AppHolder = styled.div`
     }
   }
 
-  .ovLayoutContent {
+  .tavLayoutContent {
     width: 100%;
     padding: 35px;
     background-color: #ffffff;
@@ -48,7 +48,7 @@ const AppHolder = styled.div`
     height: 100%;
   }
 
-  .ovmorphicLayout {
+  .tavmorphicLayout {
     width: calc(100% - 240px);
     flex-shrink: 0;
     overflow-x: hidden !important;

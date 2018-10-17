@@ -5,7 +5,7 @@ export default class extends Component {
   render() {
     const { children } = this.props;
     return (
-      <SocialWidgetWrapper className="ovSocialWidgetWrapper">
+      <SocialWidgetWrapper className="tavSocialWidgetWrapper">
         {children}
       </SocialWidgetWrapper>
     );

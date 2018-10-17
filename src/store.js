@@ -19,8 +19,10 @@ import signIn from "pages/auth/signin";
 import signUp from "pages/auth/signup";
 import forgotPassword from "pages/auth/forgotPassword";
 import resetPassword from "pages/auth/resetPassword";
+import verifyCode from "pages/auth/verifyCode";
 import loading from "utils/globalRedux/loading/reducer";
 import userReducers from "utils/globalRedux/user/reducers";
+import tokenReducers from "utils/globalRedux/token/reducers";
 
 const rootSage = function*() {
     yield all([
@@ -28,6 +30,7 @@ const rootSage = function*() {
         ...signUp.sagas,
         ...forgotPassword.sagas,
         ...resetPassword.sagas,
+        ...verifyCode.sagas,
     ]);
 };
 const history = createHistory();
@@ -47,7 +50,10 @@ const rootReducer = (state, action) => {
         ThemeSwitcher,
         LanguageSwitcher,
         loading,
+        ...tokenReducers,
         ...userReducers,
+        ...signUp.reducers,
+        ...signIn.reducers,
         ...forgotPassword.reducers,
         ...resetPassword.reducers,
     })(state, action);

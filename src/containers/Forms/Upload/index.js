@@ -36,9 +36,9 @@ export default class extends Component {
   render() {
     const { previewVisible, previewImage, fileList } = this.state;
     const uploadButton = (
-      <div className="ovUploadBtn">
+      <div className="tavUploadBtn">
         <Icon type="plus" />
-        <span className="ovUploadText">Upload</span>
+        <span className="tavUploadText">Upload</span>
       </div>
     );
     return (

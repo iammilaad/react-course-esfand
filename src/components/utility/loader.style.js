@@ -19,13 +19,13 @@ const LoaderComponent = styled.div`
     width: 100%;
   }
 
-  .ovContentLoader {
+  .tavContentLoader {
     width: 50px;
     height: 50px;
     animation: svgSpinner 1.4s linear infinite;
   }
 
-  .ovContentLoaderCircle {
+  .tavContentLoaderCircle {
     animation: svgSpinnerCircle 1.4s ease-in-out infinite;
     stroke-dasharray: 80px, 200px;
     stroke-dashoffset: 0px;

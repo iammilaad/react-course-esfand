@@ -1,6 +1,6 @@
 import * as constants from "./constants";
 
-export const setUser = data => ({
+export const setUserData = data => ({
   type: constants.SET,
   payload: {
     data

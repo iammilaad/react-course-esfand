@@ -32,10 +32,10 @@ export default class ContactList extends Component {
         className={`${activeClass} ovSingleContact`}
         onClick={onChange}
       >
-        <div className="ovAvatar">
+        <div className="tavAvatar">
           {contact.avatar ? <img alt="#" src={contact.avatar} /> : ""}
         </div>
-        <div className="ovContactName">
+        <div className="tavContactName">
           <h3>{contact.name ? contact.name : "No Name"}</h3>
         </div>
         <DeleteButton deleteContact={deleteContact} contact={contact} />
@@ -49,23 +49,23 @@ export default class ContactList extends Component {
     const { search } = this.state;
     const contacts = filterContacts(this.props.contacts, search);
     return (
-      <ContactListWrapper className="ovContactListWrapper">
+      <ContactListWrapper className="tavContactListWrapper">
         <InputSearch
           placeholder={this.context.intl.formatMessage({
             id: "contactlist.searchContacts"
           })}
           value={search}
           onChange={this.onChange}
-          className="ovSearchBar"
+          className="tavSearchBar"
         />
         {contacts && contacts.length > 0 ? (
-          <div className="ovContactList">
+          <div className="tavContactList">
             <Scrollbar className="contactListScrollbar">
               {contacts.map(contact => this.singleContact(contact))}
             </Scrollbar>
           </div>
         ) : (
-          <span className="ovNoResultMsg">
+          <span className="tavNoResultMsg">
             {<IntlMessages id="Component.contacts.noOption" />}
           </span>
         )}

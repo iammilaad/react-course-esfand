@@ -31,7 +31,7 @@ class Topbar extends Component {
             collapsed ? "ovmorphicTopbar collapsed" : "ovmorphicTopbar"
           }
         >
-          <div className="ovLeft">
+          <div className="tavLeft">
             <button
               className={
                 collapsed ? "triggerBtn menuCollapsed" : "triggerBtn menuOpen"
@@ -41,27 +41,27 @@ class Topbar extends Component {
             />
           </div>
 
-          <ul className="ovRight">
-            <li className="ovSearch">
+          <ul className="tavRight">
+            <li className="tavSearch">
               <TopbarSearch locale={locale} />
             </li>
 
             <li
               onClick={() => this.setState({ selectedItem: "notification" })}
-              className="ovNotify"
+              className="tavNotify"
             >
               <TopbarNotification locale={locale} />
             </li>
 
             <li
               onClick={() => this.setState({ selectedItem: "message" })}
-              className="ovMsg"
+              className="tavMsg"
             >
               <TopbarMessage locale={locale} />
             </li>
             <li
               onClick={() => this.setState({ selectedItem: "user" })}
-              className="ovUser"
+              className="tavUser"
             >
               <TopbarUser locale={locale} />
             </li>

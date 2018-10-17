@@ -13,7 +13,7 @@ const TopbarCartWrapper = styled.div`
   border-bottom: 1px solid ${palette("border", 2)};
   ${transition()};
 
-  .ovItemImage {
+  .tavItemImage {
     width: 50px;
     height: 50px;
     flex-shrink: 0;
@@ -28,7 +28,7 @@ const TopbarCartWrapper = styled.div`
     }
   }
 
-  .ovCartDetails {
+  .tavCartDetails {
     width: 100%;
     display: flex;
     padding: ${props =>
@@ -66,7 +66,7 @@ const TopbarCartWrapper = styled.div`
     }
   }
 
-  .ovItemRemove {
+  .tavItemRemove {
     position: absolute;
     right: ${props => (props["data-rtl"] === "rtl" ? "inherit" : "15px")};
     left: ${props => (props["data-rtl"] === "rtl" ? "15px" : "inherit")};
@@ -80,7 +80,7 @@ const TopbarCartWrapper = styled.div`
   &:hover {
     background-color: ${palette("grayscale", 3)};
 
-    .ovItemRemove {
+    .tavItemRemove {
       opacity: 1;
     }
   }

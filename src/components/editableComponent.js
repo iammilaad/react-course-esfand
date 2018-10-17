@@ -30,9 +30,9 @@ export default class EditableComponent extends Component {
   render() {
     const { value, editable } = this.state;
     return (
-      <div className="ovNoteContent">
+      <div className="tavNoteContent">
         {editable ? (
-          <div className="ovNoteEditWrapper">
+          <div className="tavNoteEditWrapper">
             <Input
               rows={3}
               value={value}
@@ -41,14 +41,14 @@ export default class EditableComponent extends Component {
             />
             <Icon
               type="check"
-              className="ovNoteEditIcon"
+              className="tavNoteEditIcon"
               onClick={this.check}
             />
           </div>
         ) : (
-          <p className="ovNoteTextWrapper" onClick={this.edit}>
+          <p className="tavNoteTextWrapper" onClick={this.edit}>
             {value || " "}
-            <Icon type="edit" className="ovNoteEditIcon" />
+            <Icon type="edit" className="tavNoteEditIcon" />
           </p>
         )}
       </div>

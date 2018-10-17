@@ -45,8 +45,8 @@ export default class extends Component {
       };
       if (attribute.value === "note") {
         extraInfos.push(
-          <div className="ovContactCardInfos" key={attribute.value}>
-            <p className="ovInfoLabel">{`${attribute.title}`}</p>
+          <div className="tavContactCardInfos" key={attribute.value}>
+            <p className="tavInfoLabel">{`${attribute.title}`}</p>
             <Textarea
               placeholder={`${attribute.title}`}
               value={value}
@@ -58,8 +58,8 @@ export default class extends Component {
         );
       } else {
         extraInfos.push(
-          <div className="ovContactCardInfos" key={attribute.value}>
-            <p className="ovInfoLabel">{`${attribute.title}`}</p>
+          <div className="tavContactCardInfos" key={attribute.value}>
+            <p className="tavInfoLabel">{`${attribute.title}`}</p>
             <Input
               placeholder={`${attribute.title}`}
               value={value}
@@ -70,9 +70,9 @@ export default class extends Component {
       }
     });
     return (
-      <ContactCardWrapper className="ovContactCard">
-        <div className="ovContactCardHead">
-          <div className="ovPersonImage">
+      <ContactCardWrapper className="tavContactCard">
+        <div className="tavContactCardHead">
+          <div className="tavPersonImage">
             <Upload
               className="avatar-uploader"
               name="avatar"
@@ -88,9 +88,9 @@ export default class extends Component {
               <Icon type="plus" className="avatar-uploader-trigger" />
             </Upload>
           </div>
-          <h1 className="ovPersonName">{name}</h1>
+          <h1 className="tavPersonName">{name}</h1>
         </div>
-        <div className="ovContactInfoWrapper">{extraInfos}</div>
+        <div className="tavContactInfoWrapper">{extraInfos}</div>
       </ContactCardWrapper>
     );
   }

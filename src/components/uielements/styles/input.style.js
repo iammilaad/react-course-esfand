@@ -12,7 +12,6 @@ const InputWrapper = ComponentName => styled(ComponentName)`
     width: 100%;
     height: 35px;
     cursor: text;
-    text-align: ${props => (props["data-rtl"] === "rtl" ? "right" : "left")};
     font-size: 13px;
     line-height: 1.5;
     color: ${palette("text", 1)};

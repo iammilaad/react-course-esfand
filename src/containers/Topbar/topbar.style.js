@@ -4,7 +4,7 @@ import { transition, borderRadius, boxShadow } from "../../settings/style-util";
 import WithDirection from "../../settings/withDirection";
 
 const TopbarWrapper = styled.div`
-  .ovmorphicTopbar {
+  .tavmorphicTopbar {
     display: flex;
     justify-content: space-between;
     background-color: #ffffff;
@@ -32,7 +32,7 @@ const TopbarWrapper = styled.div`
       }
     }
 
-    .ovLeft {
+    .tavLeft {
       display: flex;
       align-items: center;
 
@@ -66,7 +66,7 @@ const TopbarWrapper = styled.div`
       }
     }
 
-    .ovRight {
+    .tavRight {
       display: flex;
       align-items: center;
 
@@ -94,7 +94,7 @@ const TopbarWrapper = styled.div`
           line-height: 1;
         }
 
-        .ovIconWrapper {
+        .tavIconWrapper {
           position: relative;
           line-height: normal;
 
@@ -121,40 +121,40 @@ const TopbarWrapper = styled.div`
           }
         }
 
-        &.ovMail {
-          .ovIconWrapper {
+        &.tavMail {
+          .tavIconWrapper {
             span {
               background-color: ${palette("color", 0)};
             }
           }
         }
 
-        &.ovNotify {
-          .ovIconWrapper {
+        &.tavNotify {
+          .tavIconWrapper {
             span {
               background-color: ${palette("primary", 2)};
             }
           }
         }
 
-        &.ovMsg {
-          .ovIconWrapper {
+        &.tavMsg {
+          .tavIconWrapper {
             span {
               background-color: ${palette("color", 1)};
             }
           }
         }
 
-        &.ovCart {
-          .ovIconWrapper {
+        &.tavCart {
+          .tavIconWrapper {
             span {
               background-color: ${palette("color", 2)};
             }
           }
         }
 
-        &.ovUser {
-          .ovImgWrapper {
+        &.tavUser {
+          .tavImgWrapper {
             width: 40px;
             height: 40px;
             display: flex;
@@ -186,10 +186,10 @@ const TopbarWrapper = styled.div`
     }
   }
 
-  .ovUserDropdown {
+  .tavUserDropdown {
     .ant-popover-inner {
       .ant-popover-inner-content {
-        .ovUserDropdownContent {
+        .tavUserDropdownContent {
           padding: 7px 0;
           display: flex;
           flex-direction: column;
@@ -200,12 +200,12 @@ const TopbarWrapper = styled.div`
           width: 220px;
           min-width: 160px;
           flex-shrink: 0;
-          .ovBorderRadius(5px);
+          .tavBorderRadius(5px);
           ${borderRadius("5px")};
           ${boxShadow("0 2px 10px rgba(0,0,0,0.2)")};
           ${transition()};
 
-          .ovDropdownLink {
+          .tavDropdownLink {
             font-size: 13px;
             color: ${palette("text", 1)};
             line-height: 1.1;
@@ -229,7 +229,7 @@ const TopbarWrapper = styled.div`
   .ant-popover {
     .ant-popover-inner {
       .ant-popover-inner-content {
-        .ovDropdownContent {
+        .tavDropdownContent {
           display: flex;
           flex-direction: column;
           position: absolute;
@@ -247,7 +247,7 @@ const TopbarWrapper = styled.div`
             width: 310px;
           }
 
-          .ovDropdownHeader {
+          .tavDropdownHeader {
             border-bottom: 1px solid #f1f1f1;
             margin-bottom: 0px;
             padding: 15px 30px;
@@ -266,7 +266,7 @@ const TopbarWrapper = styled.div`
             }
           }
 
-          .ovDropdownBody {
+          .tavDropdownBody {
             width: 100%;
             height: 300px;
             overflow-y: auto;
@@ -275,7 +275,7 @@ const TopbarWrapper = styled.div`
             margin-bottom: 10px;
             background-color: ${palette("grayscale", 6)};
 
-            .ovDropdownListItem {
+            .tavDropdownListItem {
               padding: 15px 30px;
               flex-shrink: 0;
               text-decoration: none;
@@ -289,7 +289,7 @@ const TopbarWrapper = styled.div`
                 background-color: ${palette("grayscale", 3)};
               }
 
-              .ovListHead {
+              .tavListHead {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -312,7 +312,7 @@ const TopbarWrapper = styled.div`
                 overflow: hidden;
               }
 
-              .ovDate {
+              .tavDate {
                 font-size: 11px;
                 color: ${palette("grayscale", 1)};
                 flex-shrink: 0;
@@ -320,7 +320,7 @@ const TopbarWrapper = styled.div`
             }
           }
 
-          .ovViewAllBtn {
+          .tavViewAllBtn {
             font-size: 13px;
             font-weight: 500;
             color: ${palette("text", 2)};
@@ -337,7 +337,7 @@ const TopbarWrapper = styled.div`
             }
           }
 
-          .ovDropdownFooterLinks {
+          .tavDropdownFooterLinks {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -372,11 +372,11 @@ const TopbarWrapper = styled.div`
           }
 
           &.withImg {
-            .ovDropdownListItem {
+            .tavDropdownListItem {
               display: flex;
               flex-direction: row;
 
-              .ovImgWrapper {
+              .tavImgWrapper {
                 width: 35px;
                 height: 35px;
                 overflow: hidden;
@@ -397,12 +397,12 @@ const TopbarWrapper = styled.div`
                 }
               }
 
-              .ovListContent {
+              .tavListContent {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
 
-                .ovListHead {
+                .tavListHead {
                   display: flex;
                   justify-content: space-between;
                   align-items: center;
@@ -414,7 +414,7 @@ const TopbarWrapper = styled.div`
                   padding-right: 15px;
                 }
 
-                .ovDate {
+                .tavDate {
                   font-size: 11px;
                   color: ${palette("grayscale", 1)};
                   flex-shrink: 0;
@@ -434,7 +434,7 @@ const TopbarWrapper = styled.div`
     &.topbarMail {
       .ant-popover-inner {
         .ant-popover-inner-content {
-          .ovDropdownContent {
+          .tavDropdownContent {
             @media only screen and (max-width: 519px) {
               right: -170px;
             }
@@ -446,7 +446,7 @@ const TopbarWrapper = styled.div`
     &.topbarMessage {
       .ant-popover-inner {
         .ant-popover-inner-content {
-          .ovDropdownContent {
+          .tavDropdownContent {
             @media only screen and (max-width: 500px) {
               right: -69px;
             }
@@ -458,7 +458,7 @@ const TopbarWrapper = styled.div`
     &.topbarNotification {
       .ant-popover-inner {
         .ant-popover-inner-content {
-          .ovDropdownContent {
+          .tavDropdownContent {
             @media only screen and (max-width: 500px) {
               right: -120px;
             }
@@ -470,16 +470,16 @@ const TopbarWrapper = styled.div`
     &.topbarAddtoCart {
       .ant-popover-inner {
         .ant-popover-inner-content {
-          .ovDropdownContent {
+          .tavDropdownContent {
             @media only screen and (max-width: 465px) {
               right: -55px;
             }
 
-            .ovDropdownHeader {
+            .tavDropdownHeader {
               margin-bottom: 0;
             }
 
-            .ovDropdownBody {
+            .tavDropdownBody {
               background-color: ${palette("grayscale", 6)};
             }
           }

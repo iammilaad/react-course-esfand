@@ -62,7 +62,7 @@ export default class extends Component {
       <LayoutWrapper>
         <PageHeader>Mention</PageHeader>
 
-        <div className="ovBoxWrapper">
+        <div className="tavBoxWrapper">
           <h3>Customize suggestion</h3>
           <p>Customize suggestions.</p>
 

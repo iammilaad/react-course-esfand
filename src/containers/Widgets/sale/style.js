@@ -10,7 +10,7 @@ const SaleWidgetWrapper = styled.div`
   overflow: hidden;
   border: 1px solid ${palette("border", 2)};
 
-  .ovSaleLabel {
+  .tavSaleLabel {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.2;
@@ -19,14 +19,14 @@ const SaleWidgetWrapper = styled.div`
     margin: 0 0 20px;
   }
 
-  .ovSalePrice {
+  .tavSalePrice {
     font-size: 28px;
     font-weight: 300;
     line-height: 1.2;
     margin: 0 0 20px;
   }
 
-  .ovSaleDetails {
+  .tavSaleDetails {
     font-size: 13px;
     font-weight: 400;
     line-height: 1.5;

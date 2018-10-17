@@ -82,11 +82,11 @@ export default class extends Component {
         onOk={saveButton}
         okText={modalType === "edit" ? "Edit Card" : "Add Card"}
       >
-        <CardInfoWrapper id={containerId} className="ovCardWrapper" />
+        <CardInfoWrapper id={containerId} className="tavCardWrapper" />
 
         <CardReactFormContainer {...cardConfig}>
           <InfoFormWrapper>
-            <Form className="ovCardInfoForm">
+            <Form className="tavCardInfoForm">
               {this.columns.map((column, index) => {
                 const { key, title } = column;
                 return (

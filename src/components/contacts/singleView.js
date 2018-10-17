@@ -10,22 +10,22 @@ export default class extends Component {
       const value = contact[attribute.value];
       if (value) {
         extraInfos.push(
-          <div className="ovContactCardInfos" key={attribute.value}>
-            <p className="ovInfoLabel">{`${attribute.title}`}</p>
-            <p className="ovInfoDetails">{value}</p>
+          <div className="tavContactCardInfos" key={attribute.value}>
+            <p className="tavInfoLabel">{`${attribute.title}`}</p>
+            <p className="tavInfoDetails">{value}</p>
           </div>
         );
       }
     });
     return (
-      <ContactCardWrapper className="ovContactCard">
-        <div className="ovContactCardHead">
-          <div className="ovPersonImage">
+      <ContactCardWrapper className="tavContactCard">
+        <div className="tavContactCardHead">
+          <div className="tavPersonImage">
             {contact.avatar ? <img alt="#" src={contact.avatar} /> : ""}
           </div>
-          <h1 className="ovPersonName">{name}</h1>
+          <h1 className="tavPersonName">{name}</h1>
         </div>
-        <div className="ovContactInfoWrapper">{extraInfos}</div>
+        <div className="tavContactInfoWrapper">{extraInfos}</div>
       </ContactCardWrapper>
     );
   }

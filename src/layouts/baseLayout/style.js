@@ -38,14 +38,14 @@ const Style = styled.div`
     padding: 0;
   }
 
-  .ovLeftRightComponent {
+  .tavLeftRightComponent {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
   }
 
-  .ovCenterComponent {
+  .tavCenterComponent {
     display: flex;
     align-items: center;
     justify-content: center;

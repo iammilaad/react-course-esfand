@@ -2,7 +2,7 @@ import React from "react";
 import { ContentHolderWrapper } from "./contentHolder.style";
 
 export default props => (
-  <ContentHolderWrapper className="ovExampleWrapper" style={props.style}>
+  <ContentHolderWrapper className="tavExampleWrapper" style={props.style}>
     {props.children}
   </ContentHolderWrapper>
 );
