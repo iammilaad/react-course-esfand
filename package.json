@@ -1,6 +1,6 @@
 {
-  "name": "ovilo",
-  "version": "2.6.0",
+  "name": "hastnama-academy-react-admin-panel",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "antd": "^3.9.3",

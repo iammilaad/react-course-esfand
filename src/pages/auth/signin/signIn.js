@@ -41,7 +41,11 @@ handleSubmit = e => {
         }
     });
 };
-render() {
+    componentDidMount() {
+
+    }
+
+    render() {
     const { redirectIfLoggedIn } = this.state;
 
     if (redirectIfLoggedIn) {
@@ -49,6 +53,7 @@ render() {
     }
     const { getFieldDecorator } = this.props.form;
     const { loading } = this.props;
+
     return (
         <SignInStyleWrapper className="ovSignInPage">
             <div className="ovLoginContentWrapper">
@@ -141,7 +146,7 @@ SignIn.contextTypes = {
     intl: PropTypes.object.isRequired
 };
 const mapDispatchToProps = {
-    loginRequest: actions.setLoginRequest
+    loginRequest: actions.setLoginRequest,
 };
 const mapStateToProps = state => ({
     loading: state.getIn(["loading", constants.LOGIN, "status"], false),

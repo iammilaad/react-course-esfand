@@ -1,4 +1,4 @@
-import { call, put, takeEvery } from "redux-saga/effects";
+import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
 import { postRequest } from "utils/api/agent";
 import * as constants from "./constants";
 import * as actions from "./actions";
