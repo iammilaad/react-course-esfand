@@ -99,7 +99,7 @@
     "superagent": "^3.8.3",
     "superagent-intercept": "^0.1.2",
     "sync-request": "^6.0.0",
-    "uppy": "0.18.0",
+    "uppy": "2.3.3",
     "whitelist-object": "^1.0.0"
   },
   "devDependencies": {
